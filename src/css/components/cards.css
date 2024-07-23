@@ -15,4 +15,34 @@
 
   }
 
+  &-client{
+    @apply flex flex-col justify-between h-[40rem] text-left;
+
+    h3{
+      @apply font-serif text-h4 tracking-[-0.05em];
+    }
+
+    p{
+      @apply text-deep-blue font-[400] mb-3;
+    }
+
+    .ctas{
+      @apply flex gap-1;
+
+      a{
+        @apply btn btn-small btn-outline;
+      }
+
+    }
+
+  }
+
+  &-team{
+
+    img{
+      @apply aspect-[9/11] object-cover;
+    }
+
+  }
+
 }

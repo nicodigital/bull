@@ -12,7 +12,8 @@ function getHoy() {
     const anio = fechaActual.getFullYear();
 
     // Formatea la fecha en el formato deseado
-    const fechaFormateada = `${dia}/${mes}/${anio}`;
+    // const fechaFormateada = `${dia}/${mes}/${anio}`;
+    const fechaFormateada = `${anio}`;
 
     // Retorna la fecha formateada
     return fechaFormateada;

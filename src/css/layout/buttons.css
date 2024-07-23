@@ -4,20 +4,29 @@
     flex items-center justify-center
     w-[fit-content]
     rounded-full 
-    px-[2.5rem] xg:px-3 py-[1.1rem] 
+    px-[2.5rem] xg:px-3 py-[1.4rem] 
     border-solid border-[2px] border-transparent 
+    leading-[1]
     transition-all ;
 
+  &-small{
+    @apply text-tiny px-[1.2rem] xg:px-[1.5] py-[.9rem] 
+  }
+
   &-e-blue{
-    @apply bg-e-blue hover:bg-deep-blue;
+    @apply bg-e-blue hover:bg-deep-blue border-e-blue text-white; 
+
+    &:hover{
+      @apply bg-transparent text-e-blue;
+    }
+
   }
 
   &-outline{
-    @apply border-solid
-     border-white 
-     border-[2px]
-     hover:bg-white
-    hover:text-e-blue;
+    @apply border-solid border-deep-blue-200 border-[2px]
+    text-deep-blue-200
+    hover:bg-deep-blue-200
+    hover:text-white;
      ;
   }
 

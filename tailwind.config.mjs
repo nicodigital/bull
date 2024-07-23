@@ -7,11 +7,12 @@ export default {
 				'e-blue': '#3536FD',
 				'deep-blue': '#000033',
 				'deep-blue-300': '#666685',
+				'deep-blue-200': '#9999AD',
 				'invalid': '#fe0000',
 			},
 			fontFamily: {
 				sans: ['Outfit Variable', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-				// serif: ['Roboto Slab'],
+				serif: ['FreightBig Pro'],
 			},
 			fontSize: {
 				'h1': 'var(--h1)',

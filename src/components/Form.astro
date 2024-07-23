@@ -1,14 +1,18 @@
 ---
 import "../css/components/forms.css";
-import { Icon } from "astro-icon/components";
+import CustomSelect from "./CustomSelect.astro";
 ---
 <form id="contact-form" name="form" action="#" method="post" accept-charset="utf-8" >
 
-<!-- Settings -->
-<input type="hidden" name="access_key" value="fdacd6a8-2e18-40c0-9d31-3fd099bf7bef">
-<input type="hidden" name="from_name" value="AstroBox 1.0">
-<input type="hidden" name="subject" value="Contacto con Web3Forms!">
-<input type="hidden" name="replyto" value="nico@nicowebsite.com" />
+<div class="field">
+  <input
+    type="text"
+    name="company"
+    placeholder="Empresa"
+    required
+  />
+  <span class="valid-msg"> Coloca el nombre de tu empresa</span>
+</div>
 
   <div class="field">
     <input
@@ -33,18 +37,6 @@ import { Icon } from "astro-icon/components";
   </div>
 
   <div class="field">
-    <input
-      type="tel"
-      name="phone"
-      placeholder="Teléfono"
-      required
-      minlength="9"
-      maxlength="18"
-    />
-    <span class="valid-msg"> Coloca un número de teléfono válido</span>
-  </div>
-
-  <div class="field">
     <textarea
       cols=""
       name="message"
@@ -54,14 +46,23 @@ import { Icon } from "astro-icon/components";
     <div class="valid-msg">Tu mensaje debe ser de mas de 16 caracteres.</div>
   </div>
 
-  <div class="flex justify-between ">
+  <div class="flex justify-between items-end">
 
-    <button type="submit" disabled >
+    <CustomSelect options={
+      [
+        {label: 'CFO as a Service Finance', value: 'CFO as a Service Finance'}, 
+        {label: 'CFO as a Service Business', value: 'CFO as a Service Business'},
+        {label: 'Internacionalización de Negocios', value: 'Internacionalización de Negocios'},
+        {label: 'Investor Relations', value: 'Investor Relations'},
+        {label: 'M&A', value: 'M&A'},
+        {label: 'Aplicación de Tecnología al Negocio', value: 'Aplicación de Tecnología al Negocio'}
+      ]
+      } />
+
+    <button type="submit" disabled class="btn btn-e-blue" >
       <span class="flex items-center">
         <span class="loader mr-1"></span>
-        <span class="white flex items-center"
-          >Enviar <Icon name="mdi:send" size="2.5rem" class="ml-1" />
-        </span>
+        <span class="white flex items-center">Enviar</span>
       </span>
     </button>
     
@@ -69,6 +70,6 @@ import { Icon } from "astro-icon/components";
 </form>
 
 <script>
-  import contactForm from "../js/contactForm";  
+  import contactForm from "@/js/contactForm";  
   contactForm();
 </script>

@@ -1,12 +1,12 @@
 .section {
-  @apply py-8 sm:py-10 xg:py-12 3xl:py-14;
+  @apply py-8 sm:py-8 xg:py-11 3xl:py-14;
 
   &-top {
-    @apply pt-6 sm:pt-8 xg:pt-12 3xl:pt-14;
+    @apply pt-6 sm:pt-8 xg:pt-11 3xl:pt-14;
   }
 
   &-bottom {
-    @apply pb-6 sm:pb-8 xg:pb-12 3xl:pb-14;
+    @apply pb-6 sm:pb-8 xg:pb-11 3xl:pb-14;
   }
 }
 

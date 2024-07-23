@@ -1,15 +1,19 @@
 ---
 // export const prerender = false;
-import { Picture } from 'astro:assets';
-import { Icon } from 'astro-icon/components'
+import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 import Layout from "@/layout/Layout.astro";
 /* Formulario */
 
-import Slider from '../components/Slider.astro'
+import Slider from "../components/Slider.astro";
+import CardsClient from "../components/CardsClient.astro";
 import Form from "@/components/Form.astro";
 
-import teamIMG from '../assets/team.jpg'; 
+import teamIMG from "../assets/team.jpg";
+import andresIMG from "../assets/Andres-Kavedjian.jpg";
+import carlosIMG from "../assets/Carlos-Pera.jpg";
+import luisIMG from "../assets/Luis-Brennan.jpg";
 ---
 
 <Layout
@@ -38,64 +42,154 @@ import teamIMG from '../assets/team.jpg';
   <!-- Experiencia -->
   <section class="container row section text-center">
     <div class="col-1-13 xg:col-3-11">
-        <h2 class="mini-title">Experiencia</h2>
-        <p class="text-h3 text-deep-blue">
-          Ofrecemos soluciones innovadoras y estratégicas para impulsar el
-          crecimiento, la rentabilidad y la eficiencia de tu empresa.
-        </p>
+      <h2 class="mini-title">Experiencia</h2>
+      <p class="text-h3 text-deep-blue">
+        Ofrecemos soluciones innovadoras y estratégicas para impulsar el
+        crecimiento, la rentabilidad y la eficiencia de tu empresa.
+      </p>
     </div>
   </section>
 
   <!-- Team Image -->
-  <section class='container row'>
-      <div class='col-1-13'>
-          <Picture class="w-full rounded-3xl" src={teamIMG} formats={['webp']} alt="Bull Team" />
-      </div>
+  <section class="container row">
+    <div class="col-1-13">
+      <Picture
+        class="w-full rounded-3xl"
+        src={teamIMG}
+        formats={["webp"]}
+        alt="Bull Team"
+      />
+    </div>
   </section>
 
   <!-- Partners -->
-  <section class='container row section-top'>
-      <div class='xg:col-1-7'>
-          <h2 class="text-h4">
-            <span class="text-deep-blue">Más de 15 años de experiencia en dirección financiera en diversas industrias y geografías.</span> <br>
-            <span class="text-e-blue">Generamos mejoras inmediatas con un enfoque proactivo y dinámico.</span>
-          </h2>
-      </div>
-      <div class='xg:col-1-13 grid grid-cols-4 gap-10 pt-10 xg:pt-15 pb-3 place-items-center'>
-        <Icon name="santander" class="w-[19rem] h-auto" />
-        <Icon name="bbva" class="w-[12rem] h-auto" />
-        <Icon name="santander" class="w-[19rem] h-auto" />
-        <Icon name="bbva" class="w-[12rem] h-auto" />
-      </div>
+  <section class="container row section-top">
+    <div class="xg:col-1-7">
+      <h2 class="text-h4">
+        <span class="text-deep-blue"
+          >Más de 15 años de experiencia en dirección financiera en diversas
+          industrias y geografías.</span
+        >
+        <br />
+        <span class="text-e-blue"
+          >Generamos mejoras inmediatas con un enfoque proactivo y dinámico.</span
+        >
+      </h2>
+    </div>
+    <div
+      class="xg:col-1-13 grid grid-cols-4 gap-10 pt-10 xg:pt-15 pb-3 place-items-center"
+    >
+      <Icon name="santander" class="w-[19rem] h-auto" />
+      <Icon name="bbva" class="w-[12rem] h-auto" />
+      <Icon name="santander" class="w-[19rem] h-auto" />
+      <Icon name="bbva" class="w-[12rem] h-auto" />
+    </div>
   </section>
 
   <!-- Servicios -->
-  <section class='section'>
-
+  <section class="section">
     <div class="container row mb-10">
-        <div class='col-1-13'>
-            <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]">
-            <h2 class="mini-title">Servicios</h2>
-        </div>
-      
-        <div class='xg:col-1-7'>
-            <p class="text-h4 text-deep-blue"  >
-              Proporcionamos una amplia gama de servicios financieros y estratégicos para impulsar el crecimiento y la eficiencia de tu empresa.
-            </p>
-        </div>
+      <div class="col-1-13">
+        <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]" />
+        <h2 class="mini-title">Servicios</h2>
+      </div>
+
+      <div class="xg:col-1-7">
+        <p class="text-h4 text-deep-blue">
+          Proporcionamos una amplia gama de servicios financieros y estratégicos
+          para impulsar el crecimiento y la eficiencia de tu empresa.
+        </p>
+      </div>
     </div>
 
-      <Slider/>
-    
+    <Slider />
+  </section>
+
+  <!-- Historias de éxito -->
+  <section class="container row section-top xg:pb-5 text-center">
+    <div class="xg:col-3-11 mb-10 xg:mb-15">
+      <h2 class="mini-title">Historias de Éxito</h2>
+      <p class="text-h3 text-deep-blue">
+        Nuestros clientes comparten su visión y ambición de generar un cambio
+        positivo
+      </p>
+    </div>
+    <div class="col-1-13 grid md:grid-cols-3 gap-4 xg:gap-10 3xl:gap-12">
+      <CardsClient />
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="section-top">
+    <div class="container row mb-10 xg:mb-15">
+      <div class="col-1-13 mb-4">
+        <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]" />
+        <h2 class="mini-title">Nosotros</h2>
+      </div>
+      <div class="col-1-13">
+
+        <p class="text-h4 text-deep-blue mb-10">
+          Nuestro equipo, tu socio en el éxito
+        </p>
+
+        <div class="grid grid-cols-3 gap-2">
+
+          <figure class="card-team">
+            <Picture class="w-full rounded-3xl" src={carlosIMG} formats={["webp"]} alt="Carlos Pera" />
+          </figure>
+  
+          <figure class="card-team">
+            <Picture class="w-full rounded-3xl" src={andresIMG} formats={["webp"]} alt="Andrés Kavedjian" />
+          </figure>
+  
+          <figure class="card-team">
+            <Picture class="w-full rounded-3xl" src={luisIMG} formats={["webp"]} alt="Luis Brennan" />
+          </figure>
+
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="container row section">
-    <div class="col-[1/13] md:col-[1/6]">
-      <h2 class="h2">Contacto</h2>
+  <section id="contacto" class="container row section xg:mb-12">
+    <div class="xg:col-1-4">
+      <h2 class="mini-title mb-10">Contáctanos</h2>
+
+      <div class="mt-10 xg:mt-20">
+
+        <p>
+          Contáctanos para obtener más información sobre nuestros servicios de
+          consultoría o para hablar sobre tu proyecto.
+        </p>
+
+        <p class="text-e-blue font-medium mt-2">
+          <span class="block mb-2">Estamos aquí para ayudarte. </span>
+
+          <a href="mailto:info@bulladvisors.com.uy">info@bulladvisors.com.uy</a>
+       
+          <div class="flex gap-1 mt-2">
+            <a href="" target='_blank' rel='noreferrer noopener' >
+              <Icon class="text-e-blue text-[2.5rem]" name="mdi:linkedin" />
+            </a>
+            <a href="" target='_blank' rel='noreferrer noopener' >
+              <Icon class="text-e-blue text-[2.5rem]" name="mdi:whatsapp" />
+            </a>
+          </div>
+
+        </p>
+
+      </div>
+
     </div>
-    <div class="col-[1/13] md:col-[7/12]">
+    <div class="xg:col-7-12">
+      <h3 class="text-h3 text-deep-blue mb-10">
+        ¿Listo para desbloquear el <br />
+        potencial de tu negocio?
+      </h3>
       <Form />
     </div>
   </section>
+
 </Layout>

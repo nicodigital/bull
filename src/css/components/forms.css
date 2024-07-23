@@ -2,7 +2,7 @@
     --field-height: 7rem;
     --field-margin-bottom: 2rem;
     --option-height: calc(var(--field-height) + var(--field-margin-bottom));
-    --form-color: #000;
+    --form-color: theme(colors.deep-blue-200);
     --invalid-color: theme('colors.invalid');
   }
 
@@ -20,7 +20,7 @@
         w-full 
         bg-transparent 
         border-b
-        py-2 
+        py-[1.5rem] 
         pr-1 
         shadow-none 
         placeholder-opacity-100
@@ -59,7 +59,7 @@
     }
 
     [type="submit"] {
-      @apply text-body cursor-pointer border-none p-0 disabled:opacity-50;
+      @apply disabled:opacity-50;
     }
 
     /* El placeholder solo lo agarra aca */
@@ -69,7 +69,6 @@
     }
 
   }
-
 
   .valid-msg{
     @apply hidden absolute -bottom-1 right-0 font-bold text-right;
