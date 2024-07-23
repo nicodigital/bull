@@ -1,0 +1,18 @@
+---
+const { name, show, type } = Astro.props;
+import '../css/components/modal.css'
+---
+
+<div class="modal" data-show={show} data-modal={name} data-type={type} >
+  <div class="close"></div>
+  <div class="modal-box">
+    <slot />
+  </div>
+</div>
+
+<script>
+    import modal from '../js/modal'
+    modal();
+    //document.addEventListener("DOMContentLoaded", modal);
+    document.addEventListener("astro:after-swap", modal);
+</script>

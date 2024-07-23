@@ -1,0 +1,102 @@
+  :root {
+    --field-height: 7rem;
+    --field-margin-bottom: 2rem;
+    --option-height: calc(var(--field-height) + var(--field-margin-bottom));
+    --form-color: #000;
+    --invalid-color: theme('colors.invalid');
+  }
+
+[name="form"] {
+
+    @apply w-full;
+
+    .field{
+      @apply relative;
+    }
+
+    input:not([type="submit"]), textarea{
+      @apply 
+        text-body 
+        w-full 
+        bg-transparent 
+        border-b
+        py-2 
+        pr-1 
+        shadow-none 
+        placeholder-opacity-100
+        focus:outline-none
+        ;
+      color: var(--form-color);
+      border-bottom: 1px solid var(--form-color); 
+      min-height: var(--field-height);
+      height: var(--field-height);
+      line-height: 1;
+      margin-bottom: var(--field-margin-bottom);
+
+      &:invalid:focus + .valid-msg, &.invalid + .valid-msg{
+        @apply block;
+      }
+
+      &.invalid, &:focus{
+        border-color: var(--invalid-color);
+      }
+
+    }
+
+    textarea {
+      resize: none;
+      overflow: hidden;
+      box-sizing: padding-box;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      @apply w-auto;
+    }
+
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    }
+
+    [type="submit"] {
+      @apply text-body cursor-pointer border-none p-0 disabled:opacity-50;
+    }
+
+    /* El placeholder solo lo agarra aca */
+    input::placeholder, textarea::placeholder{
+      color: var(--form-color) !important;
+      opacity: 1 !important;
+    }
+
+  }
+
+
+  .valid-msg{
+    @apply hidden absolute -bottom-1 right-0 font-bold text-right;
+    color: var(--invalid-color);
+  }
+
+  .notify{
+
+    @apply hidden;
+    color: var(--invalid-color);
+
+    &.active{
+      @apply block;
+    }
+
+  }
+
+  /* Loader */
+.loader {
+    display: none;
+    width:2.2rem;
+    height:2.2rem;
+    border-radius:50%;
+    border:.38rem solid;
+    border-color: rgba(255,255,255,0.5);
+    border-right-color: rgba(0,0,0,0.5);
+    animation:s2 1s infinite linear;
+  }
+
+  @keyframes s2 {to{transform: rotate(1turn)}}

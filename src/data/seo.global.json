@@ -1,0 +1,12 @@
+{
+  "title": "AstroBox",
+  "description": "El mejor framework para crear sitios",
+  "author": {
+    "name" : "I+D",
+    "url" : "https://id.net.uy"
+  },
+  "image": {
+    "src": "/img/120x600.svg",
+    "alt": "AstroBox"
+  }
+}

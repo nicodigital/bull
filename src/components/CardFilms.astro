@@ -1,0 +1,28 @@
+---
+const { flm, delay } = Astro.props;
+import Picture from "../components/Picture.astro";
+import slugify from "../js/slugify.js";
+const homeUrl = import.meta.env.HOME_URL ?? "/";
+
+let slug: string;
+slug = slugify(flm.acfe_flexible_layout_title);
+
+---
+
+<a
+  href={`${homeUrl}films/${slug}`}
+  class="card bg-neutral-300 px-2 py-3 flex flex-col gap-2 rounded-xl animate"
+  data-anim="bottom"
+  data-delay={delay}
+  data-astro-prefetch="hover"
+>
+  <Picture url={flm.poster.url} />
+
+  <h2 class="h2 font-bold">
+    {flm.acfe_flexible_layout_title}
+  </h2>
+
+  <p>
+    {flm.genero}...
+  </p>
+</a>

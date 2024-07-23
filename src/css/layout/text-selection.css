@@ -1,0 +1,9 @@
+/* SELECTION */
+::-moz-selection {
+  /* Code for Firefox */
+  @apply text-white bg-black;
+}
+
+::selection {
+  @apply text-white bg-black;
+}

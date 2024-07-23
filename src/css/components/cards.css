@@ -1,0 +1,18 @@
+.card{
+
+  &-service{
+    @apply flex flex-col justify-between h-[50rem]
+  bg-deep-blue text-white 
+    p-[2.5rem] rounded-2xl;
+
+    h3{
+      @apply text-h4;
+    }
+
+    .cta{
+      @apply underline mt-3;
+    }
+
+  }
+
+}

@@ -1,0 +1,74 @@
+---
+import "../css/components/forms.css";
+import { Icon } from "astro-icon/components";
+---
+<form id="contact-form" name="form" action="#" method="post" accept-charset="utf-8" >
+
+<!-- Settings -->
+<input type="hidden" name="access_key" value="fdacd6a8-2e18-40c0-9d31-3fd099bf7bef">
+<input type="hidden" name="from_name" value="AstroBox 1.0">
+<input type="hidden" name="subject" value="Contacto con Web3Forms!">
+<input type="hidden" name="replyto" value="nico@nicowebsite.com" />
+
+  <div class="field">
+    <input
+      type="text"
+      name="name"
+      placeholder="Nombre y Apellido"
+      pattern="^[A-Za-z]+ [A-Za-z]+$"
+      required
+    />
+    <span class="valid-msg"> Coloca tu nombre y Apellido</span>
+  </div>
+
+  <div class="field">
+    <input
+      type="email"
+      name="email"
+      placeholder="ejemplo@email.com"
+      title="Debe ser un correo válido"
+      required
+    />
+    <span class="valid-msg"> Coloca un correo válido</span>
+  </div>
+
+  <div class="field">
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Teléfono"
+      required
+      minlength="9"
+      maxlength="18"
+    />
+    <span class="valid-msg"> Coloca un número de teléfono válido</span>
+  </div>
+
+  <div class="field">
+    <textarea
+      cols=""
+      name="message"
+      rows=""
+      placeholder="Mensaje..."
+      minlength="16"></textarea>
+    <div class="valid-msg">Tu mensaje debe ser de mas de 16 caracteres.</div>
+  </div>
+
+  <div class="flex justify-between ">
+
+    <button type="submit" disabled >
+      <span class="flex items-center">
+        <span class="loader mr-1"></span>
+        <span class="white flex items-center"
+          >Enviar <Icon name="mdi:send" size="2.5rem" class="ml-1" />
+        </span>
+      </span>
+    </button>
+    
+  </div>
+</form>
+
+<script>
+  import contactForm from "../js/contactForm";  
+  contactForm();
+</script>

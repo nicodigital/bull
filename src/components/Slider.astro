@@ -1,0 +1,99 @@
+---
+import "swiper/css";
+// const { slides } = Astro.props;
+
+const SERVICES = [
+  {
+    title: "CFO as a Service",
+    intro: "Nos unimos a tu equipo para entender tu negocio y objetivos, ofreciendo orientación estratégica para impulsar tu crecimiento y rentabilidad.",
+  },
+  {
+    title: "Internacionalización de Negocios",
+    intro: "Te acompañamos en tu expansión global con una amplia gama de servicios.",
+  },
+  {
+    title: "M&A",
+    intro: "Ofrecemos una gama completa de servicios en el ámbito de Fusiones y Adquisiciones.",
+  },
+  {
+    title: "Aplicación de <br> Tecnología al Negocio",
+    intro: "Destacamos por servicios diseñados para mejorar la eficiencia y el control estratégico.",
+  },
+]
+---
+<style>
+  .swiper-wrapper .swiper-slide{
+    
+    &:first-child{
+      @apply ctr-ml;
+    }
+
+    &:last-child{
+      @apply ctr-mr;
+    }
+
+  }
+</style>
+
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    {
+      SERVICES.map((slide) => (
+
+        <div class="swiper-slide">
+          <div class="card-service">
+              <h3><Fragment set:html={slide.title} /></h3>
+              <div>
+                <p>
+                  {slide.intro}
+                </p>
+                <div class="cta">
+                  Conoce más
+                </div>
+              </div>
+          </div>
+        </div>
+
+      ))
+    }
+  </div>
+
+  <!-- If we need pagination -->
+  <!-- <div class="swiper-pagination"></div> -->
+
+  <!-- If we need navigation buttons -->
+  <!-- <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div> -->
+
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import { Mousewheel } from "swiper/modules";
+  
+  function swiperSlider() {
+    const SwiperSlider = new Swiper(".swiper", {
+      modules: [Mousewheel],
+      slidesPerView: 3.3,
+      spaceBetween: 20,
+      mousewheel: {
+        enabled: true,
+        releaseOnEdges: true,
+        sensitivity: 1.3,
+      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+    });
+  }
+
+  swiperSlider();
+  document.addEventListener("astro:after-swap", swiperSlider);
+</script>

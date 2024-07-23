@@ -1,0 +1,25 @@
+---
+import CardFilms from "../components/CardFilms.astro";
+
+/* Get posts from json */
+// import getPosts from '../data/posts.json'
+// const posts = Object.values(getPosts);
+
+const response = await fetch('http://api.id.net.uy/wp-json/wp/v2/pages?slug=ufilms');
+const getFilms = await response.json();
+const films = getFilms[0].acf.films;
+let delay = 0;
+---
+<div id='cards' class='grid sm:grid-cols-2 xg:grid-cols-4 gap-2'>
+	{
+		// films.slice(0, 8).map( ( flm, index) => (
+		films.map( ( flm, index ) => {
+
+			delay = index % 4 !== 0 ? delay + 0.2 : 0;
+			delay = parseFloat(delay.toFixed(1));
+
+			return <CardFilms { flm } {delay} />
+
+		})
+	}
+</div>

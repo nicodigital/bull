@@ -1,0 +1,16 @@
+---
+const { url = '#', style = '', ext = 'jpeg', alt = '', lazy = true } = Astro.props
+const webpUrl = url.replace(/\.(png|jpg)$/i, '.webp');
+---
+
+<picture>
+	<source srcset={ webpUrl } type="image/webp">
+	<source srcset={ url } type={`image/${ext}`}>
+	<img class={style} src={ url } alt={alt} decoding="async" />
+</picture>
+
+<style>
+    img {
+        @apply w-full object-cover object-center ;
+    }
+</style>

@@ -1,0 +1,70 @@
+---
+const { title, claim, description, image, author, author_url, robots } = Astro.props;
+const site = import.meta.env.SITE;
+const baseUrl = import.meta.env.BASE_URL;
+---
+<!-- Basic Metas -->
+<title>{title} — {claim}</title>
+<meta name="description" content={ description } >
+
+<base href={ baseUrl } target="_self" />
+
+<!-- Canonical -->
+<link rel="canonical" href={ Astro.url } />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content={title} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={ Astro.url } />
+<meta property="og:image" content={ image } />
+<meta property="og:image:url" content={ image } />
+<meta property="og:image:secure_url" content={ image } />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image:alt" content={title} />
+
+<!-- Twitter -->
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={ image } />
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:domain" content={site} />
+
+<meta name="author" content={`web: [${author}]: ${author_url}`} />
+
+{ robots && <meta name="robots" content="noindex, nofollow" /> }
+
+<!-- JSON LD -->
+<script>
+  /* Esta función rellena el JsonLD */
+  function fillJsonLD(){ 
+
+      const title = document.querySelector('title').innerText;
+      const ogUrl = document.querySelector('meta[property="og:url"]').getAttribute('content');
+
+      const ldScript = document.querySelector('script[type="application/ld+json"]');
+      const ldData = JSON.parse(ldScript.textContent);
+
+      // Actualizar los valores en el objeto JSON-LD
+      ldData.name = title;
+      ldData.url = ogUrl;
+
+      // Actualizar el contenido del script JSON-LD
+      ldScript.textContent = JSON.stringify(ldData, null, 2);
+  }
+  document.addEventListener("DOMContentLoaded", fillJsonLD);
+  document.addEventListener("astro:after-swap", fillJsonLD);
+</script>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Website",
+      "name": "Tìtulo del snippet",
+      "url": "https//dominio.com"
+    }
+</script>
+  

@@ -1,0 +1,47 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layout/Layout.astro";
+import getPosts from '../../data/posts.json';
+
+const { id } = Astro.params;
+
+// Esta función solo es necesaria en caso de preRendered
+export async function getStaticPaths() {
+
+  const posts = Object.values(getPosts);
+  
+  return posts.map((post) => {
+    return {
+      params: {
+        id: post.id,
+        title: post.title,
+        desc: post.desc,
+      },
+    };
+  });
+}
+
+const posts = Object.values(getPosts);
+const post = posts.find( item => item.id == id );
+
+---
+
+<Layout title="Soy un Post">
+  <div class="container row section-b">
+    <div class="col-[1/13] sm:col-[2/12] xg:col-[4/9] flex flex-col justify-center">
+      <h1 class="text-big mb-5">
+        {post.title}
+      </h1>
+      <img
+        class="rounded-xl opacity-30"
+        src="https://placehold.co/600x400"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <p class="mt-5">
+        {post.desc}
+      </p>
+    </div>
+  </div>
+</Layout>

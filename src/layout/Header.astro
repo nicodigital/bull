@@ -1,0 +1,45 @@
+---
+import { Icon } from 'astro-icon/components'
+import "../css/layout/header.css";
+import Brand from "../components/Brand.astro";
+import Burger from "../components/Burger.astro";
+import Menu from "../components/Menu.astro";
+const { width } = Astro.props;
+
+const homeUrl = import.meta.env.HOME_URL ?? '/';
+---
+<header class="container row py-3 mb-4 items-center" >
+    
+    <div class="md:col-1-4">
+        <a href={homeUrl} data-astro-prefetch="hover" >
+            <Icon name="logo" class="w-[9.5rem] h-auto" />
+        </a>
+    </div>
+    <div class="md:col-4-10 flex justify-center">
+
+        <Menu items={
+            [
+                ['Experiencia', `#experiencia`],
+                ['Servicios', '#servicios'],
+                ['Nosotros', '#nosotros']
+            ]
+        } />
+
+        <Burger/>
+        
+    </div>
+
+    <div class="md:col-10-13 hidden xg:flex justify-end">
+        <div class="flex text-white items-center gap-3">
+
+            <a href="" class="flex gap-1" > 
+                <Icon name="world" class="w-2 h-auto" /> ES  <Icon name="vector-down" class="w-[1.5rem] h-auto" />
+            </a>
+
+            <a href="" class="btn btn-e-blue" >Contáctanos</a>
+
+        </div>
+    </div>
+    
+
+</header>

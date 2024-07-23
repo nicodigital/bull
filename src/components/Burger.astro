@@ -1,0 +1,126 @@
+<style>
+  :root {
+    --burger-size: 3.5rem;
+  }
+
+  .burger {
+    @apply absolute cursor-pointer xg:hidden transition-all;
+    width: var(--burger-size);
+    height: var(--burger-size);
+    right: var(--container-gap);
+    top: 2.5rem;
+    z-index: 9999999;
+
+    .burger-box {
+      width: var(--burger-size);
+      height: 24px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .burger-inner {
+      display: block;
+      top: 50%;
+      margin-top: -2px;
+    }
+
+    .burger-inner,
+    .burger-inner::after,
+    .burger-inner::before {
+      @apply absolute w-full bg-white transition-all;
+      height: 4px;
+    }
+  }
+
+  body.menu-in .burger-inner::after,
+  body.menu-in .burger-inner::before {
+    @apply bg-white;
+  }
+
+  .burger-inner::after,
+  .burger-inner::before {
+    content: "";
+    display: block;
+  }
+
+  .burger-inner::before {
+    top: -10px;
+  }
+
+  .burger-inner::after {
+    bottom: -10px;
+  }
+
+  .burger .burger-box {
+    perspective: 80px;
+  }
+
+  body.menu-in .burger .burger-inner {
+    background-color: transparent;
+    transform: rotateY(180deg);
+  }
+
+  body.menu-in .burger .burger-inner::before {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+
+  body.menu-in .burger .burger-inner::after {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+  }
+</style>
+
+<!-- burger menu to mobiles -->
+<div class="burger togg toggler out">
+  <div class="burger-box">
+    <div class="burger-inner"></div>
+  </div>
+</div>
+
+<script>
+  function burger() {
+    const html = document.querySelector("html");
+    const body = document.querySelector("body");
+    const btn_togg = document.querySelectorAll(".togg");
+
+    // Crea un elemento div que tenga un ancho forzado de desbordamiento
+    var scrollDiv = document.createElement("div");
+    scrollDiv.style.width = "100px";
+    scrollDiv.style.height = "100px";
+    scrollDiv.style.overflow = "scroll";
+
+    // Agrega el elemento al documento, pero fuera del área visible
+    document.body.appendChild(scrollDiv);
+
+    // Calcula el ancho de la barra de desplazamiento restando el ancho del contenido interno del div del ancho del div con desbordamiento
+    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+
+    // Elimina el div de prueba
+    document.body.removeChild(scrollDiv);
+
+    // La variable "scrollbarWidth" ahora contiene el ancho de la barra de desplazamiento en píxeles
+    // console.log('Ancho de la barra de desplazamiento: ' + scrollbarWidth + ' píxeles');
+
+    function menuToggler() {
+      const toggler = document.querySelector("body");
+
+      if (toggler.classList.contains("menu-in")) {
+        toggler.classList.toggle("menu-in");
+        html.style.overflowY = "auto";
+        body.style.overflowY = "auto";
+        body.style.paddingRight = "0";
+      } else {
+        toggler.classList.toggle("menu-in");
+        html.style.overflowY = "hidden";
+        body.style.overflowY = "hidden";
+        body.style.paddingRight = scrollbarWidth + "px";
+      }
+    }
+
+    btn_togg.forEach((btn) => {
+      btn.onclick = () => menuToggler();
+    });
+  }
+
+  burger();
+  document.addEventListener("astro:after-swap", burger );
+</script>

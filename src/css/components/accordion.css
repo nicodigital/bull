@@ -1,0 +1,79 @@
+  :root{
+    --content-padding: 1.2rem 0;
+    --content-gap-bottom: 4rem;
+    --acc-color: #000;
+  }
+
+  .accordion {
+    
+    @apply w-100%;
+
+    &-trigger {
+      @apply relative w-100% text-left py-2 cursor-pointer;
+      transition: 0.3s ease;
+      border: 0 none;
+      border-top: 1px solid var(--acc-color);
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+       &::before, &::after {
+        position: absolute;
+        content: "";
+        top: 50%; /*aqui ajustamos la altura en el eje Y*/
+        right: 0;
+        width: 2rem;
+        height: 3px;
+        background: var(--acc-color);
+        transform: rotate(0deg);
+        transform-origin: center;
+        transition: transform 0.5s;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+
+      &[aria-expanded="true"]::after {
+        transform: rotate(0deg);
+      }
+
+      /* &:hover,
+      &:focus {
+        background: #000;
+      } */
+
+    }
+
+    &-copy {
+      @apply overflow-hidden;
+      max-height: 0;
+      visibility: hidden;
+      transition:
+        visibility 0.5s,
+        padding 0.5s,
+        max-height 0.5s;
+
+      *{
+        color: var(--acc-color);
+      }
+
+      &--open {
+        visibility: visible !important;
+        padding: var(--content-padding);
+        padding-bottom: var(--content-gap-bottom) !important;
+      }
+
+      &:not(.accordion-copy--open){
+        padding: 0 !important;
+      }
+
+    }
+
+  }
+
+  @media (min-width: 540px) {
+    .accordion-copy-pic {
+      width: 180px;
+    }
+  }

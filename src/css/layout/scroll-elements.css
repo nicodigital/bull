@@ -1,0 +1,64 @@
+#go-top{
+        
+  @apply
+      fixed
+      bottom-0
+      xg:bottom-[3.5rem]
+      left-4
+      translate-y-full
+      xg:translate-y-[175%]
+      transition-all
+      rounded-full
+      z-[99];
+
+      svg{
+          path{
+            @apply transition-all;
+              fill: theme(colors.neutral.300);
+          }
+      }
+
+}
+
+body{
+
+  &:not([data-scroll="top"]){
+
+    #go-top{
+        @apply
+        translate-y-[-50%]
+        xg:translate-y-[0]
+    }
+  
+  }
+
+  &[data-scroll="bottom"] {
+
+    .go-top svg path{
+      fill: #fff;
+    }
+
+    #whatsapp{
+      @apply bg-white text-neutral-800;
+
+      svg path{
+        fill: theme(colors.neutral.800);
+      }
+
+    }
+    
+  }
+
+}
+
+#whatsapp{
+
+  @apply 
+    fixed bottom-[2rem] right-[2rem] xg:bottom-[3.5rem] xg:right-[4rem]
+    flex gap-1 items-center
+    bg-neutral-800 
+    rounded-[10rem]
+    p-1 xg:pl-3 xg:pr-1 xg:py-[.5rem]
+    z-[999];
+    
+}

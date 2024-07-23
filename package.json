@@ -1,0 +1,26 @@
+{
+  "name": "bull",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/outfit": "^5.0.13",
+    "@iconify-json/mdi": "^1.1.67",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "astro": "^4.12.2",
+    "astro-icon": "^1.1.0",
+    "lenis": "^1.1.6",
+    "swiper": "^11.1.5",
+    "tailwindcss": "^3.4.6"
+  },
+  "devDependencies": {
+    "postcss-nesting": "^12.1.5"
+  }
+}

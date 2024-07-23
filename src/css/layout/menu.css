@@ -1,0 +1,62 @@
+nav {
+    @apply 
+      fixed 
+      flex flex-col 
+      top-0 left-0 
+      w-100% h-full
+      px-2 py-6
+      gap-4
+      transition-transform
+      duration-500
+      z-[999]
+
+      xg:relative 
+      xg:w-auto
+      xg:h-auto
+      xg:bg-transparent
+      xg:px-0 xg:py-0
+      xg:flex-row xg:justify-between;
+      
+      a {
+        @apply mb-1 xg:mb-0 text-white;
+        font-size: var(--h1);
+      }
+
+  }
+
+
+/*//////////////////////////////////////////////////////////*/
+/*////////////////////// MAX 992px //////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
+
+  @media (max-width: theme("screens.xg")) {
+
+    nav {
+      transform: translateX(100%);
+    }
+
+    body.menu-in {
+      nav {
+        transform: translateX(0);
+      }
+    }
+
+  }
+
+/*//////////////////////////////////////////////////////////*/
+/*////////////////////// MIN 992px /////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
+
+  @media (min-width: theme("screens.xg")) {
+
+    nav {
+
+      @apply bg-transparent !important;
+
+      a {
+        @apply text-body;
+      }
+
+    }
+
+  }

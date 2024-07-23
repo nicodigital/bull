@@ -1,0 +1,16 @@
+---
+import { Icon } from "astro-icon/components";
+const currPath = Astro.url.pathname;
+let goTopLink;
+
+if( currPath == '/' ){
+    goTopLink = `#top`;
+} else {
+    goTopLink = `${currPath}#top`;
+}
+
+---
+<a id="go-top" href={ goTopLink } class="anchor" >
+    <Icon name="mdi:chevron-up-circle" size="5rem" />
+</a>
+

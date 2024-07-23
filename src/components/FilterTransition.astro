@@ -1,0 +1,118 @@
+---
+import CardFilter from "./CardFilter.astro";
+
+const response = await fetch(
+  "http://api.id.net.uy/wp-json/wp/v2/pages?slug=ufilms"
+);
+const getFilms = await response.json();
+const films = getFilms[0].acf.films;
+const cats = [];
+
+function getUniqs(array) {
+  return [...new Set(array)];
+}
+
+films.map((film) => {
+  cats.push(film.cat);
+});
+
+const uniqCats = getUniqs(cats);
+---
+
+<style>
+  .filter-btn {
+    @apply opacity-50;
+
+    &.active {
+      @apply opacity-100;
+    }
+  }
+</style>
+
+<div class="container section">
+  <div class="row">
+    <div class="xg:col-[1/13] mb-10">
+      <h2 class="h1 font-bold">Filters</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-[1/3] xg:col-[1/13]">
+      <div class="filter pt-4 pb-8 grid grid-cols-2 place-content-start xg:flex gap-2">
+        
+        <button class="filter-btn active" data-filter="all">Todos</button>
+
+        {
+          uniqCats.map((cat) => {
+            return (
+              <button class="filter-btn" data-filter={cat}>
+                {cat}
+              </button>
+            );
+          })
+        }
+      </div>
+
+      <ul
+        class="filter-items grid sm:grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-4"
+      >
+        {
+          films.map((film) => (
+            <CardFilter
+              title={film.acfe_flexible_layout_title}
+              img={film.poster.url}
+              type={film.cat}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  const filterList = document.querySelector(".filter");
+  const filterButtons = filterList.querySelectorAll(".filter-btn");
+  const filterItems = document.querySelectorAll(".filter-item");
+
+  let filterItemIndex = 0;
+
+  filterItems.forEach((filterItem) => {
+    filterItem.style.viewTransitionName = `item-${++filterItemIndex}`;
+  });
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      let confCategory = e.target.getAttribute("data-filter");
+
+      if (!document.startViewTransition) {
+        updateActiveButton(e.target);
+        filterEvents(confCategory);
+      }
+
+      document.startViewTransition(() => {
+        updateActiveButton(e.target);
+        filterEvents(confCategory);
+      });
+    });
+  });
+
+  function updateActiveButton(newButton) {
+    filterList.querySelector(".active").classList.remove("active");
+    newButton.classList.add("active");
+  }
+
+  function filterEvents(filter) {
+    filterItems.forEach((filterItem) => {
+      // get each filterItems category
+      let dataType = filterItem.getAttribute("data-type");
+
+      // check if that category matches with the filter
+      if (filter === "all" || filter === dataType) {
+        filterItem.removeAttribute("hidden");
+      } else {
+        filterItem.setAttribute("hidden", "");
+      }
+    });
+  }
+</script>

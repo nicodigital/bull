@@ -1,0 +1,24 @@
+---
+const { 
+  url = '#', 
+  style = '',
+  controls = 'on',
+  loop = 'on',
+  muted = 'off',
+  poster = '' 
+} = Astro.props
+
+---
+
+<video class={style} preload playsinline 
+controls = { controls === 'on' }
+loop = { loop === 'on' }
+muted = { muted === 'on' }
+poster = { poster !== '' ? poster : null }
+>
+  <source src={ url } type="video/mp4"  >
+    Your browser does not support the video tag.
+</video>
+
+
+

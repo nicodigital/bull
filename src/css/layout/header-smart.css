@@ -1,0 +1,52 @@
+header {
+    
+  @apply fixed
+        top-0
+        left-0
+        w-100%
+        h-[8rem]
+        z-[999]
+        transition-all 
+        mb-4;
+}
+
+.brand{
+    @apply 
+    relative block 
+    w-[15rem]
+    top-1 xg:top-0
+    transition-all;
+}
+
+
+body{
+
+  &:not([data-scroll="top"]) {
+
+    header {
+      @apply bg-white translate-y-[-100%] duration-[.5s];
+
+      a{
+        @apply text-red ;
+      }
+    }
+
+    &[data-stack="on"] header{
+      @apply translate-y-[0];
+    }
+
+    .brand svg path{
+      fill: theme(colors.red);
+    }
+
+  }
+
+}
+
+
+@media (min-width: theme("screens.xg")) {
+
+
+  
+}
+

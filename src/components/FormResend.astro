@@ -1,0 +1,129 @@
+---
+import "../css/components/forms.css";
+import { Resend } from "resend";
+import genCaptcha from "../js/captcha";
+import sendForm from "../js/sendFormResend";
+
+const resend = new Resend("re_G9Mhr6fx_Pmf7KYaExFasXXFWzDYXQCbn");
+const captcha = genCaptcha();
+const errors = { username: "", email: "", phone: "" };
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const phone = data.get("phone");
+    const message = data.get("message");
+
+    // Validación //////////////////////////////////
+
+    // Name
+    if (typeof name !== "string" || name.length < 1) {
+      errors.username += "Debes colocar tu nombre y apellido. ";
+    }
+
+    // Email
+    // if (typeof email !== "string" || !isValidEmail(email)) {
+    //   errors.email += "Email is not valid. ";
+    // } else if (await isRegistered(email)) {
+    //   errors.email += "Email is already registered. ";
+    // }
+
+    // Revisamos los errores
+    const hasErrors = Object.values(errors).some((msg) => msg);
+
+    if (!hasErrors) {
+      await sendForm(name, email, phone, message, resend);
+    }
+
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<form
+  id="contact-form"
+  name="form"
+  action="#"
+  method="post"
+  accept-charset="utf-8"
+>
+  <div class="field">
+    <input
+      type="text"
+      name="name"
+      placeholder="Nombre y Apellido"
+      pattern="^[A-Za-z]+ [A-Za-z]+$"
+      required
+    />
+    <span class="valid-msg"> Coloca tu nombre y Apellido</span>
+  </div>
+
+  <div class="field">
+    <input
+      type="email"
+      name="email"
+      placeholder="ejemplo@email.com"
+      title="Debe ser un correo válido"
+      required
+    />
+    <span class="valid-msg"> Coloca un correo válido</span>
+  </div>
+
+  <div class="field">
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Teléfono"
+      required
+      minlength="9"
+      maxlength="18"
+    />
+    <span class="valid-msg"> Coloca un número de teléfono válido</span>
+  </div>
+
+  <div class="field">
+    <textarea
+      cols=""
+      name="message"
+      rows=""
+      placeholder="Mensaje..."
+      minlength="16"></textarea>
+    <div class="valid-msg">Tu mensaje debe ser de mas de 16 caracteres.</div>
+  </div>
+
+  <!-- captcha -->
+  <div class="grid sm:grid-cols-2 gap-1">
+    <div class="opacity-50">
+      <label for="captcha"> ¿Eres un humano? </label>
+      <input type="text" id="captcha" value={captcha} required disabled >
+    </div>
+    <div>
+      <label for="" class="opacity-50"> entonces </label>
+      <input type="text" id="getcaptcha" placeholder="digita aquí el código" required >
+      <div class="notify">
+          <p>Revisa el código introducido.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <button type="submit" class="btn submit btn-solid-black btn-lg btn-circular">
+      <span class="flex align-center">
+        <span class="loader mr-1"></span>
+        <span class="white">Enviar</span>
+      </span>
+    </button>
+  </div>
+
+</form>
+
+<script>
+  import validForm from '../js/validForm'
+  validForm();
+</script>
+../js/sendFormResend

@@ -1,0 +1,75 @@
+---
+import "../css/components/forms.css";
+import { Icon } from "astro-icon/components";
+---
+
+<form name="form" action="/gracias" netlify
+  data-netlify-recaptcha="true"
+  method="post"
+  accept-charset="utf-8"
+>
+  <div class="field">
+    <input
+      type="text"
+      name="name"
+      placeholder="Nombre y Apellido"
+      pattern="^[A-Za-z]+ [A-Za-z]+$"
+      required
+    />
+    <span class="valid-msg"> Coloca tu nombre y Apellido</span>
+  </div>
+
+  <div class="field">
+    <input
+      type="email"
+      name="email"
+      placeholder="ejemplo@email.com"
+      title="Debe ser un correo válido"
+      required
+    />
+    <span class="valid-msg"> Coloca un correo válido</span>
+  </div>
+
+  <div class="field">
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Teléfono"
+      required
+      minlength="8"
+      maxlength="10"
+    />
+    <span class="valid-msg"> Coloca un número de teléfono válido</span>
+  </div>
+
+  <div class="field">
+    <textarea name="message" placeholder="Mensaje..." minlength="16"></textarea>
+    <div class="valid-msg">Tu mensaje debe ser de mas de 16 caracteres.</div>
+  </div>
+
+  <div class="notify">
+    <p>Revisa el código introducido.</p>
+  </div>
+
+  <div class="flex flex-col md:flex-row justify-between mt-2">
+
+    <div data-netlify-recaptcha="true"></div>
+
+    <button
+      type="submit"
+      class="btn submit btn-solid-black btn-lg btn-circular mt-3 md:mt-0"
+      disabled
+    >
+      <span class="flex">
+        <span class="loader mr-1"></span>
+        <span class="white flex">Enviar <Icon name="mdi:send" size="2.5rem" class="ml-1" /></span>
+      </span>
+    </button>
+
+  </div>
+</form>
+
+<script>
+  import netliValid from "../js/netliValid";
+  netliValid();
+</script>

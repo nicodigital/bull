@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon/components";
+const { num, msg } = Astro.props;
+
+const wapp_mobile_url = `https://wa.me/${num}?text=${msg}`;
+const wapp_desktop_url = `https://web.whatsapp.com/send?phone=${num}&amp;text=${msg}`;
+
+---
+<a id="whatsapp" 
+
+  data-mobile-url={wapp_mobile_url}
+  data-desk-url={wapp_desktop_url}
+
+  href="" 
+  class="text-white" 
+  target="_blank">
+
+  <span class="hidden md:block">Contáctanos</span>
+  <Icon name="mdi:whatsapp"  class="size-[4rem] md:size-[5rem]" />
+
+</a>
+
+<script>
+  import checkDevice from '../js/checkDevice.js';
+
+ function whatsapp(){
+
+  const device = checkDevice();
+  const whatsapp = document.querySelector('#whatsapp');
+  let wp_url = "";
+
+  if( device == 'desktop' ){
+    wp_url = whatsapp.getAttribute('data-desk-url');
+  }else{
+    wp_url = whatsapp.getAttribute('data-mobile-url');
+  }
+
+    whatsapp.setAttribute('href', wp_url);
+
+ }
+
+ whatsapp();
+ document.addEventListener("astro:after-swap", whatsapp );
+ window.addEventListener("resize", whatsapp );
+
+</script>

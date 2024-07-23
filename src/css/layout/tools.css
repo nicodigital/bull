@@ -1,0 +1,74 @@
+.section {
+  @apply py-8 sm:py-10 xg:py-12 3xl:py-14;
+
+  &-top {
+    @apply pt-6 sm:pt-8 xg:pt-12 3xl:pt-14;
+  }
+
+  &-bottom {
+    @apply pb-6 sm:pb-8 xg:pb-12 3xl:pb-14;
+  }
+}
+
+.link-underline{
+  width: fit-content;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% .2rem;
+  transition: background-size .3s;
+
+	&:hover{
+		background-size: 100% .2rem;
+	}
+
+}
+
+/*//////////////////////////////////////////////////////////*/
+/*//////////////////////// MAX SM //////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
+
+@media (max-width: theme("screens.sm")) {
+
+  .mobile-wide-fit {
+    max-width: inherit;
+    width: calc(100% + var(--container-gap) * 2) !important;
+    margin-left: calc(-1 * var(--container-gap)) !important;
+  }
+
+  /* Fit  */
+  .fit-left {
+    max-width: inherit;
+    width: calc(100% + var(--container-gap)) !important;
+    margin-left: calc(-1 * var(--container-gap));
+  }
+
+  .fit-right {
+    max-width: inherit;
+    width: calc(100% + var(--container-gap)) !important;
+    margin-right: calc(-1 * var(--container-gap));
+  }
+
+}
+
+/*//////////////////////////////////////////////////////////*/
+/*////////////////////////// XG ////////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
+
+@media (min-width: theme("screens.xg")) {
+
+  /* Fit  */
+  .xg\:fit-left {
+    max-width: inherit;
+    width: calc(100% + var(--container-gap)) !important;
+    margin-left: calc(-1 * var(--container-gap));
+  }
+
+  .xg\:fit-right {
+    max-width: inherit;
+    width: calc(100% + var(--container-gap)) !important;
+    margin-right: calc(-1 * var(--container-gap));
+  }
+
+}

@@ -1,0 +1,25 @@
+---
+import Layout from "../layout/Layout.astro";
+
+---
+
+<Layout
+  title="AstroBox"
+  claim="Gracias por contactarte"
+  description="El nuevo framework de maquetación de sitios de I+D"
+>
+  <div
+    class="container flex flex-col justify-center items-center text-center md:h-[60vh]"
+  >
+    <div class="md:-mt-[10vh]">
+      <h2 class="h1 text-center mb-2">Muchas Gracias!</h2>
+      <p class="mb-6">
+        Tu mensaje ha sido enviado correctamente <br />
+        Nos comunicaremos a la brevedad.
+      </p>
+      <a href="/" class="bg-neutral-600 text-white rounded-lg py-2 px-3 hover:bg-neutral-500 transition-all" >
+        Volver
+      </a>
+    </div>
+  </div>
+</Layout>

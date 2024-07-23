@@ -1,0 +1,33 @@
+---
+import slugify from '../js/slugify.js'
+
+const { 
+    title = "Título x defecto", 
+    img     = "https://placehold.co/600x400", 
+    desc    = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, temporibus?",
+    type    = 'Categoria',
+} = Astro.props;
+
+let slug = slugify(title);
+
+---
+<style>
+    .card{
+        @apply bg-neutral-300 px-2 py-3 flex flex-col gap-2 rounded-xl
+    }
+</style>
+
+<div class="filter-item animate" data-type={type} data-anim="bottom">
+  <a href={`/films/${slug}`} class="card" data-astro-prefetch="hover" >
+      <img class="rounded-xl" src={img} alt='' loading='lazy' decoding='async' />
+      <h2 class="h3 font-bold min-h-[9rem]" >
+          {title}
+      </h2>
+      <p>
+          {desc.slice(0,150)}...
+      </p>
+      <p class="small font-bold text-right">
+          {type}
+      </p>
+  </a>
+</div>

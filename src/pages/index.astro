@@ -1,0 +1,101 @@
+---
+// export const prerender = false;
+import { Picture } from 'astro:assets';
+import { Icon } from 'astro-icon/components'
+
+import Layout from "@/layout/Layout.astro";
+/* Formulario */
+
+import Slider from '../components/Slider.astro'
+import Form from "@/components/Form.astro";
+
+import teamIMG from '../assets/team.jpg'; 
+---
+
+<Layout
+  title="Bull"
+  claim="El nuevo framework de maquetación de sitios de I+D"
+  description="El nuevo framework de maquetación de sitios de I+D"
+>
+  <!-- Hero -->
+  <section
+    id="hero"
+    class="h-screen relative w-full flex items-center justify-center"
+  >
+    <img
+      class="absolute inset-0 w-full h-full -z-10"
+      src="img/bg-bull.jpg"
+      alt=""
+      loading="lazy"
+      decoding="async"
+    />
+    <h1 class="relative text-h2 z-10 text-white text-center">
+      Tu Socio en Finanzas Corporativas <br />
+      y Estrategia Empresarial
+    </h1>
+  </section>
+
+  <!-- Experiencia -->
+  <section class="container row section text-center">
+    <div class="col-1-13 xg:col-3-11">
+        <h2 class="mini-title">Experiencia</h2>
+        <p class="text-h3 text-deep-blue">
+          Ofrecemos soluciones innovadoras y estratégicas para impulsar el
+          crecimiento, la rentabilidad y la eficiencia de tu empresa.
+        </p>
+    </div>
+  </section>
+
+  <!-- Team Image -->
+  <section class='container row'>
+      <div class='col-1-13'>
+          <Picture class="w-full rounded-3xl" src={teamIMG} formats={['webp']} alt="Bull Team" />
+      </div>
+  </section>
+
+  <!-- Partners -->
+  <section class='container row section-top'>
+      <div class='xg:col-1-7'>
+          <h2 class="text-h4">
+            <span class="text-deep-blue">Más de 15 años de experiencia en dirección financiera en diversas industrias y geografías.</span> <br>
+            <span class="text-e-blue">Generamos mejoras inmediatas con un enfoque proactivo y dinámico.</span>
+          </h2>
+      </div>
+      <div class='xg:col-1-13 grid grid-cols-4 gap-10 pt-10 xg:pt-15 pb-3 place-items-center'>
+        <Icon name="santander" class="w-[19rem] h-auto" />
+        <Icon name="bbva" class="w-[12rem] h-auto" />
+        <Icon name="santander" class="w-[19rem] h-auto" />
+        <Icon name="bbva" class="w-[12rem] h-auto" />
+      </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class='section'>
+
+    <div class="container row mb-10">
+        <div class='col-1-13'>
+            <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]">
+            <h2 class="mini-title">Servicios</h2>
+        </div>
+      
+        <div class='xg:col-1-7'>
+            <p class="text-h4 text-deep-blue"  >
+              Proporcionamos una amplia gama de servicios financieros y estratégicos para impulsar el crecimiento y la eficiencia de tu empresa.
+            </p>
+        </div>
+    </div>
+
+      <Slider/>
+    
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="container row section">
+    <div class="col-[1/13] md:col-[1/6]">
+      <h2 class="h2">Contacto</h2>
+    </div>
+    <div class="col-[1/13] md:col-[7/12]">
+      <Form />
+    </div>
+  </section>
+</Layout>
