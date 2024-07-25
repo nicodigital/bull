@@ -33,7 +33,10 @@ body {
   pointer-events: none;
 }
 
-/* Grid System */
+main{
+  @apply overflow-hidden;
+}
+
 
 .row {
   @apply grid gap-1 grid-cols-12 md:gap-2;

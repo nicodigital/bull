@@ -2,18 +2,17 @@
 // export const prerender = false;
 import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
-
 import Layout from "@/layout/Layout.astro";
 /* Formulario */
-
+import HeroAnim from "@/components/HeroAnim.astro";
 import Slider from "../components/Slider.astro";
 import CardsClient from "../components/CardsClient.astro";
 import Form from "@/components/Form.astro";
 
 import teamIMG from "../assets/team.jpg";
-import andresIMG from "../assets/Andres-Kavedjian.jpg";
-import carlosIMG from "../assets/Carlos-Pera.jpg";
-import luisIMG from "../assets/Luis-Brennan.jpg";
+import Team from "@/components/Team.astro";
+
+
 ---
 
 <Layout
@@ -24,19 +23,16 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
   <!-- Hero -->
   <section
     id="hero"
-    class="h-screen relative w-full flex items-center justify-center"
+    class="h-screen relative w-full flex items-center justify-center bg-deep-blue overflow-hidden"
   >
-    <img
-      class="absolute inset-0 w-full h-full -z-10"
-      src="img/bg-bull.jpg"
-      alt=""
-      loading="lazy"
-      decoding="async"
-    />
+
+    <HeroAnim />
+    
     <h1 class="relative text-h2 z-10 text-white text-center">
       Tu Socio en Finanzas Corporativas <br />
       y Estrategia Empresarial
     </h1>
+
   </section>
 
   <!-- Experiencia -->
@@ -51,10 +47,10 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
   </section>
 
   <!-- Team Image -->
-  <section class="container row">
+  <section id="team" class="container row">
     <div class="col-1-13">
       <Picture
-        class="w-full rounded-3xl"
+        class="w-full object-cover max-w-[initial] rounded-3xl widescreen"
         src={teamIMG}
         formats={["webp"]}
         alt="Bull Team"
@@ -103,6 +99,7 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
     </div>
 
     <Slider />
+    
   </section>
 
   <!-- Historias de éxito -->
@@ -127,27 +124,10 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
         <h2 class="mini-title">Nosotros</h2>
       </div>
       <div class="col-1-13">
-
         <p class="text-h4 text-deep-blue mb-10">
           Nuestro equipo, tu socio en el éxito
         </p>
-
-        <div class="grid grid-cols-3 gap-2">
-
-          <figure class="card-team">
-            <Picture class="w-full rounded-3xl" src={carlosIMG} formats={["webp"]} alt="Carlos Pera" />
-          </figure>
-  
-          <figure class="card-team">
-            <Picture class="w-full rounded-3xl" src={andresIMG} formats={["webp"]} alt="Andrés Kavedjian" />
-          </figure>
-  
-          <figure class="card-team">
-            <Picture class="w-full rounded-3xl" src={luisIMG} formats={["webp"]} alt="Luis Brennan" />
-          </figure>
-
-        </div>
-
+        <Team />
       </div>
     </div>
   </section>
@@ -184,7 +164,7 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
 
     </div>
     <div class="xg:col-7-12">
-      <h3 class="text-h3 text-deep-blue mb-10">
+      <h3 class="text-h4 text-deep-blue mb-10">
         ¿Listo para desbloquear el <br />
         potencial de tu negocio?
       </h3>

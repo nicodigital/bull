@@ -6,8 +6,37 @@
     display: none; /*hide original SELECT element: */
   }
 
-  svg {
-    @apply absolute top-[2.5rem] right-0 w-[2rem] h-auto;
+  .icon{
+    @apply absolute top-[2.5rem] right-0 w-[2rem];
+
+    svg{
+      @apply w-full h-auto;
+
+      &:last-child{
+        @apply hidden;
+      }
+
+    }
+
+  }
+
+  &:has( .select-arrow-active ){
+
+    .icon{
+
+      svg{
+        
+        &:first-child{
+          @apply hidden;
+        }
+        &:last-child{
+          @apply block;
+        }
+
+      }
+
+    }
+
   }
 
 }

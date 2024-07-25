@@ -1,7 +1,7 @@
 .card{
 
   &-service{
-    @apply flex flex-col justify-between h-[50rem]
+    @apply flex flex-col justify-between flex-1 h-[50rem] cursor-pointer
   bg-deep-blue text-white 
     p-[2.5rem] rounded-2xl;
 
@@ -38,9 +38,42 @@
   }
 
   &-team{
+    @apply relative rounded-[1rem] cursor-pointer overflow-hidden;
 
     img{
       @apply aspect-[9/11] object-cover;
+    }
+
+    figcaption{
+      @apply absolute bottom-3 left-3 z-50 
+      flex justify-between text-white leading-[1.2];
+      width: calc(100% - 6rem);
+    }
+
+    svg{
+      @apply w-[3.2rem] h-auto;
+    }
+
+    &:before{
+      content: "";
+      @apply absolute top-0 left-0 w-full h-full z-20 pointer-events-none;
+      background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); 
+    }
+
+    &:hover{
+
+      svg {
+
+        rect{
+          fill: theme(colors.deep-blue);
+        }
+
+        path{
+          fill: white;
+        }
+
+      }
+
     }
 
   }

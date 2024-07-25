@@ -29,14 +29,15 @@
         e.preventDefault();
 
         /* open modal */
-        let modal_link = btn_modal.getAttribute('href');
+        let modal_link = btn_modal.dataset.modal;
+        // let modal_link = btn_modal.getAttribute('href');
         let modal = document.querySelector(
           ".modal[data-modal=" + modal_link + "]"
         );
         let modal_content = document.querySelector(
           ".modal[data-modal=" + modal_link + "] .modal-content"
         );
-        let modal_type = modal.dataset.type;
+        let modal_type = modal.dataset.type || "default";
         html.dataset.modal = "on";
         modal.dataset.show = "on";
 

@@ -1,0 +1,16 @@
+---
+import CardTeam from "./CardTeam.astro";
+import carlosIMG from "../assets/Carlos-Pera.jpg";
+import andresIMG from "../assets/Andres-Kavedjian.jpg";
+import luisIMG from "../assets/Luis-Brennan.jpg";
+import TEAM from '../data/team.json';
+---
+
+<div class="grid grid-cols-3 gap-2">
+  {
+    TEAM.map((team) => {
+      const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;
+      return <CardTeam name={team.name} role={team.role} src={currImg} slug={team.slug} />
+     })
+  }
+</div>

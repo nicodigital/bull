@@ -9,7 +9,7 @@ import getFirstUrlTerm from '@/js/getFirstUrlTerm';
 import "@/css/global.css";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
-import Modal from "@/components/Modal.astro";
+import Modals from "@/components/Modals.astro";
 import Favicon from "@/components/Favicon.astro";
 import Seo from "@/components/Seo.astro";
 // import getSlug from '@/js/getSlug'
@@ -73,10 +73,8 @@ if( currPage === '' ){
       currPage !== "gracias" && <Footer />
     }
 
-    <Modal name="demo" show="off" type="">
-      <h2 class="h1 text-center">Este es el mejor modal del mundo!</h2>
-    </Modal>
-
+    <Modals />
+    
     <script> import "@/js/globals";</script>
     
   </body>

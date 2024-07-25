@@ -1,11 +1,14 @@
 ---
 const { name, show, type } = Astro.props;
+import { Icon } from "astro-icon/components";
 import '../css/components/modal.css'
 ---
 
 <div class="modal" data-show={show} data-modal={name} data-type={type} >
-  <div class="close"></div>
-  <div class="modal-box">
+  <div class="close">
+    <Icon name="close" />
+  </div>
+  <div class="modal-box lenis">
     <slot />
   </div>
 </div>

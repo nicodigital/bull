@@ -8,7 +8,7 @@ export default {
 				'deep-blue': '#000033',
 				'deep-blue-300': '#666685',
 				'deep-blue-200': '#9999AD',
-				'invalid': '#fe0000',
+				'red': '#FF5454',
 			},
 			fontFamily: {
 				sans: ['Outfit Variable', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],

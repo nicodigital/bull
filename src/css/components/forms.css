@@ -3,7 +3,6 @@
     --field-margin-bottom: 2rem;
     --option-height: calc(var(--field-height) + var(--field-margin-bottom));
     --form-color: theme(colors.deep-blue-200);
-    --invalid-color: theme('colors.invalid');
   }
 
 [name="form"] {
@@ -32,13 +31,37 @@
       height: var(--field-height);
       line-height: 1;
       margin-bottom: var(--field-margin-bottom);
+      
+      &:focus{
 
-      &:invalid:focus + .valid-msg, &.invalid + .valid-msg{
-        @apply block;
+        @apply text-deep-blue border-deep-blue;
+
+        &::placeholder{
+          @apply text-deep-blue opacity-100;
+        }
+
+        & + .valid-msg{
+          @apply hidden !important;
+        }
+
       }
 
-      &.invalid, &:focus{
-        border-color: var(--invalid-color);
+      &.invalid{
+
+        @apply border-red;
+
+        &:not(:focus){
+          @apply text-transparent !important;
+        }
+
+        & + .valid-msg{
+          @apply block text-red;
+        }
+
+        &::placeholder{
+          @apply opacity-0 !important;
+        }
+
       }
 
     }
@@ -71,8 +94,7 @@
   }
 
   .valid-msg{
-    @apply hidden absolute -bottom-1 right-0 font-bold text-right;
-    color: var(--invalid-color);
+    @apply hidden absolute top-[2.2rem] left-0 font-[400] text-deep-blue text-right pointer-events-none;
   }
 
   .notify{

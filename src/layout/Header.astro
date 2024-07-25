@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 import "../css/layout/header.css";
-import Brand from "../components/Brand.astro";
+import LangSwitcher from "../components/LangSwitcher.astro";
 import Burger from "../components/Burger.astro";
 import Menu from "../components/Menu.astro";
 const { width } = Astro.props;
@@ -31,15 +31,9 @@ const homeUrl = import.meta.env.HOME_URL ?? '/';
 
     <div class="md:col-10-13 hidden xg:flex justify-end">
         <div class="flex text-white items-center gap-3">
-
-            <a href="" class="flex gap-1" > 
-                <Icon name="world" class="w-2 h-auto" /> ES  <Icon name="vector-down" class="w-[1.5rem] h-auto" />
-            </a>
-
+            <LangSwitcher />
             <a href="" class="btn btn-e-blue" >Contáctanos</a>
-
         </div>
     </div>
     
-
 </header>

@@ -1,0 +1,196 @@
+---
+import Modal from "@/components/Modal.astro";
+import { Picture } from "astro:assets";
+
+/* Team data */
+import TEAM from "../data/team.json";
+import carlosIMG from "../assets/Carlos-Pera.jpg";
+import andresIMG from "../assets/Andres-Kavedjian.jpg";
+import luisIMG from "../assets/Luis-Brennan.jpg";
+---
+
+<!-- Services Modals -->
+<Modal name="cfo-as-a-service" show="off" type="service">
+  <div>
+    <h3>
+      CFO as a Service <br />
+      <span class="text-e-blue">Finance</span>
+    </h3>
+    <div>
+      <p>
+        Entendemos la importancia de una gestión financiera completa. Ofrecemos
+        acceso a la experiencia de unCFO sin la necesidad de contratar a tiempo
+        completo.
+      </p>
+      <p>Nuestro servicio de CFO Finance proporciona:</p>
+      <ul class="list-disc">
+        <li>Gestión financiera estratégica y táctica.</li>
+        <li>Planificación de cash flow.</li>
+        <li>Armado y gestión de equipos de trabajo.</li>
+        <li>Armado y seguimiento de pack de reporting.</li>
+        <li>Optimización fiscal.</li>
+        <li>Controlling, armado y seguimiento de procesos.</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h3>
+      CFO as a Service <br />
+      <span class="text-e-blue">Business</span>
+    </h3>
+    <div>
+      <p>
+        Business Nuestro servicio CFO as a service Business va más allá de las
+        funciones financieras tradicionales.
+      </p>
+
+      <p>
+        Nos integramos en tu equipo para comprender profundamente tu modelo de
+        negocio y objetivos, ofreciendo orientación estratégica integral para
+        impulsar el crecimiento y la rentabilidad de tu empresa. Nuestro
+        servicio de CFO Business proporciona:
+      </p>
+
+      <ul>
+        <li>Gestión de capital de trabajo.</li>
+        <li>Armado de plan de negocio.</li>
+        <li>Armado de modelos de pricing.</li>
+        <li>Seguimiento de procesos.</li>
+        <li>Reestructuración empresarial y financiera.</li>
+      </ul>
+    </div>
+  </div>
+</Modal>
+
+<Modal name="inter-negocios" show="off" type="service">
+  <div>
+    <h3>
+      Internacionalización <br />
+      de Negocios
+    </h3>
+    <div>
+      <p>
+        Estamos a tu lado en tu expansión global, ofreciendo una gama de
+        servicios que incluyen:
+      </p>
+      <ul class="list-disc">
+        <li>
+          Evaluación de mercados internacionalesy análisis de oportunidades.
+        </li>
+        <li>Desarrollo de estrategias de entradaa nuevos mercados.</li>
+        <li>
+          Gestión de riesgos y cumplimiento fiscalen contextos internacionales
+        </li>.
+        <li>
+          Soporte en la adaptación a regulacionesy normativas extranjeras.
+        </li>
+        <li>
+          Optimización de operaciones internacionales para maximizar eficiencia
+          y rentabilidad.
+        </li>
+        <li>Análisis de Precios de Transferencia.</li>
+      </ul>
+    </div>
+  </div>
+</Modal>
+
+<Modal name="m-a" show="off" type="service">
+  <div>
+    <h3>
+      Mergers <br />
+      & Acquisitions
+    </h3>
+    <div>
+      <p>
+        Dentro del ámbito de Fusiones y Adquisiciones,proporcionamos una gama
+        completa de servicios que abarcan:
+      </p>
+      <ul class="list-disc">
+        <li>Valuación de empresas.</li>
+        <li>Due Diligence.</li>
+        <li>
+          Análisis detallado para garantizartransparencia y mitigar riesgos.
+        </li>
+        <li>
+          Estructuración de Transacciones:Diseño y ejecución de estrategias
+          paramaximizar beneficios.
+        </li>
+      </ul>
+    </div>
+  </div>
+</Modal>
+
+<Modal name="tecno-negocio" show="off" type="service">
+  <div>
+    <h3>
+      Aplicación de tecnología <br />
+      al negocio
+    </h3>
+    <div>
+      <p>
+        Destacamos por servicios adicionales diseñados para potenciar la
+        eficiencia y el control estratégico:
+      </p>
+      <ul class="list-disc">
+        <li>Implementación de ERPs.</li>
+        <li>Reporting via business intelligence.</li>
+        <li>Automatización de procesos mediante RPA.</li>
+      </ul>
+    </div>
+  </div>
+</Modal>
+
+<Modal name="investor" show="off" type="service">
+  <div>
+    <h3>Investor Relations</h3>
+    <div>
+      <p>
+        Administramos las relaciones con fondos y accionistas, ofreciendo un
+        servicio completo que abarca::
+      </p>
+      <ul class="list-disc">
+        <li>Manejo proactivo de relaciones con inversores.</li>
+        <li>Armado de presentaciones y decks para inversores.</li>
+        <li>Comunicación efectiva de estrategias y resultados financieros</li>.
+        <li>Asesoramiento en decisiones relacionadascon inversionistas.</li>
+        <li>Cap table management y armado de term-sheets.</li>
+        <li>Armado de modelo de stock options plan y similares.</li>
+      </ul>
+    </div>
+  </div>
+</Modal>
+
+<!-- Team Modals -->
+
+{
+  TEAM.map((team) => {
+
+    const currImg = team.slug === "carlos" ? carlosIMG : team.slug === "andres" ? andresIMG : luisIMG;
+
+    return (
+      <Modal name={`team-` + team.slug} show="off" type="team">
+        <div class="heading">
+          <div> </div>
+          <Picture
+            class="w-full object-cover max-w-[initial] rounded-3xl"
+            src={currImg}
+            formats={["webp"]}
+            alt={team.name}
+          />
+        </div>
+
+        <div class="content">
+          <h3>
+            {team.name} <br />
+            <span class="opacity-35">{team.role}</span>
+          </h3>
+          <div>
+            <Fragment set:html={team.desc} />
+          </div>
+        </div>
+      </Modal>
+    );
+
+  })
+  
+}

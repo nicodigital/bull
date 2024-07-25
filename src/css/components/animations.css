@@ -55,31 +55,7 @@
 }
 
 }
-
-@keyframes AnimBottomFull {
-
-   0% {
-     transform: translateY(100%);
-  }
-  
-  100% {
-     transform: translateY(0);
-  }
-  
-  }
-  
-  @keyframes AnimTopFull {
-  
-   0% {
-     transform: translateY(-100%);
-  }
-  
-  100% {
-     transform: translateY(0);
-  }
-  
-  }
-
+ 
 @keyframes AnimTop {
 
  0% {
