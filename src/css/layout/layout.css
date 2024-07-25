@@ -33,9 +33,9 @@ body {
   pointer-events: none;
 }
 
-main{
+/* main{
   @apply overflow-hidden;
-}
+} */
 
 
 .row {

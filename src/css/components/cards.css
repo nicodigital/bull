@@ -29,8 +29,8 @@
     .ctas{
       @apply flex gap-1;
 
-      a{
-        @apply btn btn-small btn-outline;
+      div{
+        @apply btn btn-small btn-outline pointer-events-none !important;
       }
 
     }

@@ -73,18 +73,23 @@ const SERVICES = [
 
 <script>
   import Swiper from "swiper";
-  import { Mousewheel } from "swiper/modules";
+  import { Autoplay, Mousewheel } from "swiper/modules";
   
   function swiperSlider() {
     const SwiperSlider = new Swiper(".swiper", {
-      modules: [Mousewheel],
+      modules: [Autoplay, Mousewheel],
       slidesPerView: 3.3,
       spaceBetween: 20,
-      // mousewheel: {
-      //   enabled: true,
-      //   releaseOnEdges: true,
-      //   sensitivity: 1.3,
-      // },
+      speed: 800,
+      autoplay: {
+        delay: 4000, // Tiempo de espera entre slides en milisegundos
+        disableOnInteraction: false, // Evita que el autoplay se detenga al interactuar
+      },
+      mousewheel: {
+        enabled: true,
+        releaseOnEdges: true,
+        sensitivity: 1.3,
+      },
       // pagination: {
       //   el: ".swiper-pagination",
       //   clickable: true,
@@ -94,7 +99,21 @@ const SERVICES = [
       //   prevEl: ".swiper-button-prev",
       // },
     });
-  }
+
+    // Obtener el elemento del slider
+      const sliderElement = document.querySelector('.swiper');
+
+    // Añadir el evento mouseenter para iniciar el autoplay
+    sliderElement.addEventListener('mouseenter', () => {
+      SwiperSlider.autoplay.start();
+    });
+
+    // Añadir el evento mouseleave para pausar el autoplay
+    sliderElement.addEventListener('mouseleave', () => {
+      SwiperSlider.autoplay.stop();
+    });
+
+  } // swiperSlider
 
   swiperSlider();
   document.addEventListener("astro:after-swap", swiperSlider);

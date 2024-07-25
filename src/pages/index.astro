@@ -11,8 +11,6 @@ import Form from "@/components/Form.astro";
 
 import teamIMG from "../assets/team.jpg";
 import Team from "@/components/Team.astro";
-
-
 ---
 
 <Layout
@@ -25,14 +23,12 @@ import Team from "@/components/Team.astro";
     id="hero"
     class="h-screen relative w-full flex items-center justify-center bg-deep-blue overflow-hidden"
   >
-
     <HeroAnim />
-    
+
     <h1 class="relative text-h2 z-10 text-white text-center">
       Tu Socio en Finanzas Corporativas <br />
       y Estrategia Empresarial
     </h1>
-
   </section>
 
   <!-- Experiencia -->
@@ -83,27 +79,29 @@ import Team from "@/components/Team.astro";
   </section>
 
   <!-- Servicios -->
-  <section class="section">
-    <div class="container row mb-10">
-      <div class="col-1-13">
-        <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]" />
-        <h2 class="mini-title">Servicios</h2>
-      </div>
-
-      <div class="xg:col-1-7">
-        <p class="text-h4 text-deep-blue">
-          Proporcionamos una amplia gama de servicios financieros y estratégicos
-          para impulsar el crecimiento y la eficiencia de tu empresa.
-        </p>
-      </div>
-    </div>
-
-    <Slider />
+  <section class="section relative xg:h-[280vh]">
     
+      <div class="container row mb-10">
+        <div class="col-1-13">
+          <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]" />
+          <h2 class="mini-title">Servicios</h2>
+        </div>
+
+        <div class="xg:col-1-7">
+          <p class="text-h4 text-deep-blue">
+            Proporcionamos una amplia gama de servicios financieros y
+            estratégicos para impulsar el crecimiento y la eficiencia de tu
+            empresa.
+          </p>
+        </div>
+      </div>
+      <div class="sticky top-[15vh]">
+        <Slider />
+      </div>
   </section>
 
   <!-- Historias de éxito -->
-  <section class="container row section-top xg:pb-5 text-center">
+  <section class="container row section-top xg:pb-5 text-center xg:mt-[-10vh]">
     <div class="xg:col-3-11 mb-10 xg:mb-15">
       <h2 class="mini-title">Historias de Éxito</h2>
       <p class="text-h3 text-deep-blue">
@@ -138,7 +136,6 @@ import Team from "@/components/Team.astro";
       <h2 class="mini-title mb-10">Contáctanos</h2>
 
       <div class="mt-10 xg:mt-20">
-
         <p>
           Contáctanos para obtener más información sobre nuestros servicios de
           consultoría o para hablar sobre tu proyecto.
@@ -148,20 +145,17 @@ import Team from "@/components/Team.astro";
           <span class="block mb-2">Estamos aquí para ayudarte. </span>
 
           <a href="mailto:info@bulladvisors.com.uy">info@bulladvisors.com.uy</a>
-       
+
           <div class="flex gap-1 mt-2">
-            <a href="" target='_blank' rel='noreferrer noopener' >
+            <a href="" target="_blank" rel="noreferrer noopener">
               <Icon class="text-e-blue text-[2.5rem]" name="mdi:linkedin" />
             </a>
-            <a href="" target='_blank' rel='noreferrer noopener' >
+            <a href="" target="_blank" rel="noreferrer noopener">
               <Icon class="text-e-blue text-[2.5rem]" name="mdi:whatsapp" />
             </a>
           </div>
-
         </p>
-
       </div>
-
     </div>
     <div class="xg:col-7-12">
       <h3 class="text-h4 text-deep-blue mb-10">
@@ -171,5 +165,4 @@ import Team from "@/components/Team.astro";
       <Form />
     </div>
   </section>
-
 </Layout>
