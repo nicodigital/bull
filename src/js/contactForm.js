@@ -12,13 +12,13 @@ function contactForm() {
 
     const name = form.querySelector('[name=name]');
     const email = form.querySelector('[type=email]');
-    const phone = form.querySelector('[name=phone]');
+    // const phone = form.querySelector('[name=phone]');
     const message = form.querySelector('[name=message]');
     const btn_submit = form.querySelector('[type=submit]');
 
     const nameRegex = /^[A-Za-z]+ [A-Za-z]+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const phoneRegex = /^\+\d{0,3}(?:\s?\d{1,3}){1,4}$|^\d{8,9}$/;
+    // const phoneRegex = /^\+\d{0,3}(?:\s?\d{1,3}){1,4}$|^\d{8,9}$/;
     const messageRegex = /^.{16,}$/; // min 16 caracteres
 
 
@@ -61,7 +61,7 @@ function contactForm() {
 
       let formStatus = '';
 
-      if (validField(name, nameRegex) && validField(email, emailRegex) && validField(phone, phoneRegex) && validField(message, messageRegex) ) {
+      if (validField(name, nameRegex) && validField(email, emailRegex) && validField(message, messageRegex) ) {
         btn_submit.disabled = false;
         formStatus = true;
       } else {
@@ -83,9 +83,9 @@ function contactForm() {
       handleInput(email, emailRegex);
     });
 
-    phone.addEventListener('input', function() {
-      handleInput(phone, phoneRegex);
-    });
+    // phone.addEventListener('input', function() {
+    //   handleInput(phone, phoneRegex);
+    // });
 
     message.addEventListener('input', function() {
       handleInput(message, messageRegex);
