@@ -6,7 +6,7 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
 import TEAM from '../data/team.json';
 ---
 
-<div class="grid grid-cols-3 gap-2">
+<div class="grid grid-cols-3 gap-2 xg:gap-[3.2rem]">
   {
     TEAM.map((team) => {
       const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;
