@@ -1,13 +1,35 @@
 ---
+import LangSwitcher from "../components/LangSwitcher.astro";
+import { Icon } from "astro-icon/components";
 const { items } = Astro.props;
+import CONTACT from '../data/contact.json';
 import '../css/layout/menu.css';
+
 ---
 <nav>
     {
         items.map( item =>(
-        <a href={ item[1] } class={ item[2] } data-astro-prefetch="hover" >
+        <a href={ item[1] } class="item" data-astro-prefetch="hover" >
             { item[0] }
         </a>
         ) )
     }
+
+    <div class="relative flex w-full justify-between items-end flex-1 xg:hidden pb-2 text-white z-50">
+        
+        <LangSwitcher />
+
+        <div class="flex gap-1 mt-2">
+            <a href={CONTACT[0].whatsapp} target="_blank" rel="noreferrer noopener">
+                <Icon class="text-white text-[3.5rem]" name="mdi:linkedin" />
+            </a>
+            <a href={CONTACT[0].linkedin} target="_blank" rel="noreferrer noopener">
+                <Icon class="text-white text-[3.5rem]" name="mdi:whatsapp" />
+            </a>
+        </div>
+          
+    </div>
+
+    <div class="ball xg:hidden" ></div>
+
 </nav>

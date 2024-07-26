@@ -6,32 +6,38 @@ const SERVICES = [
   {
     title: "CFO as a Service",
     slug: "cfo-as-a-service",
-    intro: "Nos unimos a tu equipo para entender tu negocio y objetivos, ofreciendo orientación estratégica para impulsar tu crecimiento y rentabilidad.",
+    intro:
+      "Nos unimos a tu equipo para entender tu negocio y objetivos, ofreciendo orientación estratégica para impulsar tu crecimiento y rentabilidad.",
   },
   {
-    title: "Internacionalización de Negocios",
+    title: "Internacionalización <br> de Negocios",
     slug: "inter-negocios",
-    intro: "Te acompañamos en tu expansión global con una amplia gama de servicios.",
+    intro:
+      "Te acompañamos en tu expansión global con una amplia gama de servicios.",
   },
   {
     title: "Investor Relations",
     slug: "investor",
-    intro: "Gestionamos las relaciones con fondos y accionistas, ofreciendo un servicio integral.",
+    intro:
+      "Gestionamos las relaciones con fondos y accionistas, ofreciendo un servicio integral.",
   },
   {
     title: "M&A",
     slug: "m-a",
-    intro: "Ofrecemos una gama completa de servicios en el ámbito de Fusiones y Adquisiciones.",
+    intro:
+      "Ofrecemos una gama completa de servicios en el ámbito de Fusiones y Adquisiciones.",
   },
   {
     title: "Aplicación de <br> Tecnología al Negocio",
     slug: "tecno-negocio",
-    intro: "Destacamos por servicios diseñados para mejorar la eficiencia y el control estratégico.",
+    intro:
+      "Destacamos por servicios diseñados para mejorar la eficiencia y el control estratégico.",
   },
-]
+];
 ---
+
 <style>
-  .swiper{
+  .swiper {
     padding-left: var(--container-gap) !important;
     padding-right: var(--container-gap) !important;
   }
@@ -43,21 +49,17 @@ const SERVICES = [
   <div class="swiper-wrapper">
     {
       SERVICES.map((slide) => (
-
         <div class="swiper-slide">
-          <div class="card-service m-link" data-modal={slide.slug} >
-              <h3><Fragment set:html={slide.title} /></h3>
-              <div>
-                <p>
-                  {slide.intro}
-                </p>
-                <div class="cta">
-                  Conoce más
-                </div>
-              </div>
+          <div class="card-service m-link" data-modal={slide.slug}>
+            <h3>
+              <Fragment set:html={slide.title} />
+            </h3>
+            <div>
+              <p>{slide.intro}</p>
+              <div class="cta">Conoce más</div>
+            </div>
           </div>
         </div>
-
       ))
     }
   </div>
@@ -68,17 +70,15 @@ const SERVICES = [
   <!-- If we need navigation buttons -->
   <!-- <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div> -->
-
 </div>
 
 <script>
   import Swiper from "swiper";
   import { Autoplay, Mousewheel } from "swiper/modules";
-  
+
   function swiperSlider() {
     const SwiperSlider = new Swiper(".swiper", {
       modules: [Autoplay, Mousewheel],
-      slidesPerView: 3.3,
       spaceBetween: 20,
       speed: 800,
       autoplay: {
@@ -90,29 +90,31 @@ const SERVICES = [
         releaseOnEdges: true,
         sensitivity: 1.3,
       },
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      // },
-      // navigation: {
-      //   nextEl: ".swiper-button-next",
-      //   prevEl: ".swiper-button-prev",
-      // },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.05,
+        },
+        768: {
+          slidesPerView: 2.3,
+        },
+        1024: {
+          slidesPerView: 3.05,
+        },
+      },
     });
 
     // Obtener el elemento del slider
-      const sliderElement = document.querySelector('.swiper');
+    const sliderElement = document.querySelector(".swiper");
 
     // Añadir el evento mouseenter para iniciar el autoplay
-    sliderElement.addEventListener('mouseenter', () => {
+    sliderElement.addEventListener("mouseenter", () => {
       SwiperSlider.autoplay.start();
     });
 
     // Añadir el evento mouseleave para pausar el autoplay
-    sliderElement.addEventListener('mouseleave', () => {
+    sliderElement.addEventListener("mouseleave", () => {
       SwiperSlider.autoplay.stop();
     });
-
   } // swiperSlider
 
   swiperSlider();

@@ -3,10 +3,12 @@
 import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Layout from "@/layout/Layout.astro";
-/* Formulario */
+
+
 import HeroAnim from "@/components/HeroAnim.astro";
 import Slider from "../components/Slider.astro";
 import CardsClient from "../components/CardsClient.astro";
+import CONTACT from '../data/contact.json';
 import Form from "@/components/Form.astro";
 
 import teamIMG from "../assets/team.jpg";
@@ -25,14 +27,17 @@ import Team from "@/components/Team.astro";
   >
     <HeroAnim />
 
-    <h1 class="relative text-h2 z-10 text-white text-center">
-      Tu Socio en Finanzas Corporativas <br />
-      y Estrategia Empresarial
+    <h1 class="relative text-h3 xg:text-h2 z-10 text-white text-center">
+      Tu socio en finanzas corporativas <br class="hidden xg:block" />
+      y estrategia empresarial
     </h1>
+
+    <a href="#experiencia" class="xg:hidden absolute left-[50%] bottom-4 translate-x-[-50%] z-50 text-white"> Scroll para continuar </a>
+
   </section>
 
   <!-- Experiencia -->
-  <section class="container row section text-center">
+  <section id="experiencia" class="container row section xg:text-center">
     <div class="col-1-13 xg:col-3-11">
       <h2 class="mini-title">Experiencia</h2>
       <p class="text-h3 text-deep-blue">
@@ -56,30 +61,31 @@ import Team from "@/components/Team.astro";
 
   <!-- Partners -->
   <section class="container row section-top">
-    <div class="xg:col-1-7">
-      <h2 class="text-h4">
-        <span class="text-deep-blue"
-          >Más de 15 años de experiencia en dirección financiera en diversas
-          industrias y geografías.</span
-        >
+    <div class="xg:col-1-10">
+      <h2 class="text-h3">
+        <span class="text-deep-blue">
+          Más de 15 años de experiencia en dirección <br class="hidden xg:block" />
+          financiera en diversas industrias y geografías.</span>
         <br />
-        <span class="text-e-blue"
-          >Generamos mejoras inmediatas con un enfoque proactivo y dinámico.</span
-        >
+        <span class="text-e-blue">Generamos mejoras inmediatas con un <br class="hidden xg:block" /> enfoque proactivo y dinámico.</span>
       </h2>
     </div>
-    <div
-      class="xg:col-1-13 grid grid-cols-4 gap-10 pt-10 xg:pt-15 pb-3 place-items-center"
-    >
-      <Icon name="santander" class="w-[19rem] h-auto" />
-      <Icon name="bbva" class="w-[12rem] h-auto" />
-      <Icon name="santander" class="w-[19rem] h-auto" />
-      <Icon name="bbva" class="w-[12rem] h-auto" />
+
+    <div class="xg:col-1-13 pt-10 xg:pt-15 pb-3 overflow-x-auto">
+      <div class="partners">
+        <Icon name="santander" class="w-[19rem] h-auto" />
+        <Icon name="bbva" class="w-[12rem] h-auto" />
+        <Icon name="santander" class="w-[19rem] h-auto" />
+        <Icon name="bbva" class="w-[12rem] h-auto" />
+        <Icon name="santander" class="w-[19rem] h-auto" />
+        <Icon name="bbva" class="w-[12rem] h-auto" />
     </div>
+    </div>
+
   </section>
 
   <!-- Servicios -->
-  <section class="section relative xg:h-[280vh]">
+  <section class="section relative xg:h-[275vh]">
     
       <div class="container row mb-10">
         <div class="col-1-13">
@@ -102,14 +108,14 @@ import Team from "@/components/Team.astro";
 
   <!-- Historias de éxito -->
   <section class="container row section-top xg:pb-5 text-center xg:mt-[-10vh]">
-    <div class="xg:col-3-11 mb-10 xg:mb-15">
+    <div class="xg:col-3-11 mb-10 xg:mb-12">
       <h2 class="mini-title">Historias de Éxito</h2>
       <p class="text-h3 text-deep-blue">
         Nuestros clientes comparten su visión y ambición de generar un cambio
         positivo
       </p>
     </div>
-    <div class="col-1-13 grid md:grid-cols-3 gap-4 xg:gap-10 3xl:gap-12">
+    <div class="col-1-13 grid md:grid-cols-3 gap-4 xg:gap-8">
       <CardsClient />
     </div>
   </section>
@@ -143,18 +149,19 @@ import Team from "@/components/Team.astro";
 
         <p class="text-e-blue font-medium mt-2">
           <span class="block mb-2">Estamos aquí para ayudarte. </span>
-
           <a href="mailto:info@bulladvisors.com.uy">info@bulladvisors.com.uy</a>
 
           <div class="flex gap-1 mt-2">
-            <a href="" target="_blank" rel="noreferrer noopener">
-              <Icon class="text-e-blue text-[2.5rem]" name="mdi:linkedin" />
+            <a href={CONTACT[0].whatsapp} target="_blank" rel="noreferrer noopener">
+                <Icon class="text-e-blue text-[2.5rem]" name="mdi:linkedin" />
             </a>
-            <a href="" target="_blank" rel="noreferrer noopener">
-              <Icon class="text-e-blue text-[2.5rem]" name="mdi:whatsapp" />
+            <a href={CONTACT[0].linkedin} target="_blank" rel="noreferrer noopener">
+                <Icon class="text-e-blue text-[2.5rem]" name="mdi:whatsapp" />
             </a>
-          </div>
+        </div>
+          
         </p>
+
       </div>
     </div>
     <div class="xg:col-7-12">
@@ -165,4 +172,5 @@ import Team from "@/components/Team.astro";
       <Form />
     </div>
   </section>
+
 </Layout>

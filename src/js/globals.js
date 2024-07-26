@@ -93,25 +93,26 @@ function fetchGsap(){
 					observer.observe(image);
 			}
 
+			
+
 	// let tl = gsap.timeline({
 	// 	// yes, we can add it to an entire timeline!
 	// 	scrollTrigger: {
 	// 			trigger: '#team',
-	// 			toggleActions: 'play reverse play resume',
-	// 			//pin: true, // pin the trigger element while active
-	// 			start: '15% 90%', // when the top of the trigger hits the top of the viewport
-	// 			end: '100% 66%', // end after scrolling 500px beyond the start
+	// 			toggleActions: 'play reverse play reverse',
+	// 			start: '15% 80%', 
+	// 			end: '100% 70%', 
 	// 			// scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
 	// 			markers: true,
 	// 	}
 	// });
 
-	// return tl.to( team, { 
+	// return tl.to( image, { 
 	// 	width: "calc( 100% + var(--container-gap) * 2 )", 
 	// 	marginLeft: "calc(-1 * var(--container-gap) )",
 	// 	borderRadius: "0", 
-	// 	duration: 2, 
-	// 	ease: CustomEase.create("custom", "M0,0 C0.015,0.494 0.168,0.895 0.418,0.966 0.693,1.021 0.814,0.984 1,1 "),
+	// 	duration: .5, 
+	// 	ease: "ease-in-out",
 	// });
 
 }

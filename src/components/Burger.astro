@@ -1,78 +1,56 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <style>
-  :root {
-    --burger-size: 3.5rem;
-  }
 
   .burger {
     @apply absolute cursor-pointer xg:hidden transition-all;
-    width: var(--burger-size);
-    height: var(--burger-size);
     right: var(--container-gap);
     top: 2.5rem;
     z-index: 9999999;
 
-    .burger-box {
-      width: var(--burger-size);
-      height: 24px;
-      display: inline-block;
-      position: relative;
+    div{
+
+      @apply flex justify-center align-middle size-4;
+
+      svg{
+
+        @apply w-4 h-auto;
+
+        &:last-child{
+          @apply w-3 hidden;
+        }
+
+        }
+
     }
 
-    .burger-inner {
-      display: block;
-      top: 50%;
-      margin-top: -2px;
+  }
+
+  body.menu-in .burger {
+
+    svg{
+
+      &:first-child{
+        @apply hidden;
+      }
+
+      &:last-child{
+        @apply block;
+      }
+
     }
-
-    .burger-inner,
-    .burger-inner::after,
-    .burger-inner::before {
-      @apply absolute w-full bg-white transition-all;
-      height: 4px;
-    }
+    
   }
 
-  body.menu-in .burger-inner::after,
-  body.menu-in .burger-inner::before {
-    @apply bg-white;
-  }
-
-  .burger-inner::after,
-  .burger-inner::before {
-    content: "";
-    display: block;
-  }
-
-  .burger-inner::before {
-    top: -10px;
-  }
-
-  .burger-inner::after {
-    bottom: -10px;
-  }
-
-  .burger .burger-box {
-    perspective: 80px;
-  }
-
-  body.menu-in .burger .burger-inner {
-    background-color: transparent;
-    transform: rotateY(180deg);
-  }
-
-  body.menu-in .burger .burger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg);
-  }
-
-  body.menu-in .burger .burger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg);
-  }
 </style>
 
 <!-- burger menu to mobiles -->
-<div class="burger togg toggler out">
-  <div class="burger-box">
-    <div class="burger-inner"></div>
+<div class="burger togg toggler out text-white">
+  <div>
+    <Icon name="burger" />
+    <Icon name="close" />
   </div>
 </div>
 

@@ -1,25 +1,38 @@
 .card{
 
   &-service{
-    @apply flex flex-col justify-between flex-1 h-[50rem] cursor-pointer
-  bg-deep-blue text-white 
-    p-[2.5rem] rounded-2xl;
+    @apply relative flex flex-col justify-between flex-1 aspect-square cursor-pointer
+   text-white bg-deep-blue  p-[2.5rem] rounded-2xl  overflow-hidden transition-all;
 
     h3{
-      @apply text-h4;
+      @apply relative text-h5 xg:text-h4 z-10 leading-[1.2];
+    }
+
+    & > div{
+      @apply relative z-10;
     }
 
     .cta{
       @apply underline mt-3;
     }
 
+    &:after{
+      content: "";
+      @apply absolute w-full h-full top-0 left-0 z-0 translate-x-[50%] translate-y-[50%] opacity-0 pointer-events-none transition-all;
+      background: radial-gradient(103.32% 259.99% at 103.32% 98.15%, #3536FD 0%, #000033 72%)  !important;
+    }
+
+    &:hover:after{
+      @apply translate-x-[0] translate-y-[0] opacity-100;
+    }
+
   }
 
   &-client{
-    @apply flex flex-col justify-between h-[40rem] text-left;
+    @apply relative flex flex-col text-left py-4;
 
     h3{
-      @apply font-serif text-h4 tracking-[-0.05em];
+      @apply font-serif text-h4 tracking-[-0.05em] min-h-[26rem];
     }
 
     p{
@@ -35,13 +48,17 @@
 
     }
 
+    &:not(:last-child):after{
+      @apply absolute content-[""] top-0 right-0 w-[1px] h-full bg-deep-blue-100 translate-x-4;
+    }
+
   }
 
   &-team{
     @apply relative rounded-[1rem] cursor-pointer overflow-hidden;
 
     img{
-      @apply aspect-[9/11] object-cover;
+      @apply aspect-[9/12.5] object-cover;
     }
 
     figcaption{

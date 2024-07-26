@@ -1,0 +1,16 @@
+---
+import { Icon } from "astro-icon/components";
+const { whatsapp, linkedin, color = "text-white", size } = Astro.props;
+
+const txtSize = size ? `text-[${size}]` : "text-[2.5rem]";
+
+---
+
+<div class="flex gap-1 mt-2">
+  <a href={whatsapp} target="_blank" rel="noreferrer noopener">
+    <Icon class={color} name="mdi:linkedin" />
+  </a>
+  <a href={linkedin} target="_blank" rel="noreferrer noopener">
+    <Icon class={color} name="mdi:whatsapp" />
+  </a>
+</div>

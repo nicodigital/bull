@@ -8,6 +8,7 @@ export default {
 				'deep-blue': '#000033',
 				'deep-blue-300': '#666685',
 				'deep-blue-200': '#9999AD',
+				'deep-blue-100': '#CCCCD6',
 				'red': '#FF5454',
 			},
 			fontFamily: {
@@ -104,9 +105,10 @@ export default {
 			'xg': '992px',
 			'xl': '1064px',
 			'2xl': '1280px',
-			'3xl': '1536px',
-			'4xl': '1920px',
-			'5xl': '2560px'
+			'3xl': '1420px',
+			'4xl': '1536px',
+			'5xl': '1920px',
+			'6xl': '2560px',
 		},
 		container: {
 			screens: {

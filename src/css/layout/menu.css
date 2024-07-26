@@ -4,10 +4,12 @@ nav {
       flex flex-col 
       top-0 left-0 
       w-100% h-full
-      px-2 py-6
-      gap-4
+      bg-deep-blue
+      ctr-px pt-20 pb-6
+      gap-2
       transition-transform
       duration-500
+      overflow-hidden
       z-[999]
 
       xg:relative 
@@ -15,11 +17,21 @@ nav {
       xg:h-auto
       xg:bg-transparent
       xg:px-0 xg:py-0
+      xg:gap-4
       xg:flex-row xg:justify-between;
       
-      a {
-        @apply mb-1 xg:mb-0 text-white;
-        font-size: var(--h1);
+      .item {
+        @apply relative mb-1 xg:mb-0 z-30
+        text-white text-h4 xg:text-small;
+      }
+
+      .ball{
+        @apply absolute w-[200vw] left-[-50vw] bottom-[-50vh] aspect-square rounded-full opacity-50 scale-150 translate-y-[-10%] pointer-events-none;
+        background: radial-gradient(ellipse at center,  rgba(53,54,253,1) 0%,rgba(0,0,51,1) 50%);
+      }
+
+      .lang-switcher svg{
+        font-size: 4rem;
       }
 
   }
@@ -32,7 +44,7 @@ nav {
   @media (max-width: theme("screens.xg")) {
 
     nav {
-      transform: translateX(100%);
+      @apply translate-x-[100%];
     }
 
     body.menu-in {
@@ -50,13 +62,7 @@ nav {
   @media (min-width: theme("screens.xg")) {
 
     nav {
-
       @apply bg-transparent !important;
-
-      a {
-        @apply text-body;
-      }
-
     }
 
   }

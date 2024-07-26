@@ -1,6 +1,6 @@
 .lang-switcher{
 
-  @apply relative flex gap-[.7rem] pl-[3.5rem];
+  @apply relative top-[1.3rem] flex gap-[.7rem] xg:top-0 xg:pl-[3.5rem];
 
   .langs{
     @apply relative flex flex-col top-[1.7rem] gap-[.7rem];
@@ -27,6 +27,9 @@
 
 }
 
+.partners{
+  @apply flex xg:grid xg:grid-cols-4 gap-7 xg:gap-10 place-items-center w-fit xg:w-full;
+}
 
 .widescreen{
 

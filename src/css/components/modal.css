@@ -11,7 +11,7 @@
             backdrop-blur-sm
             translate-x-full
             transition-transform
-            duration-500;
+            duration-[700ms];
     height: 100vh;
     height: 100dvh;
     -webkit-backface-visibility: hidden;
@@ -56,7 +56,12 @@
     }
 
     p{
-      @apply mb-2;
+      @apply font-[400] mb-2;
+
+      &:last-child{
+        @apply mb-0;
+      }
+
     }
 
     ul{
@@ -93,6 +98,10 @@
           height: calc(100% + 12rem);
         }
 
+      }
+
+      .social{
+        @apply flex gap-1;
       }
 
     }
