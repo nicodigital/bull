@@ -13,8 +13,8 @@ font-style: normal;
   --h3: 3.2rem;
   --h4: 3.6rem;
   --h5: 2.8rem;
-  --body: 1.8rem;
-  --small: 1.6rem;
+  --body: 1.6rem;
+  --small: 1.4rem;
   --tiny: 1.4rem;
 }
 
@@ -45,12 +45,12 @@ p {
   @apply font-light leading-[1.2];
 }
 
-.text-h4{
+.text-h4, .text-h5{
   @apply font-light leading-[1.1];
 }
 
 .mini-title{
-  @apply text-body text-e-blue uppercase mb-3 font-medium;
+  @apply text-small xg:text-body text-e-blue uppercase mb-3 font-medium;
 }
 
 /*//////////////////////////////////////////////////////////*/

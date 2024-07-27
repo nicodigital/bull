@@ -8,6 +8,7 @@ import Layout from "@/layout/Layout.astro";
 import HeroAnim from "@/components/HeroAnim.astro";
 import Slider from "../components/Slider.astro";
 import CardsClient from "../components/CardsClient.astro";
+import Partners from "@/components/Partners.astro";
 import CONTACT from '../data/contact.json';
 import Form from "@/components/Form.astro";
 
@@ -28,7 +29,7 @@ import Team from "@/components/Team.astro";
     <HeroAnim />
 
     <h1 class="relative text-h3 xg:text-h2 z-10 text-white text-center">
-      Tu socio en finanzas corporativas <br class="hidden xg:block" />
+      Tu socio en finanzas <br class="xg:hidden" /> corporativas <br class="hidden xg:block" />
       y estrategia empresarial
     </h1>
 
@@ -40,7 +41,7 @@ import Team from "@/components/Team.astro";
   <section id="experiencia" class="container row section xg:text-center">
     <div class="col-1-13 xg:col-3-11">
       <h2 class="mini-title">Experiencia</h2>
-      <p class="text-h3 text-deep-blue">
+      <p class="text-h5 xg:text-h3 text-deep-blue">
         Ofrecemos soluciones innovadoras y estratégicas para impulsar el
         crecimiento, la rentabilidad y la eficiencia de tu empresa.
       </p>
@@ -60,32 +61,34 @@ import Team from "@/components/Team.astro";
   </section>
 
   <!-- Partners -->
-  <section class="container row section-top">
-    <div class="xg:col-1-10">
-      <h2 class="text-h3">
-        <span class="text-deep-blue">
-          Más de 15 años de experiencia en dirección <br class="hidden xg:block" />
-          financiera en diversas industrias y geografías.</span>
-        <br />
-        <span class="text-e-blue">Generamos mejoras inmediatas con un <br class="hidden xg:block" /> enfoque proactivo y dinámico.</span>
-      </h2>
+  <section class="section-top">
+
+    <div class="container row " >
+
+      <div class="xg:col-1-10">
+        <h2 class="text-h5 xg:text-h3">
+          <span class="text-deep-blue">
+            Más de 15 años de experiencia en dirección <br class="hidden xg:block" />
+            financiera en diversas industrias y geografías.</span>
+          <br />
+          <span class="text-e-blue">Generamos mejoras inmediatas con un <br class="hidden xg:block" /> enfoque proactivo y dinámico.</span>
+        </h2>
+      </div>
+
+      <div class="xg:col-1-13 pt-10 xg:pt-15 pb-3 hidden xg:block">
+        <Partners class="partners" />
+      </div>
+
     </div>
 
-    <div class="xg:col-1-13 pt-10 xg:pt-15 pb-3 overflow-x-auto">
-      <div class="partners">
-        <Icon name="santander" class="w-[19rem] h-auto" />
-        <Icon name="bbva" class="w-[12rem] h-auto" />
-        <Icon name="santander" class="w-[19rem] h-auto" />
-        <Icon name="bbva" class="w-[12rem] h-auto" />
-        <Icon name="santander" class="w-[19rem] h-auto" />
-        <Icon name="bbva" class="w-[12rem] h-auto" />
+    <div class="xg:hidden overflow-x-auto mt-7">
+      <Partners class="partners" />
     </div>
-    </div>
-
+  
   </section>
 
   <!-- Servicios -->
-  <section class="section relative xg:h-[270vh]">
+  <section id="servicios" class="section-bottom pt-4 sm:pt-6 xg:pt-11 3xl:pt-14 relative xg:h-[270vh]">
     
       <div class="container row mb-10">
         <div class="col-1-13">
@@ -94,7 +97,7 @@ import Team from "@/components/Team.astro";
         </div>
 
         <div class="xg:col-1-7">
-          <p class="text-h4 text-deep-blue">
+          <p class="text-h5 xg:text-h4 text-deep-blue">
             Proporcionamos una amplia gama de servicios financieros y
             estratégicos para impulsar el crecimiento y la eficiencia de tu
             empresa.
@@ -106,11 +109,11 @@ import Team from "@/components/Team.astro";
       </div>
   </section>
 
-  <!-- Historias de éxito -->
-  <section class="container row section-top xg:pb-5 text-center xg:mt-[-10vh]">
+  <!-- Testimonios -->
+  <section class="container row section-top xg:pb-5 text-center xg:mt-[-10vh] overflow-hidden">
     <div class="xg:col-3-11 mb-10 xg:mb-12">
       <h2 class="mini-title">Historias de Éxito</h2>
-      <p class="text-h3 text-deep-blue">
+      <p class="text-h5 xg:text-h3 text-deep-blue">
         Nuestros clientes comparten su visión y ambición de generar un cambio
         positivo
       </p>
@@ -122,18 +125,21 @@ import Team from "@/components/Team.astro";
 
   <!-- Nosotros -->
   <section id="nosotros" class="section-top">
+    
     <div class="container row mb-10 xg:mb-15">
       <div class="col-1-13 mb-4">
         <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]" />
         <h2 class="mini-title">Nosotros</h2>
       </div>
-      <div class="col-1-13">
-        <p class="text-h4 text-deep-blue mb-10">
-          Nuestro equipo, tu socio en el éxito
-        </p>
+      <div class="col-1-13 hidden xg:block">
         <Team />
       </div>
     </div>
+
+    <div class="xg:hidden">
+      <Team />
+    </div>
+
   </section>
 
   <!-- Contacto -->
@@ -165,7 +171,7 @@ import Team from "@/components/Team.astro";
       </div>
     </div>
     <div class="xg:col-7-12">
-      <h3 class="text-h4 text-deep-blue mb-10">
+      <h3 class="text-h5 xg:text-h4 text-deep-blue mb-10">
         ¿Listo para desbloquear el <br />
         potencial de tu negocio?
       </h3>

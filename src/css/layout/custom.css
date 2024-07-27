@@ -28,7 +28,13 @@
 }
 
 .partners{
-  @apply flex xg:grid xg:grid-cols-4 gap-7 xg:gap-10 place-items-center w-fit xg:w-full;
+  @apply flex xg:grid xg:grid-cols-4 gap-5 xg:gap-10 
+  place-items-center 
+  ctr-px pb-6 xg:p-0
+  w-fit xg:w-full;
+
+
+
 }
 
 .widescreen{

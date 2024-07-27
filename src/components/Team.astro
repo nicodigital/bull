@@ -6,7 +6,19 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
 import TEAM from '../data/team.json';
 ---
 
-<div class="grid grid-cols-3 gap-2 xg:gap-[3.2rem]">
+<style>
+  .team-wrap{
+    @apply flex overflow-x-auto xg:grid-cols-3 gap-2 xg:gap-[3.2rem] ctr-px xg:px-0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+</style>
+
+<p class="text-h5 xg:text-h4 text-deep-blue mb-10">
+  Nuestro equipo, tu socio en el éxito
+</p>
+
+<div class="team-wrap">
   {
     TEAM.map((team) => {
       const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;

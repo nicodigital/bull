@@ -32,7 +32,7 @@
     @apply relative flex flex-col text-left py-4;
 
     h3{
-      @apply font-serif text-h4 tracking-[-0.05em] min-h-[26rem];
+      @apply font-serif text-h5 xg:text-h4 tracking-[-0.05em] min-h-[15rem] xg:min-h-[26rem];
     }
 
     p{
@@ -55,7 +55,9 @@
   }
 
   &-team{
-    @apply relative rounded-[1rem] cursor-pointer overflow-hidden;
+    min-width: calc(100% - 4rem);
+    @apply relative xg:min-w-[auto] rounded-[1rem] cursor-pointer overflow-hidden;
+
 
     img{
       @apply aspect-[9/12.5] object-cover;
