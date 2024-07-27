@@ -1,7 +1,7 @@
 .card{
 
   &-service{
-    @apply relative flex flex-col justify-between flex-1 aspect-square cursor-pointer
+    @apply relative flex flex-col justify-between flex-1 aspect-[1/1.05] cursor-pointer
    text-white bg-deep-blue  p-[2.5rem] rounded-2xl  overflow-hidden transition-all;
 
     h3{
