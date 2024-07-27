@@ -21,6 +21,7 @@ export default {
 				'h3': 'var(--h3)',
 				'h4': 'var(--h4)',
 				'h5': 'var(--h5)',
+				'h6': 'var(--h6)',
 				'body': 'var(--body)',
 				'small': 'var(--small)',
 				'tiny': 'var(--tiny)'

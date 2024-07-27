@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+const { links } = Astro.props;
+---
+
+<div class="mt-10 xg:mt-20 text-center xg:text-left">
+
+  <p class="text-deep-blue-300">
+    Contáctanos para obtener más información sobre nuestros servicios de
+    consultoría o para hablar sobre tu proyecto.
+  </p>
+
+  <p class="text-deep-blue xg:text-e-blue font-medium mt-2">
+    <span class="block  xg:mb-2">Estamos aquí para ayudarte. </span>
+    <a href="mailto:info@bulladvisors.com.uy">info@bulladvisors.com.uy</a>
+
+    <div class="flex justify-center xg:justify-start gap-1 mt-3 xg:mt-2">
+      <a href={links[0].whatsapp} target="_blank" rel="noreferrer noopener">
+        <Icon class="text-e-blue text-[3.3rem] xg:text-[2.5rem]" name="mdi:linkedin" />
+      </a>
+      <a href={links[0].linkedin} target="_blank" rel="noreferrer noopener">
+        <Icon class="text-e-blue text-[3.3rem] xg:text-[2.5rem]" name="mdi:whatsapp" />
+      </a>
+    </div>
+  </p>
+</div>

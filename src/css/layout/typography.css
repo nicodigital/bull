@@ -13,6 +13,7 @@ font-style: normal;
   --h3: 3.2rem;
   --h4: 3.6rem;
   --h5: 2.8rem;
+  --h6: 1.8rem;
   --body: 1.6rem;
   --small: 1.4rem;
   --tiny: 1.4rem;
@@ -45,7 +46,7 @@ p {
   @apply font-light leading-[1.2];
 }
 
-.text-h4, .text-h5{
+.text-h4, .text-h5, .text-h6{
   @apply font-light leading-[1.1];
 }
 

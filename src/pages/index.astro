@@ -4,12 +4,12 @@ import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Layout from "@/layout/Layout.astro";
 
-
 import HeroAnim from "@/components/HeroAnim.astro";
 import Slider from "../components/Slider.astro";
 import CardsClient from "../components/CardsClient.astro";
 import Partners from "@/components/Partners.astro";
 import CONTACT from '../data/contact.json';
+import ContactText from "@/components/ContactText.astro";
 import Form from "@/components/Form.astro";
 
 import teamIMG from "../assets/team.jpg";
@@ -125,9 +125,9 @@ import Team from "@/components/Team.astro";
 
   <!-- Nosotros -->
   <section id="nosotros" class="section-top">
-    
-    <div class="container row mb-10 xg:mb-15">
-      <div class="col-1-13 mb-4">
+
+    <div class="container row xg:mb-15">
+      <div class="col-1-13 xg:mb-4">
         <hr class="h-[2px] bg-deep-blue-300 mb-[2.5rem]" />
         <h2 class="mini-title">Nosotros</h2>
       </div>
@@ -143,40 +143,27 @@ import Team from "@/components/Team.astro";
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="container row section xg:mb-12">
+  <section id="contacto" class="container row section mt-15 xg:mt-0 xg:mb-12">
+
     <div class="xg:col-1-4">
-      <h2 class="mini-title mb-10">Contáctanos</h2>
-
-      <div class="mt-10 xg:mt-20">
-        <p>
-          Contáctanos para obtener más información sobre nuestros servicios de
-          consultoría o para hablar sobre tu proyecto.
-        </p>
-
-        <p class="text-e-blue font-medium mt-2">
-          <span class="block mb-2">Estamos aquí para ayudarte. </span>
-          <a href="mailto:info@bulladvisors.com.uy">info@bulladvisors.com.uy</a>
-
-          <div class="flex gap-1 mt-2">
-            <a href={CONTACT[0].whatsapp} target="_blank" rel="noreferrer noopener">
-                <Icon class="text-e-blue text-[2.5rem]" name="mdi:linkedin" />
-            </a>
-            <a href={CONTACT[0].linkedin} target="_blank" rel="noreferrer noopener">
-                <Icon class="text-e-blue text-[2.5rem]" name="mdi:whatsapp" />
-            </a>
-        </div>
-          
-        </p>
-
+      <h2 class="mini-title mb-[2.4rem] xg:mb-10">Contáctanos</h2>
+      <div class="hidden xg:block">
+        <ContactText links={CONTACT} />
       </div>
     </div>
+
     <div class="xg:col-7-12">
-      <h3 class="text-h5 xg:text-h4 text-deep-blue mb-10">
+      <h3 class="text-h5 xg:text-h4 text-deep-blue mb-6 xg:mb-10">
         ¿Listo para desbloquear el <br />
         potencial de tu negocio?
       </h3>
       <Form />
     </div>
+
+    <div class="xg:hidden">
+      <ContactText links={CONTACT} />
+    </div>
+
   </section>
 
 </Layout>
