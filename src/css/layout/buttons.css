@@ -40,8 +40,11 @@
     xg:w-[fit-content]
     px-[2.5rem] py-[1.5rem] xg:py-[1.2rem]
     border-solid border-[2px] border-transparent 
-    rounded-full 
     btn-e-blue
-    transition-all;
+    rounded-full transition-all;
+
+    &:disabled{
+      @apply bg-transparent border-solid border-deep-blue-200 border-[2px] text-deep-blue-200 opacity-100
+    }
 
 }

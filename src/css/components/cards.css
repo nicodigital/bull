@@ -18,12 +18,12 @@
 
     &:after{
       content: "";
-      @apply absolute w-full h-full top-0 left-0 z-0 translate-x-[50%] translate-y-[50%] opacity-0 pointer-events-none transition-all;
+      @apply absolute w-[175%] h-[175%] top-0 left-0 z-0 translate-x-[50%] translate-y-[50%] opacity-0 pointer-events-none transition-all duration-[.5s];
       background: radial-gradient(103.32% 259.99% at 103.32% 98.15%, #3536FD 0%, #000033 72%)  !important;
     }
 
     &:hover:after{
-      @apply translate-x-[0] translate-y-[0] opacity-100;
+      @apply translate-x-[-25%] translate-y-[-25%] opacity-100;
     }
 
   }
@@ -36,7 +36,7 @@
     }
 
     p{
-      @apply text-deep-blue font-[400] mb-3;
+      @apply text-deep-blue font-[400] mb-3 min-h-[15rem];
     }
 
     .ctas{

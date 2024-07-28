@@ -81,10 +81,6 @@
       -webkit-box-shadow: 0 0 0px 1000px #fff inset;
     }
 
-    [type="submit"] {
-      @apply disabled:opacity-50;
-    }
-
     /* El placeholder solo lo agarra aca */
     input::placeholder, textarea::placeholder{
       color: var(--form-color) !important;

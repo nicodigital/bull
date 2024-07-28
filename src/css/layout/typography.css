@@ -51,7 +51,7 @@ p {
 }
 
 .mini-title{
-  @apply text-small xg:text-body text-e-blue uppercase mb-3 font-medium;
+  @apply text-small xg:text-body text-e-blue uppercase mb-3 font-medium tracking-[0.1rem];
 }
 
 /*//////////////////////////////////////////////////////////*/
