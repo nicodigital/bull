@@ -1,6 +1,6 @@
 function menuMobile() {
 
-  const btn_togg = document.querySelectorAll('.togg');
+  const btn_togg = document.querySelectorAll('nav .item');
 
   // Crea un elemento div que tenga un ancho forzado de desbordamiento
   var scrollDiv = document.createElement('div');

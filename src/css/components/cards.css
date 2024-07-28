@@ -13,7 +13,12 @@
     }
 
     .cta{
-      @apply underline mt-3;
+      @apply inline-flex underline mt-3;
+
+      span{
+        @apply hidden;
+      }
+
     }
 
     &:after{
@@ -22,8 +27,22 @@
       background: radial-gradient(103.32% 259.99% at 103.32% 98.15%, #3536FD 0%, #000033 72%)  !important;
     }
 
-    &:hover:after{
-      @apply translate-x-[-25%] translate-y-[-25%] opacity-100;
+    &:hover{
+
+      .cta {
+
+        @apply underline;
+
+        span{
+          @apply inline-flex;
+        }
+
+      }
+
+      &:after{
+        @apply translate-x-[-25%] translate-y-[-25%] opacity-100;
+      }
+
     }
 
   }

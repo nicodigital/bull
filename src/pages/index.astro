@@ -1,11 +1,10 @@
 ---
 // export const prerender = false;
 import { Picture } from "astro:assets";
-import { Icon } from "astro-icon/components";
 import Layout from "@/layout/Layout.astro";
 
 import HeroAnim from "@/components/HeroAnim.astro";
-import Slider from "../components/Slider.astro";
+import CardsServicios from "../components/CardsServicios.astro";
 import CardsClient from "../components/CardsClient.astro";
 import Partners from "@/components/Partners.astro";
 import CONTACT from '../data/contact.json';
@@ -33,7 +32,7 @@ import Team from "@/components/Team.astro";
       y estrategia empresarial
     </h1>
 
-    <a href="#experiencia" class="xg:hidden absolute left-[50%] bottom-4 translate-x-[-50%] z-50 text-white"> Scroll para continuar </a>
+    <a href="#experiencia" class="xg:hidden absolute left-[50%] bottom-3 translate-x-[-50%] z-10 text-white"> Scroll para continuar </a>
 
   </section>
 
@@ -49,15 +48,13 @@ import Team from "@/components/Team.astro";
   </section>
 
   <!-- Team Image -->
-  <section id="team" class="container row">
-    <div class="col-1-13">
+  <section id="team" class="overflow-hidden" >
       <Picture
-        class="w-full object-cover max-w-[initial] rounded-3xl widescreen"
+        class="w-full object-cover max-w-[initial] rounded-3xl team-to-wide"
         src={teamIMG}
         formats={["webp"]}
         alt="Bull Team"
       />
-    </div>
   </section>
 
   <!-- Partners -->
@@ -105,7 +102,7 @@ import Team from "@/components/Team.astro";
         </div>
       </div>
 
-        <Slider />
+        <CardsServicios />
 
   </section>
 

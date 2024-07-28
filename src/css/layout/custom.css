@@ -37,15 +37,15 @@
 
 }
 
-.widescreen{
-
-  max-width: initial;
-  transition: all 0.65s ease;
+.team-to-wide{
+  
+  @apply relative w-full top-5 scale-100;
+  clip-path: inset(10% 10% 10% 10% round 3rem);
+  transition: all 0.75s ease-out;
 
   &.active{
-    width: calc( 100% + var(--container-gap) * 2 );
-    margin-left: calc(-1 * var(--container-gap) );
-    border-radius: 0 !important;
+    @apply top-0 scale-105;
+    clip-path: inset(0% 0% 0% 0% round 0rem);
   }
   
 }
