@@ -13,7 +13,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Outfit Variable', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-				serif: ['FreightBig Pro'],
+				serif: ['freight-big-pro'],
 			},
 			fontSize: {
 				'h1': 'var(--h1)',
