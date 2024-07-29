@@ -54,8 +54,17 @@
       @apply font-serif text-h5 xg:text-h4 tracking-[-0.035em] min-h-[15rem] xg:min-h-[26rem];
     }
 
+    .talk {
+      @apply xg:min-h-[30rem];
+    }
+
     p{
-      @apply text-deep-blue font-[400] mb-3 xg:min-h-[21rem];
+      @apply text-deep-blue font-[400] mb-3;
+
+      &.author{
+        @apply text-e-blue;
+      }
+
     }
 
     .ctas{

@@ -10,7 +10,12 @@ import CLIENTS from "../data/clientes.json";
         <Fragment set:html={client.title} />
       </h3>
       <div>
-        <p>{client.intro}</p>
+        
+        <div class="talk">
+          <p>{client.intro}</p>
+          <p class="author">{client.author}</p>
+        </div>
+
         <div class="ctas">
           <div> Investor Relations </div>
           <div> Automovil </div>
