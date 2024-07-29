@@ -5,9 +5,13 @@
   .wrapper{
     @apply grid overflow-x-auto;
     grid-auto-flow: column;  
+    grid-auto-columns: var(--colwidth, 100%);
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     clip-path: inset(0 0 30px 0);
+
+    padding-bottom: var(--paddBottom, 0) ;
+    gap: var(--gap, 0);
 
     &::-webkit-scrollbar {
       display: none !important;
@@ -18,10 +22,8 @@
 
   .slide{
     scroll-snap-align: start;
-  }
-
-  &.full .wrapper{
-    grid-auto-columns: 100%; 
+    padding-left: var(--paddSide, 0);
+    padding-right: var(--paddSide, 0);
   }
 
 }

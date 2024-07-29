@@ -55,7 +55,7 @@
     }
 
     p{
-      @apply text-deep-blue font-[400] mb-3 min-h-[15rem];
+      @apply text-deep-blue font-[400] mb-3 xg:min-h-[21rem];
     }
 
     .ctas{
@@ -70,8 +70,7 @@
   }
 
   &-team{
-    min-width: calc(100% - 4rem);
-    @apply relative aspect-[9/12.5] xg:min-w-[auto] rounded-[1rem] cursor-pointer overflow-hidden;
+    @apply relative w-full aspect-[9/12.5] xg:min-w-[auto] rounded-[1rem] cursor-pointer overflow-hidden;
 
 
     img{
@@ -143,5 +142,6 @@
     }
 
   }
+
 
 }

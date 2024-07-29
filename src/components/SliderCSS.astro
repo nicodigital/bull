@@ -1,17 +1,8 @@
 ---
-const { colwidth = 100, paddBottom = 0 } = Astro.props;
+const { customClass , colwidth = 100, paddSide = 0, paddBottom = 0, gap = 0 } = Astro.props;
 // El resto de los estilos estan en slider-css.css
 ---
-<style>
-  .slider-css {
-    .wrapper {
-      grid-auto-columns: var(--colwidth, 100%);
-      padding-bottom: var(--paddBottom, 0) ;
-    }
-  }
-</style>
-
-<div class="slider-css" style={`--colwidth: ${colwidth}%; --paddBottom: ${paddBottom}rem`}  >
+<div class={`slider-css ${customClass}`  } style={`--colwidth: ${colwidth}%; --paddBottom: ${paddBottom}rem; --paddSide: ${paddSide}rem; --gap: ${gap}rem`}  >
   <div class="wrapper"  >
     <slot />
   </div>

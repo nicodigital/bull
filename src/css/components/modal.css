@@ -20,7 +20,7 @@
 
 
     &-box {
-      @apply relative w-[66%] h-full bg-white  text-deep-blue px-5 pt-12 pb-5 overflow-y-auto;
+      @apply relative w-full xg:w-[66%] h-full bg-white  text-deep-blue ctr-px xg:px-5 pt-12 pb-5 overflow-y-auto;
 
       &::-webkit-scrollbar { opacity: 0; width: 0 }
 
@@ -33,7 +33,7 @@
             cursor-pointer
             text-deep-blue;
 
-      left:calc( 33% + 7rem );
+      left: var(--container-gap) ;
 
       svg{
         @apply w-[2rem] h-[2rem];
@@ -75,7 +75,7 @@
     &[data-type="service"]{
 
       .modal-box > div{
-        @apply grid grid-cols-[1fr_1.5fr] gap-2 mb-5;
+        @apply grid xg:grid-cols-[1fr_1.5fr] gap-2 mb-5;
       }
     }
 
@@ -107,3 +107,16 @@
     }
 
   }
+
+
+/*//////////////////////////////////////////////////////////*/
+/*///////////////////////// 992px //////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
+
+@media (min-width: theme("screens.xg")) {
+  .modal {
+    .close {
+      left:calc( 33% + 7rem );
+    }
+  }
+}

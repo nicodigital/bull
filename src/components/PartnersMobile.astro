@@ -4,9 +4,9 @@ import PARTNERS from '../data/partners.json';
 import SliderCSS from "./SliderCSS.astro";
 ---
 
-<SliderCSS colwidth="40">
+<SliderCSS colwidth="40" paddSide="2" >
     {PARTNERS.map((slide) => (
-      <div class="slide ctr-px">
+      <div class="slide"  >
           <Icon name={slide.slug} class="w-[14rem] md:w-[19rem] h-auto" />
       </div>
     ))}

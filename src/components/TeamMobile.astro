@@ -11,7 +11,7 @@ import SliderCSS from "./SliderCSS.astro";
   Nuestro equipo, <br class="xg:hidden"> tu socio en el éxito
 </p>
 
-<SliderCSS paddBottom={4} >
+<SliderCSS colWidth="calc(100% - var(--container-gap))" customClass="team-mobile" paddBottom="4" paddSide="2" >
   {
     TEAM.map((team) => {
       const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;

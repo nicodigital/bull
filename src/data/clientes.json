@@ -1,17 +1,20 @@
 [
 {
-    "name": "Cliente",
+    "name": "Nuskle",
     "title": "Trabajar con Bull Advisors fue una experiencia excepcional.",
-    "intro":"“ Nos brindaron una valuación precisa de nuestra empresa, Nuskle, superando nuestras expectativas. Su profesionalismo y atención al detalle nos ayudaron a tomar decisiones estratégicas informadas. Recomiendo ampliamente sus servicios.”"
+    "intro":"Nos brindaron una valuación precisa de nuestra empresa que superó nuestras expectativas. Su profesionalismo y comprensión del negocio nos ayudaron a tomar decisiones informadas y estratégicas. Espero poder contar con ellos en proyectos futuros.",
+    "author": "Bruno Hiriart, CEO de Nuskle"
   },
   {
-    "name": "Cliente",
-    "title": "Lorem ipsum dolor sit amet.",
-    "intro":"“Lorem ipsum dolor sit amet consectetur. Tellus augue mattis elementum elit diam eget risus, sodales amet tellus vel convallis sed nullam.”"
+    "name": "OnFloor",
+    "title": "Gracias a Bull, mejoramos significativamente la gestión de nuestro capitalde trabajo. ",
+    "intro":"Su asesoramiento nos permitió tomar mejores decisiones de financiamiento, ordenar la gestión de stock, mejorar la planificación de tesorería y optimizar nuestros resultados. Su conocimiento y profesionalismo hicieron una gran diferencia en nuestro negocio. Recomiendo sus servicios sin reservas.",
+    "author": "Mario Carassale, CEO de OnFloor"
   },
   {
-    "name": "Cliente",
-    "title": "Lorem ipsum dolor sit amet.",
-    "intro":"“Lorem ipsum dolor sit amet consectetur. Tellus augue mattis elementum elit diam eget risus, sodales amet tellus vel convallis sed nullam.”"
+    "name": "Ginkgo",
+    "title": "Trabajar con Bull ha sido transformador para nuestra empresa.",
+    "intro":"Nos ayudaron a implementar un modelo de asignación de horas de nuestros recursos, obteniendo visibilidad sobre la rentabilidad por cliente. Además, mejoraron significativamente nuestra planificación de cash flow. Su conocimiento y enfoque profesional han sido claves para nuestro éxito. Estamos muy satisfechos con los resultados y continuaremos colaborando con ellos en el futuro.",
+    "author": "Alberto Román, CEO de Ginkgo"
   }
 ]
