@@ -17,7 +17,6 @@
   }
 
   .slide{
-    @apply ctr-px;
     scroll-snap-align: start;
   }
 
