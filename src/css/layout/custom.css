@@ -32,31 +32,6 @@
   ctr-px pb-6 xg:p-0;
 }
 
-.slider-mobile{
-
-  @apply relative w-full;
-
-  .wrapper{
-    @apply grid overflow-x-auto;
-    grid-auto-flow: column;  
-	  grid-auto-columns: 40%; 
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    clip-path: inset(0 0 30px 0);
-
-    &::-webkit-scrollbar {
-      display: none !important;
-      opacity: 0 !important;
-    }
-
-  }
-
-  .slide{
-    @apply ctr-px;
-    scroll-snap-align: start;
-  }
-
-}
 
 /* Team Image Animation  */
 .team-to-wide{

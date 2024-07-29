@@ -3,24 +3,25 @@ import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
 const { name, role, src, slug } = Astro.props;
 ---
+<div class="slide">
+  <figure class="card-team m-link" data-modal={`team-` + slug }>
 
-<figure class="card-team m-link" data-modal={`team-` + slug }>
+    <Picture
+      class="w-full"
+      {src}
+      formats={["webp"]}
+      alt={name}
+    />
 
-  <Picture
-    class="w-full"
-    {src}
-    formats={["webp"]}
-    alt={name}
-  />
+    <figcaption>
+      <div>
+        {name} <br> {role}
+      </div>
+      <div class="plus">
+        <svg width="32" height="32"><use xlink:href="#plus-white"></use></svg>
+        <svg width="32" height="32"><use xlink:href="#plus-blue"></use></svg>
+      </div>
+    </figcaption>
 
-  <figcaption>
-    <div>
-      {name} <br> {role}
-    </div>
-    <div class="plus">
-      <svg width="32" height="32"><use xlink:href="#plus-white"></use></svg>
-      <svg width="32" height="32"><use xlink:href="#plus-blue"></use></svg>
-    </div>
-  </figcaption>
-
-</figure>
+  </figure>
+</div>

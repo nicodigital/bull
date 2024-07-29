@@ -6,6 +6,7 @@
 @import "./layout/custom.css";
 @import "./layout/text-selection.css";
 @import  "./layout/tools.css";
+@import  "./layout/slider-css.css";
 
 @import "./components/cards.css";
 /* @import "./components/animations.css";     */

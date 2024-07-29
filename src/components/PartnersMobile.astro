@@ -1,21 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
 import PARTNERS from '../data/partners.json';
+import SliderCSS from "./SliderCSS.astro";
 ---
 
-  <div class="slider-mobile w-full" >
-    <div class="wrapper">  
-
-      {
-        PARTNERS.map((slide) => (
-          <div class="slide"> 
-            <Icon name={slide.slug} class="w-[14rem] md:w-[19rem] h-auto" />
-          </div>
-        ))  
-      }
-
-    </div>
-  </div>
+<SliderCSS colwidth="40">
+    {PARTNERS.map((slide) => (
+      <div class="slide">
+          <Icon name={slide.slug} class="w-[14rem] md:w-[19rem] h-auto" />
+      </div>
+    ))}
+</SliderCSS>
 
 <!-- <script>
   import Swiper from "swiper";

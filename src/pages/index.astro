@@ -5,13 +5,15 @@ import Layout from "@/layout/Layout.astro";
 
 import HeroAnim from "@/components/HeroAnim.astro";
 import CardsServicios from "../components/CardsServicios.astro";
-import CardsClient from "../components/CardsClient.astro";
+import CardsClientDesktop from "../components/CardsClientDesktop.astro";
+import CardsClientMobile from "../components/CardsClientMobile.astro";
 import CONTACT from '../data/contact.json';
 import ContactText from "@/components/ContactText.astro";
 import Form from "@/components/Form.astro";
 
 import teamIMG from "../assets/team.jpg";
-import Team from "@/components/Team.astro";
+import TeamDesktop from "@/components/TeamDesktop.astro";
+import TeamMobile from "@/components/TeamMobile.astro";
 import PartnersDesktop from "@/components/PartnersDesktop.astro";
 import PartnersMobile from "@/components/PartnersMobile.astro";
 ---
@@ -118,9 +120,14 @@ import PartnersMobile from "@/components/PartnersMobile.astro";
         positivo
       </p>
     </div>
-    <div class="col-1-13 grid md:grid-cols-3 gap-4 xg:gap-8">
-      <CardsClient />
+    <div class="col-1-13 hidden xg:grid md:grid-cols-3 gap-4 xg:gap-8">
+      <CardsClientDesktop/>
     </div>
+
+    <div class="testimonios xg:hidden">
+        <CardsClientMobile/>
+    </div>
+
   </section>
 
   <!-- Nosotros -->
@@ -132,12 +139,12 @@ import PartnersMobile from "@/components/PartnersMobile.astro";
         <h2 class="mini-title">Nosotros</h2>
       </div>
       <div class="col-1-13 hidden xg:block">
-        <Team />
+        <TeamDesktop />
       </div>
     </div>
 
     <div class="xg:hidden">
-      <Team />
+      <TeamMobile />
     </div>
 
   </section>

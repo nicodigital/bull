@@ -67,10 +67,6 @@
 
     }
 
-    &:not(:last-child):after{
-      @apply absolute content-[""] top-0 right-0 w-[1px] h-full bg-deep-blue-100 translate-x-4;
-    }
-
   }
 
   &-team{
@@ -131,6 +127,19 @@
 
       }
 
+    }
+
+  }
+
+}
+
+
+@media (min-width: theme("screens.xg")) {
+
+  .card-client{
+
+    &:not(:last-child):after{
+      @apply absolute content-[""] top-0 right-0 w-[1px] h-full bg-deep-blue-100 translate-x-4;
     }
 
   }

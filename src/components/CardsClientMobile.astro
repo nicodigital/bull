@@ -1,0 +1,21 @@
+---
+import SliderCSS from "./SliderCSS.astro";
+import CLIENTS from "../data/clientes.json";
+---
+<SliderCSS >
+{CLIENTS.map((client) => (
+    <div class="card-client slide">
+      <h3> 
+        <span class="text-e-blue" > <Fragment set:html={client.name} /> </span> - 
+        <Fragment set:html={client.title} />
+      </h3>
+      <div>
+        <p>{client.intro}</p>
+        <div class="ctas">
+          <div> Investor Relations </div>
+          <div> Automovil </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</SliderCSS>

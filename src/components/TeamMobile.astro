@@ -1,0 +1,21 @@
+---
+import CardTeam from "./CardTeam.astro";
+import carlosIMG from "../assets/Carlos-Pera.jpg";
+import andresIMG from "../assets/Andres-Kavedjian.jpg";
+import luisIMG from "../assets/Luis-Brennan.jpg";
+import TEAM from '../data/team.json';
+import SliderCSS from "./SliderCSS.astro";
+---
+
+<p class="text-h5 xg:text-h4 text-deep-blue mb-6 xg:mb-10 ctr-pl xg:pl-0">
+  Nuestro equipo, <br class="xg:hidden"> tu socio en el éxito
+</p>
+
+<SliderCSS paddBottom={4} >
+  {
+    TEAM.map((team) => {
+      const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;
+      return <CardTeam name={team.name} role={team.role} src={currImg} slug={team.slug} />
+     })
+  }
+</SliderCSS>
