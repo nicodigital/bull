@@ -75,11 +75,11 @@
 
   &-team{
     min-width: calc(100% - 4rem);
-    @apply relative xg:min-w-[auto] rounded-[1rem] cursor-pointer overflow-hidden;
+    @apply relative aspect-[9/12.5] xg:min-w-[auto] rounded-[1rem] cursor-pointer overflow-hidden;
 
 
     img{
-      @apply aspect-[9/12.5] object-cover;
+      @apply w-full h-full object-cover transition-all duration-[.4s] ease-in-out;
     }
 
     figcaption{
@@ -88,8 +88,19 @@
       width: calc(100% - 6rem);
     }
 
-    svg{
-      @apply w-[3.2rem] h-auto;
+    .plus{
+
+      @apply relative size-[3.2rem] rounded-full overflow-hidden;
+
+      svg{
+        @apply absolute top-0 left-0 w-[3.2rem] h-auto transition-all duration-[.4s];
+
+        &:last-child{
+          @apply z-20 translate-y-[100%];
+        }
+
+      }
+
     }
 
     &:before{
@@ -100,14 +111,22 @@
 
     &:hover{
 
-      svg {
+      img{
+         @apply scale-[1.1];
+      }
 
-        rect{
-          fill: theme(colors.deep-blue);
-        }
+      .plus {
 
-        path{
-          fill: white;
+        svg{
+
+          &:first-child{
+            @apply scale-[.96];
+          }
+
+          &:last-child{
+            @apply translate-y-0 !important;
+          }
+
         }
 
       }
