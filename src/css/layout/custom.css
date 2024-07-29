@@ -42,6 +42,11 @@
 	  grid-auto-columns: 40%; 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      opacity: 0 !important;
+    }
+
   }
 
   .slide{
