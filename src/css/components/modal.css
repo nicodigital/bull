@@ -81,20 +81,25 @@
 
     &[data-type="team"]{
 
+      .modal-box{
+        @apply pt-0;
+      }
+
       .heading, .content{
-        @apply relative grid grid-cols-2;
+        @apply relative grid xg:grid-cols-2;
       }
 
       .content{
-        @apply mt-[-5rem];
+        @apply mt-4;
       }
 
       picture{
-        @apply relative block h-[66vh] xg:top-[-12rem] right-[0] overflow-hidden !important ;
-        width: calc(100% + 5rem);
+        @apply relative block h-[66vh] right-[0] overflow-hidden !important ;
+        width: calc(100% + var(--container-gap)*2);
+        margin-left: calc(-1 * var(--container-gap));
 
         img{
-          @apply w-full rounded-none object-cover translate-y-[-5rem];
+          @apply w-full rounded-none object-cover;
           height: calc(100% + 12rem);
         }
 
@@ -115,8 +120,19 @@
 
 @media (min-width: theme("screens.xg")) {
   .modal {
+
     .close {
       left:calc( 33% + 7rem );
     }
+
+    &[data-type="team"]{
+
+      picture{
+        width: calc(100% + 5rem);
+        margin-left:0;
+      }
+
+    }
+
   }
 }
