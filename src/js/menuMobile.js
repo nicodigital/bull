@@ -1,4 +1,4 @@
-function menuMobile() {
+function menuMobile(html, body) {
 
   const btn_togg = document.querySelectorAll('nav .item');
 

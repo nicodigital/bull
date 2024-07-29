@@ -133,7 +133,7 @@ document.addEventListener('scroll', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-	menuMobile()
+	menuMobile(html,body)
 	fetchGsap()
 	// Animations();
 });
