@@ -51,7 +51,7 @@
     @apply relative flex flex-col text-left py-4;
 
     h3{
-      @apply font-serif text-h5 xg:text-h4 tracking-[-0.05em] min-h-[15rem] xg:min-h-[26rem];
+      @apply font-serif text-h5 xg:text-h4 tracking-[-0.035em] min-h-[15rem] xg:min-h-[26rem];
     }
 
     p{
