@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components";
+import PARTNERS from '../data/partners.json';
+---
+<style>
+  .swiper-slide{
+    @apply flex justify-center;
+  }
+</style>
+
+  <div class="slider-mobile w-full" >
+    <div class="wrapper">  
+
+      {
+        PARTNERS.map((slide) => (
+          <div class="slide"> 
+            <Icon name={slide.slug} class="w-[14rem] md:w-[19rem] h-auto" />
+          </div>
+        ))  
+      }
+
+    </div>
+  </div>
+
+<!-- <script>
+  import Swiper from "swiper";
+
+  function partnersSlider() {
+
+    const PartnersSwiper = new Swiper(".swiper-partners", {
+      spaceBetween: 20,
+      loop: true,
+      // speed: 800,
+      breakpoints: {
+        0: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 3.3,
+        }
+      },
+    });
+
+    
+  } // partnersSlider
+
+  partnersSlider();
+  document.addEventListener("astro:after-swap", partnersSlider );
+</script> -->

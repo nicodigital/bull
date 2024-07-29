@@ -28,17 +28,31 @@
 }
 
 .partners{
-  @apply flex xg:grid xg:grid-cols-4 gap-5 xg:gap-10 
-  place-items-center 
-  ctr-px pb-6 xg:p-0
-  w-fit xg:w-full;
+  @apply flex w-full xg:grid xg:grid-cols-4 gap-5 xg:gap-10 place-items-center 
+  ctr-px pb-6 xg:p-0;
+}
 
+.slider-mobile{
 
+  @apply relative w-full;
+
+  .wrapper{
+    @apply grid overflow-x-auto;
+    grid-auto-flow: column;  
+	  grid-auto-columns: 40%; 
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .slide{
+    @apply ctr-px;
+    scroll-snap-align: start;
+  }
 
 }
 
+/* Team Image Animation  */
 .team-to-wide{
-  
   @apply relative w-full top-5 scale-100;
   clip-path: inset(10% 10% 10% 10% round 3rem);
   transition: all 0.75s ease-out;

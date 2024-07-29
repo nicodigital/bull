@@ -6,13 +6,14 @@ import Layout from "@/layout/Layout.astro";
 import HeroAnim from "@/components/HeroAnim.astro";
 import CardsServicios from "../components/CardsServicios.astro";
 import CardsClient from "../components/CardsClient.astro";
-import Partners from "@/components/Partners.astro";
 import CONTACT from '../data/contact.json';
 import ContactText from "@/components/ContactText.astro";
 import Form from "@/components/Form.astro";
 
 import teamIMG from "../assets/team.jpg";
 import Team from "@/components/Team.astro";
+import PartnersDesktop from "@/components/PartnersDesktop.astro";
+import PartnersMobile from "@/components/PartnersMobile.astro";
 ---
 
 <Layout
@@ -73,13 +74,15 @@ import Team from "@/components/Team.astro";
       </div>
 
       <div class="xg:col-1-13 pt-10 xg:pt-15 pb-3 hidden xg:block">
-        <Partners class="partners" />
+        <div class="partners">
+            <PartnersDesktop class="partners" />
+        </div>
       </div>
 
     </div>
 
-    <div class="xg:hidden overflow-x-auto mt-7">
-      <Partners class="partners" />
+    <div class="xg:hidden mt-7">
+      <PartnersMobile class="partners" />
     </div>
   
   </section>
