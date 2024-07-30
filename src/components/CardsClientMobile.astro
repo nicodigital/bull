@@ -1,26 +1,61 @@
 ---
-import SliderCSS from "./SliderCSS.astro";
+import "swiper/css";
+import 'swiper/css/pagination';
+// const { slides } = Astro.props;
 import CLIENTS from "../data/clientes.json";
 ---
-<SliderCSS >
-{CLIENTS.map((client) => (
-    <div class="card-client slide">
-      <h3> 
-        <span class="text-e-blue" > <Fragment set:html={client.name} /> </span> - 
-        <Fragment set:html={client.title} />
-      </h3>
-      <div>
-        
-        <div class="talk">
-          <p>{client.intro}</p>
-          <p class="author">{client.author}</p>
-        </div>
 
-        <div class="ctas">
-          <div> Investor Relations </div>
-          <div> Automovil </div>
+<div class="swiper swiper-client">
+  <div class="swiper-wrapper pb-[3.5rem]">
+    {
+      CLIENTS.map((client) => (
+        <div class="swiper-slide">
+          <div class="card-client slide">
+            <h3>
+              <span class="text-e-blue">
+                {" "}
+                <Fragment set:html={client.name} />{" "}
+              </span>{" "}
+              -
+              <Fragment set:html={client.title} />
+            </h3>
+            <div>
+              <div class="talk">
+                <p>{client.intro}</p>
+                <p class="author">{client.author}</p>
+              </div>
+
+              <div class="ctas">
+                <div> Investor Relations </div>
+                <div> Automovil </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  ))}
-</SliderCSS>
+      ))
+    }
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import { Autoplay, Pagination } from "swiper/modules";
+
+  function swiperClient() {
+    const SwiperClient = new Swiper(".swiper-client", {
+      modules: [Autoplay, Pagination],
+      spaceBetween: 10,
+      slidesPerView: 1,
+      speed: 800,
+      pagination: {
+        el: ".swiper-pagination",
+      }
+    });
+
+  } // swiperClient
+
+
+  document.addEventListener("DOMContentLoaded", swiperClient );
+  // document.addEventListener("astro:after-swap", swiperClient);
+</script>

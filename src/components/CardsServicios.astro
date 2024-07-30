@@ -37,6 +37,9 @@ const SERVICES = [
 ---
 
 <style>
+  :root{
+    --swiper-theme-color: theme("colors.e-blue") !important;
+  }
   .swiper {
     padding-left: var(--container-gap) !important;
     padding-right: var(--container-gap) !important;
@@ -44,7 +47,7 @@ const SERVICES = [
 </style>
 
 <!-- Slider main container -->
-<div class="swiper">
+<div class="swiper swiper-servicios">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     {
@@ -67,55 +70,58 @@ const SERVICES = [
 </div>
 
 <script>
-  import Swiper from "swiper";
-  import { Autoplay } from "swiper/modules";
+import Swiper from "swiper";
+import { Autoplay } from "swiper/modules";
 
-  function swiperSlider() {
+function swiperSlider() {
 
-    const SwiperSlider = new Swiper(".swiper", {
-      modules: [Autoplay],
-      spaceBetween: 20,
-      speed: 800,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: true,
+  const swiperElement = document.querySelector(".swiper-servicios");
+
+  const SwiperSlider = new Swiper( swiperElement, {
+    modules: [Autoplay],
+    spaceBetween: 20,
+    speed: 800,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.05,
       },
-      breakpoints: {
-        0: {
-          slidesPerView: 1.05,
-        },
-        768: {
-          slidesPerView: 2.3,
-        },
-        1024: {
-          slidesPerView: 3.05,
-        },
+      768: {
+        slidesPerView: 2.3,
       },
-    });
+      1024: {
+        slidesPerView: 3.05,
+      },
+    },
+  });
 
-    //SwiperSlider.autoplay.stop();
+  // Configuración del Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          SwiperSlider.autoplay.start(); // Inicia el autoplay
+          setTimeout(() => {
+            SwiperSlider.slideTo(1);
+          }, 1500);
+        } else {
+          SwiperSlider.autoplay.stop(); // Detiene el autoplay
+        }
+      });
+    },
+    {
+      root: null, // Usa el viewport como root
+      threshold: 0.1, // Activa el autoplay cuando al menos el 10% del slider es visible
+    }
+  );
 
-    // Obtener el elemento del slider
-    const sliderElement = document.querySelector(".swiper");
+  // Observa el elemento del slider
+  observer.observe(swiperElement);
+}
 
-    // Añadir el evento mouseleave para autoplay
-    // sliderElement.addEventListener("mouseleave", () => {
-    //     SwiperSlider.autoplay.start();
-    // });
-
-    new IntersectionObserver((entries, observer) => {
-      if (entries[0].isIntersecting) {
-        observer.disconnect()
-        SwiperSlider.autoplay.start();
-        setTimeout(() => {
-          SwiperSlider.slideTo(1)
-        }, 2000)
-      }
-    }).observe(sliderElement)
-    
-
-  } // swiperSlider
-
-  swiperSlider();
-  document.addEventListener("astro:after-swap", swiperSlider);
+document.addEventListener("DOMContentLoaded", swiperSlider);
+// document.addEventListener("astro:after-swap", swiperSlider);
 </script>

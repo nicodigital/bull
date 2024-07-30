@@ -3,7 +3,6 @@
 import { Picture } from "astro:assets";
 import Layout from "@/layout/Layout.astro";
 
-import HeroAnim from "@/components/HeroAnim.astro";
 import CardsServicios from "../components/CardsServicios.astro";
 import CardsClientDesktop from "../components/CardsClientDesktop.astro";
 import CardsClientMobile from "../components/CardsClientMobile.astro";
@@ -24,11 +23,9 @@ import PartnersMobile from "@/components/PartnersMobile.astro";
   description="El nuevo framework de maquetación de sitios de I+D"
 >
   <!-- Hero -->
-  <section
-    id="hero"
-    class="h-screen relative w-full flex items-center justify-center bg-deep-blue overflow-hidden"
-  >
-    <HeroAnim />
+  <section id="hero" class="h-screen relative w-full flex items-center justify-center bg-deep-blue overflow-hidden">
+
+    <video class="absolute top-0 left-0 w-full h-full object-cover" src="/Bull-Back.mp4" poster="/img/poster.jpeg" loop autoplay muted ></video>
 
     <h1 class="relative text-h3 xg:text-h2 z-10 text-white text-center">
       Tu socio en finanzas <br class="xg:hidden" /> corporativas <br class="hidden xg:block" />
@@ -150,7 +147,7 @@ import PartnersMobile from "@/components/PartnersMobile.astro";
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="container row section mt-15 xg:mt-0 xg:mb-12">
+  <section id="contacto" class="container row section xg:mb-12">
 
     <div class="xg:col-1-4">
       <h2 class="mini-title mb-[2.4rem] xg:mb-10">Contáctanos</h2>
