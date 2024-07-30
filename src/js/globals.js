@@ -133,15 +133,19 @@ document.addEventListener('scroll', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-	menuMobile(html,body)
+	
+	if( device != 'desktop' ) {
+		menuMobile(html,body)
+	}
+
 	fetchGsap()
-	// Animations();
+
 });
 
-document.addEventListener('astro:after-swap', function () {
-	menuMobile()
-	fetchGsap()
-});
+// document.addEventListener('astro:after-swap', function () {
+// 	menuMobile()
+// 	fetchGsap()
+// });
 
 
 /*/////////////////////////////////////////////////////////////////////*/
