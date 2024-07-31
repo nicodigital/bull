@@ -3,6 +3,7 @@ import lenisScroll from "../js/lenisScroll"
 import scrollMarkers from "../js/scrollMarkers"
 import smartMenu from "../js/smartMenu"
 import menuMobile from '../js/menuMobile'
+import reloadClick from '../js/reloadClick'
 
 // import { gsap } from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -139,13 +140,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	fetchGsap()
+	reloadClick()
 
 });
 
-// document.addEventListener('astro:after-swap', function () {
-// 	menuMobile()
-// 	fetchGsap()
-// });
+document.addEventListener('astro:after-swap', function () {
+	fetchGsap()
+	reloadClick()
+});
 
 
 /*/////////////////////////////////////////////////////////////////////*/
