@@ -128,12 +128,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	fetchGsap()
+	lenisScroll()
 
 });
 
 document.addEventListener('astro:after-swap', function () {
 	fetchGsap()
-	reloadClick()
+	lenisScroll()
 });
 
 
@@ -179,4 +180,4 @@ if ( device != 'desktop' ) {
 
 }
 
-	lenisScroll();
+	
