@@ -135,6 +135,9 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('astro:after-swap', function () {
 	fetchGsap()
 	lenisScroll()
+	if( device != 'desktop' ) {
+		menuMobile(html,body)
+	}
 });
 
 
