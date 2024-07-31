@@ -3,18 +3,6 @@ import lenisScroll from "../js/lenisScroll"
 import scrollMarkers from "../js/scrollMarkers"
 import smartMenu from "../js/smartMenu"
 import menuMobile from '../js/menuMobile'
-import reloadClick from '../js/reloadClick'
-
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { CustomEase } from "gsap/all";
-// gsap.registerPlugin(ScrollTrigger);
-// gsap.registerPlugin(CustomEase);
-
-
-// import Animations from '../js/animations'
-// import Rellax from "rellax";
-// import Rellax from "rellax";
 
 /*/////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////// GET BASIC /////////////////////////////*/
@@ -140,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	fetchGsap()
-	reloadClick()
 
 });
 
