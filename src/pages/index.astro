@@ -10,11 +10,13 @@ import CONTACT from '../data/contact.json';
 import ContactText from "@/components/ContactText.astro";
 import Form from "@/components/Form.astro";
 
-import teamIMG from "../assets/team.jpg";
 import TeamDesktop from "@/components/TeamDesktop.astro";
 import TeamMobile from "@/components/TeamMobile.astro";
 import PartnersDesktop from "@/components/PartnersDesktop.astro";
 import PartnersMobile from "@/components/PartnersMobile.astro";
+
+import teamIMG from "../assets/team.jpg";
+import posterIMG from "../assets/poster.jpeg";
 ---
 
 <Layout
@@ -24,9 +26,12 @@ import PartnersMobile from "@/components/PartnersMobile.astro";
 >
   <!-- Hero -->
   <section id="hero" class="h-screen relative w-full flex items-center justify-center overflow-hidden">
-
-    <video class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none -z-10" src="/Bull-Back.mp4" poster="/img/poster.jpeg" loop autoplay muted playsinline ></video>
-
+    
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none -z-10">
+      <video class="relative hidden xg:block top-0 left-0 w-full h-full object-cover " src="/Bull-Back.mp4" poster="/img/poster.jpeg" loop autoplay muted playsinline ></video>
+      <Picture class="w-full h-full object-cover max-w-[initial] xg:hidden" src={posterIMG} formats={["webp"]} alt="Bull Team" />
+    </div>
+   
     <h1 class="relative text-h3 xg:text-h2 z-10 text-white text-center">
       Tu socio en finanzas <br class="xg:hidden" /> corporativas <br class="hidden xg:block" />
       y estrategia empresarial
