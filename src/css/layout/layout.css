@@ -1,5 +1,6 @@
 :root {
   --container-gap: 1rem;
+  --gradient-1: radial-gradient(80.77% 37.32% at 53.85% 51.24%, #3536FD 0%, #000033 100%);
 }
 
 html {

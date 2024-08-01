@@ -27,7 +27,7 @@ nav {
 
       .ball{
         @apply absolute w-[200vw] left-[-50vw] bottom-[-50vh] aspect-square rounded-full opacity-50 scale-150 translate-y-[-10%] pointer-events-none;
-        background: radial-gradient(ellipse at center,  rgba(53,54,253,1) 0%,rgba(0,0,51,1) 50%);
+        background: var(--gradient-1);
       }
 
       .lang-switcher svg{

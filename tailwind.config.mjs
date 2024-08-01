@@ -9,6 +9,7 @@ export default {
 				'deep-blue-300': '#666685',
 				'deep-blue-200': '#9999AD',
 				'deep-blue-100': '#CCCCD6',
+				'gradient-1': 'var(--gradient-1)',
 				'red': '#FF5454',
 			},
 			fontFamily: {

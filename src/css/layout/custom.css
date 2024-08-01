@@ -1,3 +1,8 @@
+#hero{
+  background: var(--gradient-1);
+}
+
+
 .lang-switcher{
 
   @apply relative top-[1.3rem] flex gap-[.7rem] xg:top-0 xg:pl-[3.5rem];
