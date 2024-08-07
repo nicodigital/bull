@@ -7,7 +7,7 @@
   }
 
   .icon{
-    @apply absolute top-[2.5rem] right-0 w-[2rem];
+    @apply absolute top-[2.5rem] right-0 w-[2rem] pointer-events-none;
 
     svg{
       @apply w-full h-auto;

@@ -6,7 +6,7 @@ import CLIENTS from "../data/clientes.json";
 ---
 
 <div class="swiper swiper-client">
-  <div class="swiper-wrapper pb-[3.5rem]">
+  <div class="swiper-wrapper pb-[3.5rem] xg:pb-6">
     {
       CLIENTS.map((client) => (
         <div class="swiper-slide">
@@ -50,6 +50,7 @@ import CLIENTS from "../data/clientes.json";
       speed: 800,
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
       breakpoints: {
         0: {

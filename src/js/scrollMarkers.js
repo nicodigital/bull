@@ -1,4 +1,4 @@
-function scrollMarkers(){
+function scrollMarkers( winH ){
 	
 		const body = document.querySelector('body');
 		const scrollPosition = window.scrollY;
@@ -23,7 +23,7 @@ function scrollMarkers(){
 					// Por ejemplo, cambiar su estilo, cargar contenido adicional, etc.
 				}else{
 	
-					if (scrollPosition < 100) {
+					if ( scrollPosition < winH ) {
 						body.setAttribute('data-scroll', 'top');
 					} else {
 						body.setAttribute('data-scroll', 'down');

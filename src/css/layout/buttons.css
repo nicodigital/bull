@@ -25,9 +25,10 @@
   &-outline{
     @apply border-solid border-deep-blue-200 border-[2px]
     text-deep-blue-200
-    hover:bg-deep-blue-200
+    hover:bg-deep-blue
+    hover:border-deep-blue
     hover:text-white;
-     ;
+
   }
 
 }

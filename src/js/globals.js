@@ -117,7 +117,7 @@ window.addEventListener("resize", getBasic);
 window.addEventListener("orientationchange", getBasic);
 
 document.addEventListener('scroll', function () {
-	scrollMarkers()
+	scrollMarkers( winH )
 	smartMenu()
 });
 
