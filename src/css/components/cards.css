@@ -49,17 +49,7 @@
 
   &-client{
 
-    @apply relative flex flex-col text-left py-4 xg:pr-3 3xl:pr-6;
-
-    &:after{
-      position: absolute;
-      content: "";
-      width: 2px;
-      height: 100%;
-      top: 0;
-      right: 3rem;
-      background-color: theme(colors.deep-blue-100);
-    }
+    @apply relative flex flex-col text-left py-4 xg:pr-3 xl:pr-5 3xl:pr-6;
 
     h3{
       @apply font-serif text-h5 xg:text-h4 tracking-[-0.02em] min-h-[15rem] xg:min-h-[26rem];
@@ -157,8 +147,14 @@
 
   .card-client{
 
-    &:not(:last-child):after{
-      @apply absolute content-[""] top-0 right-0 w-[1px] h-full bg-deep-blue-100 translate-x-4;
+    &:after{
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 100%;
+      top: 0;
+      right: 3rem;
+      background-color: theme(colors.deep-blue-100);
     }
 
   }

@@ -4,7 +4,25 @@ import 'swiper/css/pagination';
 // const { slides } = Astro.props;
 import CLIENTS from "../data/clientes.json";
 ---
+<style>
 
+@media (min-width: theme("screens.xg")) {
+
+  .swiper:after{
+      position: absolute;
+      content: "";
+      width: 33%;
+      height: 100%;
+      background: white;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      pointer-events: none;
+      transform: translateX(90%);
+  }
+
+}
+</style>
 <div class="swiper swiper-client">
   <div class="swiper-wrapper pb-[3.5rem] xg:pb-6">
     {
