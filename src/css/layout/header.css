@@ -15,7 +15,7 @@ header{
 }
 
 [data-scroll="down"][data-stack="on"] header{
-    @apply  xg:py-1;
+    @apply  bg-white xg:py-1;
 
     .item, .lang-switcher{
         @apply text-deep-blue;
