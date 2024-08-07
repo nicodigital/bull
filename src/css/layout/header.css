@@ -1,10 +1,34 @@
 header{
     @apply 
-        absolute top-0 left-0
-        w-full z-50;
+        fixed top-0 left-0
+        w-full z-[100] xg:overflow-hidden
+        transition-all duration-[.6s] ease-in-out;
 
         *{
             @apply text-small;
         }
 
+        &:after{
+            @apply absolute top-0 left-0 w-full h-full xg:h-[200%] pointer-events-none z-[-1] opacity-0;
+            content: "";
+            background: linear-gradient(to bottom,  rgba(0,0,51,1) 0%,rgba(0,0,51,0) 100%); 
+            transition: all .6s ease-in-out;
+        }
+
 }
+
+[data-stack="off"] header{
+    transform: translateY(-100%);
+}
+
+[data-scroll="down"][data-stack="on"] header{
+
+    @apply  xg:py-1;
+    
+    &:after{
+        @apply backdrop-blur-sm;
+        opacity: 1;
+    }
+
+}
+

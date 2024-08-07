@@ -4,8 +4,7 @@ import { Picture } from "astro:assets";
 import Layout from "@/layout/Layout.astro";
 
 import CardsServicios from "../components/CardsServicios.astro";
-import CardsClientDesktop from "../components/CardsClientDesktop.astro";
-import CardsClientMobile from "../components/CardsClientMobile.astro";
+import CardsClientes from "../components/CardsClientes.astro";
 import CONTACT from '../data/contact.json';
 import ContactText from "@/components/ContactText.astro";
 import Form from "@/components/Form.astro";
@@ -16,7 +15,6 @@ import PartnersDesktop from "@/components/PartnersDesktop.astro";
 import PartnersMobile from "@/components/PartnersMobile.astro";
 
 import teamIMG from "../assets/team.jpg";
-import posterIMG from "../assets/poster.jpeg";
 ---
 
 <Layout
@@ -89,7 +87,7 @@ import posterIMG from "../assets/poster.jpeg";
   </section>
 
   <!-- Servicios -->
-  <section id="servicios" class="section-bottom pt-4 sm:pt-6 xg:pt-11 3xl:pt-14">
+  <section id="servicios" class="section-bottom pt-4 sm:pt-6 xg:pt-8 3xl:pt-10">
     
       <div class="container row mb-10">
         <div class="col-1-13">
@@ -110,7 +108,7 @@ import posterIMG from "../assets/poster.jpeg";
 
   </section>
 
-  <!-- Testimonios -->
+  <!-- Clientes -->
   <section class="container row section-top xg:pb-5 text-center xg:mt-[-10vh] overflow-hidden">
     <div class="xg:col-3-11 mb-10 xg:mb-12">
       <h2 class="mini-title">Historias de Éxito</h2>
@@ -119,12 +117,11 @@ import posterIMG from "../assets/poster.jpeg";
         positivo
       </p>
     </div>
-    <div class="col-1-13 hidden xg:grid md:grid-cols-3 gap-4 xg:gap-8">
-      <CardsClientDesktop/>
-    </div>
 
-    <div class="testimonios xg:hidden">
-        <CardsClientMobile/>
+    <div class="col-1-13">
+      <div class="testimonios">
+        <CardsClientes/>
+      </div>
     </div>
 
   </section>

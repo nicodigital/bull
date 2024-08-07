@@ -48,7 +48,7 @@
   }
 
   &-client{
-    @apply relative flex flex-col text-left py-4;
+    @apply relative flex flex-col text-left py-4 xg:pr-3 3xl:pr-6;
 
     h3{
       @apply font-serif text-h5 xg:text-h4 tracking-[-0.035em] min-h-[15rem] xg:min-h-[26rem];

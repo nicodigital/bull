@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import "swiper/css";
 // const { slides } = Astro.props;
 
@@ -37,18 +38,45 @@ const SERVICES = [
 ---
 
 <style>
-  :root{
+
+  :root {
     --swiper-theme-color: theme("colors.e-blue") !important;
   }
+  
   .swiper {
     padding-left: var(--container-gap) !important;
     padding-right: var(--container-gap) !important;
   }
+
+  .swiper-button-next,.swiper-button-prev{
+    @apply cursor-pointer w-[1.4rem];
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  .swiper-button-disabled {
+    @apply cursor-not-allowed text-deep-blue-200;
+  }
+
 </style>
 
 <!-- Slider main container -->
+<div class="flex justify-end gap-2 ctr-pr translate-y-[-3rem] xg:translate-y-[-12rem]">
+  <div class="swiper-button-prev">
+    <Icon name="vector-left" />
+  </div>
+  <div class="swiper-button-next">
+    <Icon name="vector-right" />
+  </div>
+</div>
+
 <div class="swiper swiper-servicios">
-  <!-- Additional required wrapper -->
+  
+  
   <div class="swiper-wrapper">
     {
       SERVICES.map((slide) => (
@@ -59,69 +87,73 @@ const SERVICES = [
             </h3>
             <div>
               <p>{slide.intro}</p>
-              <div class="cta">Conoce más  &nbsp;<span>→</span> </div>
+              <div class="cta">
+                Conoce más &nbsp;<span>→</span>{" "}
+              </div>
             </div>
           </div>
         </div>
       ))
     }
   </div>
-
 </div>
 
 <script>
-import Swiper from "swiper";
-import { Autoplay } from "swiper/modules";
+  import Swiper from "swiper";
+  import { Autoplay, Navigation } from "swiper/modules";
 
-function swiperSlider() {
+  function swiperSlider() {
+    const swiperElement = document.querySelector(".swiper-servicios");
 
-  const swiperElement = document.querySelector(".swiper-servicios");
-
-  const SwiperSlider = new Swiper( swiperElement, {
-    modules: [Autoplay],
-    spaceBetween: 20,
-    speed: 800,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1.05,
+    const SwiperSlider = new Swiper(swiperElement, {
+      modules: [Autoplay, Navigation],
+      spaceBetween: 20,
+      speed: 800,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
       },
-      768: {
-        slidesPerView: 2.3,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      1024: {
-        slidesPerView: 3.05,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.05,
+        },
+        768: {
+          slidesPerView: 2.3,
+        },
+        1024: {
+          slidesPerView: 3.05,
+        },
       },
-    },
-  });
+    });
 
-  // Configuración del Intersection Observer
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          SwiperSlider.autoplay.start(); // Inicia el autoplay
-          setTimeout(() => {
-            SwiperSlider.slideTo(1);
-          }, 1500);
-        } else {
-          SwiperSlider.autoplay.stop(); // Detiene el autoplay
-        }
-      });
-    },
-    {
-      root: null, // Usa el viewport como root
-      threshold: 0.1, // Activa el autoplay cuando al menos el 10% del slider es visible
-    }
-  );
+    // Configuración del Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            SwiperSlider.autoplay.start(); // Inicia el autoplay
+            setTimeout(() => {
+              SwiperSlider.slideTo(1);
+            }, 1500);
+          } else {
+            SwiperSlider.autoplay.stop(); // Detiene el autoplay
+          }
+        });
+      },
+      {
+        root: null, // Usa el viewport como root
+        threshold: 0.1, // Activa el autoplay cuando al menos el 10% del slider es visible
+      }
+    );
 
-  // Observa el elemento del slider
-  observer.observe(swiperElement);
-}
+    // Observa el elemento del slider
+    observer.observe(swiperElement);
+  }
 
-document.addEventListener("DOMContentLoaded", swiperSlider);
-document.addEventListener("astro:after-swap", swiperSlider);
+  document.addEventListener("DOMContentLoaded", swiperSlider);
+  document.addEventListener("astro:after-swap", swiperSlider);
 </script>
