@@ -3,7 +3,7 @@ nav {
       fixed 
       flex flex-col 
       top-0 left-0 
-      w-100% h-full
+      w-100% h-[100svh]
       bg-deep-blue
       ctr-px pt-20
       gap-2

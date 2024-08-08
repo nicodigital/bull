@@ -8,7 +8,7 @@
   @apply relative top-[1.3rem] flex gap-[.7rem] xg:top-0 xg:pl-[3.5rem];
 
   .langs{
-    @apply relative flex flex-col top-[1.7rem] gap-[.7rem];
+    @apply relative flex flex-col top-[1.4rem] gap-[.7rem];
 
     a{
         
@@ -30,6 +30,10 @@
 
   }
 
+}
+
+[data-stack="on"] .lang-switcher .langs{
+  gap: .3rem;
 }
 
 .partners{

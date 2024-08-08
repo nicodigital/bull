@@ -10,6 +10,9 @@ header{
 
 }
 
+.menu-in header *{color: #fff !important}
+.menu-in header path{fill: #fff !important}
+
 [data-stack="off"] header{
     transform: translateY(-100%);
 }
