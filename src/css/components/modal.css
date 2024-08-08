@@ -82,11 +82,12 @@
     &[data-type="team"]{
 
       .close{
-        left: calc(45% + var(--container-gap));
+        top: var(--container-gap);
+        left: var(--container-gap);
       }
 
       .modal-box{
-        @apply flex w-full h-full pt-0 p-0;
+        @apply flex flex-col xg:flex-row w-full h-full pt-0 p-0;
       }
 
       picture{
@@ -99,7 +100,7 @@
       }
 
       .content{
-        @apply w-55% ctr-p xg:mt-10;
+        @apply xg:w-55% ctr-p xg:mt-10;
 
         p{
           @apply text-h6 font-[300] leading-[2.4rem] tracking-[-0.01em];
@@ -108,7 +109,9 @@
       }
 
       .social{
-        @apply absolute top-0 right-0 ctr-p flex gap-1;
+        @apply absolute right-0 flex gap-1;
+        top: var(--container-gap);
+        right: var(--container-gap);
       }
 
     }
@@ -129,9 +132,8 @@
 
     &[data-type="team"]{
 
-      picture{
-        width: calc(100% + 5rem);
-        margin-left:0;
+      .close{
+        left: calc(45% + var(--container-gap));
       }
 
     }
