@@ -81,32 +81,34 @@
 
     &[data-type="team"]{
 
+      .close{
+        left: calc(45% + var(--container-gap));
+      }
+
       .modal-box{
-        @apply pt-0;
-      }
-
-      .heading, .content{
-        @apply relative grid xg:grid-cols-2;
-      }
-
-      .content{
-        @apply mt-4;
+        @apply flex w-full h-full pt-0 p-0;
       }
 
       picture{
-        @apply relative block h-[66vh] right-[0] overflow-hidden !important ;
-        width: calc(100% + var(--container-gap)*2);
-        margin-left: calc(-1 * var(--container-gap));
+        @apply relative block xg:w-45% !important;
 
         img{
-          @apply w-full rounded-none object-cover;
-          height: calc(100% + 12rem);
+          @apply w-full h-full rounded-none object-cover;
+        }
+
+      }
+
+      .content{
+        @apply w-55% ctr-p xg:mt-10;
+
+        p{
+          @apply text-h6 font-[300] leading-[2.4rem] tracking-[-0.01em];
         }
 
       }
 
       .social{
-        @apply flex gap-1;
+        @apply absolute top-0 right-0 ctr-p flex gap-1;
       }
 
     }
