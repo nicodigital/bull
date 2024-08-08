@@ -71,7 +71,7 @@
 
 /*Style items (options): */
 .select-items {
-  position: absolute;
+  @apply relative xg:absolute;
   top: 100%;
   left: 0;
   right: 0;
