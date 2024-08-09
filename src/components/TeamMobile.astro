@@ -4,18 +4,68 @@ import carlosIMG from "../assets/Carlos-Pera.jpg";
 import andresIMG from "../assets/Andres-Kavedjian.jpg";
 import luisIMG from "../assets/Luis-Brennan.jpg";
 import TEAM from '../data/team.json';
-import SliderCSS from "./SliderCSS.astro";
+
+import "swiper/css";
+import 'swiper/css/pagination';
 ---
+<style>
+  .swiper-slide{
+    @apply ctr-px;
+  }
+</style>
 
 <p class="text-h5 xg:text-h4 text-deep-blue mb-6 xg:mb-10 ctr-pl xg:pl-0">
   Nuestro equipo, <br class="xg:hidden"> tu socio en el éxito
 </p>
 
-<SliderCSS colWidth="calc(100% - var(--container-gap))" customClass="team-mobile" paddBottom="4" paddSide="2" >
-  {
-    TEAM.map((team) => {
-      const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;
-      return <CardTeam name={team.name} role={team.role} src={currImg} slug={team.slug} />
-     })
-  }
-</SliderCSS>
+
+<div class="swiper swiper-team">
+  <div class="swiper-wrapper pb-8 xg:pb-6">
+    {
+      TEAM.map((team) => {
+
+        const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;
+
+        return <div class="swiper-slide">
+             <CardTeam name={team.name} role={team.role} src={currImg} slug={team.slug} />
+        </div>
+        
+      })
+    }
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<script>
+  import Swiper from "swiper";
+  import { Autoplay, Pagination } from "swiper/modules";
+
+  function swiperTeam() {
+    const SwiperTeam = new Swiper(".swiper-team", {
+      modules: [Autoplay, Pagination],
+      spaceBetween: 10,
+      slidesPerView: 1,
+      speed: 800,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+      }
+    });
+
+  } // swiperTeam
+
+
+  document.addEventListener("DOMContentLoaded", swiperTeam  );
+  document.addEventListener("astro:after-swap", swiperTeam );
+</script>

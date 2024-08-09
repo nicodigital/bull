@@ -1,39 +1,65 @@
 ---
-import { Icon } from "astro-icon/components";
-import PARTNERS from '../data/partners.json';
-import SliderCSS from "./SliderCSS.astro";
+import { Picture } from "astro:assets";
+
+import "swiper/css";
+import 'swiper/css/pagination';
+
+import Nuskle from "../assets/Nuskle.png";
+import Ginkgo from "../assets/Ginkgo.png";
+import OnFloor from "../assets/OnFloor.png";
+
 ---
+<style>
+  .swiper-slide{
+    @apply flex items-center justify-center
+    ctr-px min-h-[15rem];
+  }
+</style>
+<div class="swiper swiper-partners">
+  <div class="swiper-wrapper pb-8 xg:pb-6">
+    <div class="swiper-slide">
+      <Picture class="w-full" src={Nuskle} formats={["webp"]} alt="Nuskle" />
+    </div>
+    <div class="swiper-slide">
+      <Picture class="w-80%" src={Ginkgo} formats={["webp"]} alt="Ginkgo" />
+    </div>
+    <div class="swiper-slide">
+      <Picture class="w-80%" src={OnFloor} formats={["webp"]} alt="OnFloor" />
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
 
-<SliderCSS colwidth="40" paddSide="2" >
-    {PARTNERS.map((slide) => (
-      <div class="slide"  >
-          <Icon name={slide.slug} class="w-[14rem] md:w-[19rem] h-auto" />
-      </div>
-    ))}
-</SliderCSS>
-
-<!-- <script>
+<script>
   import Swiper from "swiper";
+  import { Autoplay, Pagination } from "swiper/modules";
 
-  function partnersSlider() {
-
-    const PartnersSwiper = new Swiper(".swiper-partners", {
-      spaceBetween: 20,
-      loop: true,
-      // speed: 800,
+  function swiperPartners() {
+    const SwiperPartners = new Swiper(".swiper-partners", {
+      modules: [Autoplay, Pagination],
+      spaceBetween: 10,
+      slidesPerView: 1,
+      speed: 800,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       breakpoints: {
         0: {
-          slidesPerView: 3,
+          slidesPerView: 2,
         },
         768: {
-          slidesPerView: 3.3,
-        }
-      },
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+      }
     });
 
-    
-  } // partnersSlider
+  } // swiperPartners
 
-  partnersSlider();
-  document.addEventListener("astro:after-swap", partnersSlider );
-</script> -->
+
+  document.addEventListener("DOMContentLoaded", swiperPartners  );
+  document.addEventListener("astro:after-swap", swiperPartners );
+</script>

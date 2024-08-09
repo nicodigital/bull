@@ -1,13 +1,16 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import Nuskle from "../assets/Nuskle.png";
+import Ginkgo from "../assets/Ginkgo.png";
+import OnFloor from "../assets/OnFloor.png";
 ---
 <style>
   svg{
     @apply w-full h-auto px-2;
   }
 </style>
-<Icon name="santander" />
-<Icon name="bbva" />
-<Icon name="santander" />
-<Icon name="bbva" />
+
+<Picture class="w-full" src={Nuskle} formats={["webp"]} alt="Nuskle" />
+<Picture class="w-80%" src={Ginkgo} formats={["webp"]} alt="Ginkgo" />
+<Picture class="w-80%" src={OnFloor} formats={["webp"]} alt="OnFloor" />
 
