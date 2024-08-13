@@ -44,8 +44,11 @@ import CLIENTS from "../data/clientes.json";
               </div>
 
               <div class="ctas">
-                <div> Investor Relations </div>
-                <div> Automovil </div>
+                {
+                  client.bullets.map(
+                      (line) => <div>{line}</div>
+                  )
+                }
               </div>
             </div>
           </div>
