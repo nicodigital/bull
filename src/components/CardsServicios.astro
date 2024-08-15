@@ -3,38 +3,11 @@ import { Icon } from "astro-icon/components";
 import "swiper/css";
 // const { slides } = Astro.props;
 
-const SERVICES = [
-  {
-    title: "CFO as a Service",
-    slug: "cfo-as-a-service",
-    intro:
-      "Nos unimos a tu equipo para entender tu negocio y objetivos, ofreciendo orientación estratégica para impulsar tu crecimiento y rentabilidad.",
-  },
-  {
-    title: "Internacionalización <br> de Negocios",
-    slug: "inter-negocios",
-    intro:
-      "Te acompañamos en tu expansión global con una amplia gama de servicios.",
-  },
-  {
-    title: "Investor Relations",
-    slug: "investor",
-    intro:
-      "Gestionamos las relaciones con fondos y accionistas, ofreciendo un servicio integral.",
-  },
-  {
-    title: "M&A",
-    slug: "m-a",
-    intro:
-      "Ofrecemos una gama completa de servicios en el ámbito de Fusiones y Adquisiciones.",
-  },
-  {
-    title: "Aplicación de <br> Tecnología al Negocio",
-    slug: "tecno-negocio",
-    intro:
-      "Destacamos por servicios diseñados para mejorar la eficiencia y el control estratégico.",
-  },
-];
+/* GET LANG */
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale});
+
 ---
 
 <style>
@@ -72,26 +45,28 @@ const SERVICES = [
 
 <div class="swiper swiper-servicios">
   
-  
   <div class="swiper-wrapper">
     {
-      SERVICES.map((slide) => (
-        <div class="swiper-slide">
-          <div class="card-service m-link" data-modal={slide.slug}>
-            <h3>
-              <Fragment set:html={slide.title} />
-            </h3>
-            <div>
-              <p>{slide.intro}</p>
-              <div class="cta">
-                Conoce más &nbsp;<span>→</span>{" "}
+      Object.entries(i18n.SERVICIOS).map(([key, slide]) => {
+        return (
+          <div class="swiper-slide" key={key}>
+            <div class="card-service m-link" data-modal={slide.SLUG}>
+              <h3>
+                <Fragment set:html={slide.COOL_TITLE} />
+              </h3>
+              <div>
+                <p>{slide.INTRO}</p>
+                <div class="cta">
+                  {i18n.WORDS.READMORE} &nbsp;<span>→</span>{" "}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))
+        );
+      })
     }
   </div>
+  
 </div>
 
 <script>

@@ -7,56 +7,61 @@ import TEAM from "../data/team.json";
 import carlosIMG from "../assets/Carlos-Pera.jpg";
 import andresIMG from "../assets/Andres-Kavedjian.jpg";
 import luisIMG from "../assets/Luis-Brennan.jpg";
+
+/* GET LANG */
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale});
 ---
 
 <!-- Services Modals -->
 <Modal name="cfo-as-a-service" show="off" type="service">
   <div>
     <h3>
-      CFO as a Service <br />
-      <span class="text-e-blue">Finance</span>
+      { i18n.SERVICIOS.CFO.C1.TITLE } <br />
+      <span class="text-e-blue">
+        { i18n.SERVICIOS.CFO.C1.SUBTITLE }
+      </span>
     </h3>
     <div>
       <p>
-        Entendemos la importancia de una gestión financiera completa. Ofrecemos
-        acceso a la experiencia de un CFO sin la necesidad de contratar a tiempo
-        completo.
+        { i18n.SERVICIOS.CFO.C1.T1 }
       </p>
-      <p>Nuestro servicio de CFO Finance proporciona:</p>
+      <p>
+        { i18n.SERVICIOS.CFO.C1.T2 }
+      </p>
       <ul class="list-disc">
-        <li>Gestión financiera estratégica y táctica.</li>
-        <li>Planificación de cash flow.</li>
-        <li>Armado y gestión de equipos de trabajo.</li>
-        <li>Armado y seguimiento de pack de reporting.</li>
-        <li>Optimización fiscal.</li>
-        <li>Controlling, armado y seguimiento de procesos.</li>
+        <li> { i18n.SERVICIOS.CFO.C1.L1 } </li>
+        <li> { i18n.SERVICIOS.CFO.C1.L2 } </li>
+        <li> { i18n.SERVICIOS.CFO.C1.L3 } </li>
+        <li> { i18n.SERVICIOS.CFO.C1.L4 } </li>
+        <li> { i18n.SERVICIOS.CFO.C1.L5 } </li>
+        <li> { i18n.SERVICIOS.CFO.C1.L6 } </li>
       </ul>
     </div>
   </div>
   <div>
     <h3>
-      CFO as a Service <br />
-      <span class="text-e-blue">Business</span>
+      { i18n.SERVICIOS.CFO.C2.TITLE } <br />
+      <span class="text-e-blue">
+        { i18n.SERVICIOS.CFO.C2.SUBTITLE }
+      </span>
     </h3>
     <div>
       <p>
-        Nuestro servicio CFO as a service Business va más allá de las
-        funciones financieras tradicionales.
+        { i18n.SERVICIOS.CFO.C2.T1 }
       </p>
 
       <p>
-        Nos integramos en tu equipo para comprender profundamente tu modelo de
-        negocio y objetivos, ofreciendo orientación estratégica integral para
-        impulsar el crecimiento y la rentabilidad de tu empresa. Nuestro
-        servicio de CFO Business proporciona:
+        { i18n.SERVICIOS.CFO.C2.T2 }
       </p>
 
       <ul>
-        <li>Gestión de capital de trabajo.</li>
-        <li>Armado de plan de negocio.</li>
-        <li>Armado de modelos de pricing.</li>
-        <li>Seguimiento de procesos.</li>
-        <li>Reestructuración empresarial y financiera.</li>
+        <li>{ i18n.SERVICIOS.CFO.C2.L1 }</li>
+        <li>{ i18n.SERVICIOS.CFO.C2.L2 }</li>
+        <li>{ i18n.SERVICIOS.CFO.C2.L3 }</li>
+        <li>{ i18n.SERVICIOS.CFO.C2.L4 }</li>
+        <li>{ i18n.SERVICIOS.CFO.C2.L5 }</li>
       </ul>
     </div>
   </div>
@@ -65,30 +70,19 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
 <Modal name="inter-negocios" show="off" type="service">
   <div>
     <h3>
-      Internacionalización <br />
-      de Negocios
+      <Fragment set:html={i18n.SERVICIOS.INTER.TITLE} />
     </h3>
     <div>
       <p>
-        Estamos a tu lado en tu expansión global, ofreciendo una gama de
-        servicios que incluyen:
+        { i18n.SERVICIOS.INTER.T1 }
       </p>
       <ul class="list-disc">
-        <li>
-          Evaluación de mercados internacionales y análisis de oportunidades.
-        </li>
-        <li>Desarrollo de estrategias de entrada nuevos mercados.</li>
-        <li>
-          Gestión de riesgos y cumplimiento fiscal en contextos internacionales.
-        </li>
-        <li>
-          Soporte en la adaptación a regulaciones y normativas extranjeras.
-        </li>
-        <li>
-          Optimización de operaciones internacionales para maximizar eficiencia
-          y rentabilidad.
-        </li>
-        <li>Análisis de Precios de Transferencia.</li>
+        <li>{ i18n.SERVICIOS.INTER.L1 }</li>
+        <li> { i18n.SERVICIOS.INTER.L2 }</li>
+        <li> { i18n.SERVICIOS.INTER.L3 }</li>
+        <li> { i18n.SERVICIOS.INTER.L4 }</li>
+        <li> { i18n.SERVICIOS.INTER.L5 }</li>
+        <li> { i18n.SERVICIOS.INTER.L6 }</li>
       </ul>
     </div>
   </div>
@@ -97,24 +91,17 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
 <Modal name="m-a" show="off" type="service">
   <div>
     <h3>
-      Mergers <br />
-      & Acquisitions
+      <Fragment set:html={i18n.SERVICIOS.MA.TITLE} />
     </h3>
     <div>
       <p>
-        Dentro del ámbito de Fusiones y Adquisiciones, proporcionamos una gama
-        completa de servicios que abarcan:
+        { i18n.SERVICIOS.MA.T1 }
       </p>
       <ul class="list-disc">
-        <li>Valuación de empresas.</li>
-        <li>Due Diligence.</li>
-        <li>
-          Análisis detallado para garantizar transparencia y mitigar riesgos.
-        </li>
-        <li>
-          Estructuración de Transacciones: Diseño y ejecución de estrategias
-          para maximizar beneficios.
-        </li>
+        <li>{ i18n.SERVICIOS.MA.L1 }</li>
+        <li> { i18n.SERVICIOS.MA.L2 }</li>
+        <li> { i18n.SERVICIOS.MA.L3 }</li>
+        <li> { i18n.SERVICIOS.MA.L4 }</li>
       </ul>
     </div>
   </div>
@@ -123,18 +110,16 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
 <Modal name="tecno-negocio" show="off" type="service">
   <div>
     <h3>
-      Aplicación de tecnología <br />
-      al negocio
+      <Fragment set:html={i18n.SERVICIOS.TECNO.TITLE} />
     </h3>
     <div>
       <p>
-        Destacamos por servicios adicionales diseñados para potenciar la
-        eficiencia y el control estratégico:
+        { i18n.SERVICIOS.TECNO.T1 }
       </p>
       <ul class="list-disc">
-        <li>Implementación de ERPs.</li>
-        <li>Reporting via business intelligence.</li>
-        <li>Automatización de procesos mediante RPA.</li>
+        <li>{ i18n.SERVICIOS.TECNO.L1 }</li>
+        <li> { i18n.SERVICIOS.TECNO.L2 }</li>
+        <li> { i18n.SERVICIOS.TECNO.L3 }</li>
       </ul>
     </div>
   </div>
@@ -142,19 +127,20 @@ import luisIMG from "../assets/Luis-Brennan.jpg";
 
 <Modal name="investor" show="off" type="service">
   <div>
-    <h3>Investor Relations</h3>
+    <h3>
+      <Fragment set:html={i18n.SERVICIOS.INVESTOR.TITLE} />
+    </h3>
     <div>
       <p>
-        Administramos las relaciones con fondos y accionistas, ofreciendo un
-        servicio completo que abarca:
+        { i18n.SERVICIOS.INVESTOR.T1 }
       </p>
       <ul class="list-disc">
-        <li>Manejo proactivo de relaciones con inversores.</li>
-        <li>Armado de presentaciones y decks para inversores.</li>
-        <li>Comunicación efectiva de estrategias y resultados financieros.</li>
-        <li>Asesoramiento en decisiones relacionadas con inversionistas.</li>
-        <li>Cap table management y armado de term-sheets.</li>
-        <li>Armado de modelo de stock options plan y similares.</li>
+        <li>{ i18n.SERVICIOS.INVESTOR.L1 }</li>
+        <li> { i18n.SERVICIOS.INVESTOR.L2 }</li>
+        <li> { i18n.SERVICIOS.INVESTOR.L3 }</li>
+        <li> { i18n.SERVICIOS.INVESTOR.L4 }</li>
+        <li> { i18n.SERVICIOS.INVESTOR.L5 }</li>
+        <li> { i18n.SERVICIOS.INVESTOR.L6 }</li>
       </ul>
     </div>
   </div>

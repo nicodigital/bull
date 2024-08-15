@@ -6,7 +6,10 @@ import Burger from "../components/Burger.astro";
 import Menu from "../components/Menu.astro";
 const { width } = Astro.props;
 
-const homeUrl = import.meta.env.HOME_URL ?? '/';
+/* GET LANG */
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale});
 ---
 <header class="container row py-3 mb-4 items-center" >
     
@@ -19,9 +22,9 @@ const homeUrl = import.meta.env.HOME_URL ?? '/';
 
         <Menu items={
             [
-                ['Experiencia', `#experiencia`],
-                ['Servicios', '#servicios'],
-                ['Nosotros', '#nosotros']
+                [ i18n.MENU.EXPERIENCIA, `#experiencia`],
+                [i18n.MENU.SERVICIOS, '#servicios'],
+                [i18n.MENU.NOSOTROS, '#nosotros']
             ]
         } />
 
@@ -32,7 +35,9 @@ const homeUrl = import.meta.env.HOME_URL ?? '/';
     <div class="md:col-10-13 hidden xg:flex justify-end">
         <div class="flex text-white items-center gap-3">
             <LangSwitcher />
-            <a href="#contacto" class="btn btn-e-blue smooth-link" >Contáctanos</a>
+            <a href="#contacto" class="btn btn-e-blue smooth-link" >
+                {i18n.WORDS.CONTACTUS}
+            </a>
         </div>
     </div>
     

@@ -1,19 +1,48 @@
 ---
 import { Icon } from 'astro-icon/components'
 
+import { getLangFromUrl, langMirrorPage } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+let transURL = "";
+
+if( lang === 'en' ){
+  transURL = langMirrorPage( Astro.url.pathname, lang, 'es', 'es' );
+}else{ // es
+  transURL = langMirrorPage( Astro.url.pathname, lang, 'es', 'en' );
+}
+
 ---
 
 <div class="lang-switcher">
   <Icon name="world" class="w-2 h-auto" />
   <div class="langs">
-    <a href="" class="active"> 
-      <span class="xg:hidden">Español</span>
-      <span class="hidden xg:block">ES</span>
-    </a>
-    <a href=""> 
-      <span class="xg:hidden">English</span>
-      <span class="hidden xg:block">EN</span>
-    </a>
+  {
+    lang === "es" && (
+      <a href={currentPath} class="active"> 
+        <span class="xg:hidden">Español</span>
+        <span class="hidden xg:block">ES</span>
+      </a>
+      <a href={transURL} > 
+        <span class="xg:hidden">English</span>
+        <span class="hidden xg:block">EN</span>
+      </a>
+    )
+  }
+  
+  {
+    lang === "en" && (
+      <a href={currentPath} class="active" > 
+        <span class="xg:hidden">English</span>
+        <span class="hidden xg:block">EN</span>
+      </a>
+      <a href={transURL} > 
+        <span class="xg:hidden">Español</span>
+        <span class="hidden xg:block">ES</span>
+      </a>
+    )
+  }
+
   </div>
   <Icon name="vector-down" class="w-[1.5rem] h-auto" />
 </div>
