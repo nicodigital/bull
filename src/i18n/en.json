@@ -8,7 +8,87 @@
   },
   "WORDS": {
     "CONTACTUS": "Contact us",
-    "EXPERIENCIA": "Experience"
+    "EXPERIENCIA": "Experience",
+    "SERVICIOS": "Services",
+    "READMORE": "Read more"
   },
-  "HEROTITLE": "Tu socio en finanzas <br class=\"xg:hidden\" /> corporativas <br class=\"hidden xg:block\" /> y estrategia empresarial"
+  "HEROTITLE": "Tu socio en finanzas <br class=\"xg:hidden\" /> corporativas <br class=\"hidden xg:block\" /> y estrategia empresarial",
+  "SERVICIOS": {
+    "CFO": {
+      "TITLE": "CFO as a Service",
+      "COOL_TITLE": "CFO as a Service",
+      "SLUG": "cfo-as-a-service",
+      "INTRO": "Nos unimos a tu equipo para entender tu negocio y objetivos, ofreciendo orientación estratégica para impulsar tu crecimiento y rentabilidad.",
+      "C1": {
+        "TITLE": "CFO as a Service",
+        "SUBTITLE": "Finance",
+        "T1": "Entendemos la importancia de una gestión financiera completa. Ofrecemos acceso a la experiencia de un CFO sin la necesidad de contratar a tiempo completo.",
+        "T2": "Nuestro servicio de CFO Finance proporciona:",
+        "L1": "Gestión financiera estratégica y táctica.",
+        "L2": "Planificación de cash flow.",
+        "L3": "Armado y gestión de equipos de trabajo.",
+        "L4": "Armado y seguimiento de pack de reporting.",
+        "L5": "Optimización fiscal.",
+        "L6": "Controlling, armado y seguimiento de procesos."
+      },
+      "C2": {
+        "TITLE": "CFO as a Service ",
+        "SUBTITLE": "Business",
+        "T1": "Nuestro servicio CFO as a service Business va más allá de las funciones financieras tradicionales.",
+        "T2": "Nos integramos en tu equipo para comprender profundamente tu modelo de negocio y objetivos, ofreciendo orientación estratégica integral para impulsar el crecimiento y la rentabilidad de tu empresa. Nuestro servicio de CFO Business proporciona:",
+        "L1": "Gestión de capital de trabajo.",
+        "L2": "Armado de plan de negocio.",
+        "L3": "Armado de modelos de pricing.",
+        "L4": "Seguimiento de procesos.",
+        "L5": "Reestructuración empresarial y financiera."
+      }
+    },
+    "INTER": {
+      "TITLE": "Internacionalización <br/> de Negocios",
+      "COOL_TITLE": "Internacionalización <br/> de Negocios",
+      "SLUG": "inter-negocios",
+      "INTRO": "Te acompañamos en tu expansión global con una amplia gama de servicios.",
+      "T1": "Estamos a tu lado en tu expansión global, ofreciendo una gama de servicios que incluyen:",
+      "L1": "Evaluación de mercados internacionales y análisis de oportunidades.",
+      "L2": "Desarrollo de estrategias de entrada nuevos mercados.",
+      "L3": "Gestión de riesgos y cumplimiento fiscal en contextos internacionales.",
+      "L4": "Soporte en la adaptación a regulaciones y normativas extranjeras.",
+      "L5": "Optimización de operaciones internacionales para maximizar eficiencia y rentabilidad.",
+      "L6": "Análisis de Precios de Transferencia."
+    },
+    "INVESTOR": {
+      "TITLE": "Investor Relations",
+      "COOL_TITLE": "Investor Relations",
+      "SLUG": "investor",
+      "INTRO": "Gestionamos las relaciones con fondos y accionistas, ofreciendo un servicio integral.",
+      "T1": "Administramos las relaciones con fondos y accionistas, ofreciendo un servicio completo que abarca:",
+      "L1": "Manejo proactivo de relaciones con inversores.",
+      "L2": "Armado de presentaciones y decks para inversores.",
+      "L3": "Comunicación efectiva de estrategias y resultados financieros.",
+      "L4": "Asesoramiento en decisiones relacionadas con inversionistas.",
+      "L5": "Cap table management y armado de term-sheets.",
+      "L6": "Armado de modelo de stock options plan y similares."
+    },
+    "MA": {
+      "TITLE": "Mergers <br /> & Acquisitions",
+      "COOL_TITLE": "M&A",
+      "SLUG": "m-a",
+      "INTRO": "Ofrecemos una gama completa de servicios en el ámbito de Fusiones y Adquisiciones.",
+      "T1": "Dentro del ámbito de Fusiones y Adquisiciones, proporcionamos una gama completa de servicios que abarcan:",
+      "L1": "Valuación de empresas.",
+      "L2": "Due Diligence.",
+      "L3": "Análisis detallado para garantizar transparencia y mitigar riesgos.",
+      "L4": "Estructuración de Transacciones: Diseño y ejecución de estrategias para maximizar beneficios."
+    },
+    "TECNO": {
+      "TITLE": "Aplicación de tecnología<br> al negocio",
+      "COOL_TITLE": "Aplicación de <br> Tecnología al Negocio",
+      "SLUG": "tecno-negocio",
+      "INTRO": "Destacamos por servicios diseñados para mejorar la eficiencia y el control estratégico.",
+      "T1": "Destacamos por servicios adicionales diseñados para potenciar la eficiencia y el control estratégico:",
+      "L1": "Implementación de ERPs.",
+      "L2": "Reporting via business intelligence.",
+      "L3": "Automatización de procesos mediante RPA."
+    }
+  }
 }
