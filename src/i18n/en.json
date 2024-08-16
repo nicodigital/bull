@@ -76,35 +76,34 @@
       "TITLE": "Investor Relations",
       "COOL_TITLE": "Investor Relations",
       "SLUG": "investor",
-      "INTRO": "Gestionamos las relaciones con fondos y accionistas, ofreciendo un servicio integral.",
-      "T1": "Administramos las relaciones con fondos y accionistas, ofreciendo un servicio completo que abarca:",
-      "L1": "Manejo proactivo de relaciones con inversores.",
-      "L2": "Armado de presentaciones y decks para inversores.",
-      "L3": "Comunicación efectiva de estrategias y resultados financieros.",
-      "L4": "Asesoramiento en decisiones relacionadas con inversionistas.",
-      "L5": "Cap table management y armado de term-sheets.",
-      "L6": "Armado de modelo de stock options plan y similares."
+      "INTRO": "We manage relationships with investors and shareholders, offering a comprehensive service.",
+      "T1": "We manage relationships with investors and shareholders, offering a comprehensive service that includes:",
+      "L1": "Proactive management of investor relations.",
+      "L2": "Investor deck preparation and presentation.",
+      "L3": "Effective communication of strategies and financial results.",
+      "L4": "Advisory on investor-related decisions.",
+      "L5": "Cap table management and term sheets preparation.",
+      "L6": "Development of stock option plan model."
     },
     "MA": {
       "TITLE": "Mergers <br /> & Acquisitions",
       "COOL_TITLE": "M&A",
       "SLUG": "m-a",
-      "INTRO": "Ofrecemos una gama completa de servicios en el ámbito de Fusiones y Adquisiciones.",
-      "T1": "Dentro del ámbito de Fusiones y Adquisiciones, proporcionamos una gama completa de servicios que abarcan:",
-      "L1": "Valuación de empresas.",
-      "L2": "Due Diligence.",
-      "L3": "Análisis detallado para garantizar transparencia y mitigar riesgos.",
-      "L4": "Estructuración de Transacciones: Diseño y ejecución de estrategias para maximizar beneficios."
+      "INTRO": "Within the realm of Mergers and Acquisitions, we provide a comprehensive range of services.",
+      "T1": "Within the realm of Mergers and Acquisitions, we provide a comprehensive range of services including:",
+      "L1": "Company valuation.",
+      "L2": "Due Diligence: <br> Detailed analysis to ensure transparency and mitigate risks.",
+      "L3": "Transaction Structuring: <br> Design and execution of strategies to maximize benefits."
     },
     "TECNO": {
-      "TITLE": "Aplicación de tecnología<br> al negocio",
-      "COOL_TITLE": "Aplicación de <br> Tecnología al Negocio",
+      "TITLE": "Software tools <br>applied to Business",
+      "COOL_TITLE": "Software tools <br>applied to Business",
       "SLUG": "tecno-negocio",
-      "INTRO": "Destacamos por servicios diseñados para mejorar la eficiencia y el control estratégico.",
-      "T1": "Destacamos por servicios adicionales diseñados para potenciar la eficiencia y el control estratégico:",
-      "L1": "Implementación de ERPs.",
+      "INTRO": "We stand out for additional services designed to enhance efficiency and strategic control.",
+      "T1": "We stand out for additional services designed to enhance efficiency and strategic control:",
+      "L1": "ERP implementation assessment.",
       "L2": "Reporting via business intelligence.",
-      "L3": "Automatización de procesos mediante RPA."
+      "L3": "Process automation through RPA."
     }
   },
 
@@ -152,26 +151,26 @@
       "CARLOS": {
         "name": "Carlos Pera Maldonado",
         "slug": "carlos",
-        "role": "MBA & Contador Público",
+        "role": "MBA/CA",
         "email": "#",
         "linkedin": "#",
-        "desc": "<p> Más de 8 años de experiencia como CFO en diferentes sectores (Software, Automotriz, Retail, Travel).</p><p>Experto en diseño e implementación de estrategias financieras a corto y largo plazo.</p><p> Enfoque innovador para mejorar los márgenes mediante sinergias, negociaciones estratégicas y cambios operativos.</p><p>Amplia experiencia en implementaciones de ERPs (SAP) y reestructuraciones de equipos.</p><p>Experto en modelado financiero.</p>"
+        "desc": "<p>  More than 8 years of experience as CFO in different sectors (Software, Automotive, Retail, Travel).</p><p> Expert in design and implementation of short and long term financial strategies.</p><p> Innovative approach to improve margins through synergies, strategic negotiations and operational changes.</p><p>Extensive experience in ERP (SAP) implementations and team restructurings </p><p> Expert in Financial Modeling.</p>"
       },
       "ANDRES": {
         "name": "Andrés Kavedjian",
         "slug": "andres",
-        "role": "Lic. en Administración de Empresas",
+        "role": "Business Administration",
         "email": "#",
         "linkedin": "#",
-        "desc": "<p>Especialista en reestructuras financieras, negociación con bancos y proveedores.</p> <p>Desarrollo de nuevas líneas de negocio y reestructura de puntos de venta tanto físicos como digitales.</p> <p>Experto en optimización de costos. </p> <p>Expertise en implementación de reportes y sistemas diversos.</p>"
+        "desc": "<p>Expert in financial restructuring, negotiation with banks and suppliers.</p> <p>Development of new business lines and restructuring of physical and digital points of sale.</p> <p>Expert in cost optimization. </p> <p>Expertise in implementation of reports and diverse systems.</p>"
       },
       "LUIS": {
         "name": "Luis Brennan",
         "slug": "luis",
-        "role": "MBA & Contador Público",
+        "role": "MBA/CA",
         "email": "#",
         "linkedin": "#",
-        "desc": "<p>Ejecutivo con más de 20 años de experiencia en diversas industrias (Software, Manufactura, Retail, Farmacéutica, Automotriz y Consultoría).</p> <p>12+ años de experiencia como CFO y Director Financiero a nivel Regional en estructuras matriciales.</p> <p>Amplia experiencia en start-ups, procesos de M&A, ejecución de planes de negocio y reestructuras.</p><p>Liderazgo en implementaciones de ERP’s (SAP y Netsuite) y BI.</p> <p>Gestión de equipos de trabajo en entornos multiculturales.</p> <p>Manejo de relaciones con fondos de inversión y scale up de empresas.</p>"
+        "desc": "<p>Executive with over 20 years of experience in various industries (Software, Manufacturing, Retail, Pharmaceutical, Automotive and Consulting).</p> <p>12+ years of experience as CFO at Regional level in matrix structures.</p> <p>Extensive experience in start-ups, M&A processes, business plan execution and restructurings.</p> <p> Lead several ERP and BI solutions assessment & implementations.</p> <p>Team management in multicultural environments.</p> <p>Relationship management with investment funds and scale up of companies.</p>"
       }
     }
   },
