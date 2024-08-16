@@ -1,60 +1,76 @@
 {
-  "METATITLE" : "",
-  "METADESC" : "",
-  "MENU" : {
-    "EXPERIENCIA" : "Experience",
-    "SERVICIOS" : "Services",
-    "NOSOTROS" : "About us"
+  "METATITLE": "",
+  "METADESC": "",
+
+  "MENU": {
+    "EXPERIENCIA": "Experience",
+    "SERVICIOS": "Services",
+    "NOSOTROS": "About us"
   },
+
   "WORDS": {
     "CONTACTUS": "Contact us",
     "EXPERIENCIA": "Experience",
     "SERVICIOS": "Services",
     "READMORE": "Read more"
   },
+
   "HEROTITLE": "Tu socio en finanzas <br class=\"xg:hidden\" /> corporativas <br class=\"hidden xg:block\" /> y estrategia empresarial",
+
+  "EXPERIENCIA": {
+    "T1": "Ofrecemos soluciones innovadoras y estratégicas para impulsar el crecimiento, la rentabilidad y la eficiencia de tu empresa.",
+    "T2": " Más de 15 años de experiencia en dirección",
+    "T3": "financiera en diversas industrias y geografías.",
+    "T4": "Generamos mejoras inmediatas con un",
+    "T5": "enfoque proactivo y dinámico."
+  },
+
+  "PARTNERS": "Confían en nosotros",
+
+  "SERV_TXT": "Proporcionamos una amplia gama de servicios financieros y estratégicos para impulsar el crecimiento y la eficiencia de tu empresa.",
+
   "SERVICIOS": {
     "CFO": {
       "TITLE": "CFO as a Service",
       "COOL_TITLE": "CFO as a Service",
       "SLUG": "cfo-as-a-service",
-      "INTRO": "Nos unimos a tu equipo para entender tu negocio y objetivos, ofreciendo orientación estratégica para impulsar tu crecimiento y rentabilidad.",
+      "INTRO": "We integrate into your team to deeply understand your business model and objectives, offering comprehensive strategic guidance to drive growth and profitability for your company.",
       "C1": {
         "TITLE": "CFO as a Service",
         "SUBTITLE": "Finance",
-        "T1": "Entendemos la importancia de una gestión financiera completa. Ofrecemos acceso a la experiencia de un CFO sin la necesidad de contratar a tiempo completo.",
-        "T2": "Nuestro servicio de CFO Finance proporciona:",
-        "L1": "Gestión financiera estratégica y táctica.",
-        "L2": "Planificación de cash flow.",
-        "L3": "Armado y gestión de equipos de trabajo.",
-        "L4": "Armado y seguimiento de pack de reporting.",
-        "L5": "Optimización fiscal.",
-        "L6": "Controlling, armado y seguimiento de procesos."
+        "T1": "We understand the importance of comprehensive financial management. We offer access to the expertise of a CFO without the need to hire a full-time resource.",
+        "T2": "Our outsourced CFO service provides:",
+        "L1": "Strategic and tactical financial management.",
+        "L2": "Cash flow planning.",
+        "L3": "Team building and management.",
+        "L4": "Financial reporting package preparation and presentation.",
+        "L5": "Tax optimization.",
+        "L6": "Controlling, process setup, and monitoring."
       },
       "C2": {
         "TITLE": "CFO as a Service ",
         "SUBTITLE": "Business",
-        "T1": "Nuestro servicio CFO as a service Business va más allá de las funciones financieras tradicionales.",
-        "T2": "Nos integramos en tu equipo para comprender profundamente tu modelo de negocio y objetivos, ofreciendo orientación estratégica integral para impulsar el crecimiento y la rentabilidad de tu empresa. Nuestro servicio de CFO Business proporciona:",
-        "L1": "Gestión de capital de trabajo.",
-        "L2": "Armado de plan de negocio.",
-        "L3": "Armado de modelos de pricing.",
+        "T1": "Our CFO as a service Business goes beyond traditional financial functions.",
+        "T2": "We integrate into your team to deeply understand your business model and objectives, offering comprehensive strategic guidance to drive growth and profitability for your company. Our outsourced CFO service provides:",
+        "L1": "Working capital management.",
+        "L2": "Business plan development.",
+        "L3": "Pricing model setup.",
         "L4": "Seguimiento de procesos.",
-        "L5": "Reestructuración empresarial y financiera."
+        "L5": " Business and financial restructuring."
       }
     },
     "INTER": {
-      "TITLE": "Internacionalización <br/> de Negocios",
-      "COOL_TITLE": "Internacionalización <br/> de Negocios",
+      "TITLE": "Business <br>Internationalization",
+      "COOL_TITLE": "Business <br> Internationalization",
       "SLUG": "inter-negocios",
-      "INTRO": "Te acompañamos en tu expansión global con una amplia gama de servicios.",
-      "T1": "Estamos a tu lado en tu expansión global, ofreciendo una gama de servicios que incluyen:",
-      "L1": "Evaluación de mercados internacionales y análisis de oportunidades.",
-      "L2": "Desarrollo de estrategias de entrada nuevos mercados.",
-      "L3": "Gestión de riesgos y cumplimiento fiscal en contextos internacionales.",
-      "L4": "Soporte en la adaptación a regulaciones y normativas extranjeras.",
-      "L5": "Optimización de operaciones internacionales para maximizar eficiencia y rentabilidad.",
-      "L6": "Análisis de Precios de Transferencia."
+      "INTRO": "We stand by your side in your global expansion, offering a range of services.",
+      "T1": "We stand by your side in your global expansion, offering a range of services including:",
+      "L1": "Assessment of international markets and opportunity analysis.",
+      "L2": "Development of strategies for entering new markets.",
+      "L3": "Risk management and tax compliance in international contexts.",
+      "L4": "Support in adapting to foreign regulations and standards.",
+      "L5": "Optimization of international operations to maximize efficiency and profitability.",
+      "L6": "Transfer pricing analysis."
     },
     "INVESTOR": {
       "TITLE": "Investor Relations",
@@ -90,5 +106,101 @@
       "L2": "Reporting via business intelligence.",
       "L3": "Automatización de procesos mediante RPA."
     }
+  },
+
+  "CLIENTS": {
+    "TITLE": "Historias de Éxito",
+    "T1": "Nuestros clientes comparten su visión y ambición de generar un cambio positivo",
+    "SLIDES": {
+      "NUSKLE": {
+        "NAME": "Nuskle",
+        "TITLE": "Trabajar con Bull Advisors fue una experiencia excepcional.",
+        "INTRO": "Nos brindaron una valuación precisa de nuestra empresa que superó nuestras expectativas. Su profesionalismo y rápida comprensión del negocio nos ayudaron a tomar decisiones informadas y estratégicas. Espero poder contar con ellos en proyectos futuros.",
+        "AUTHOR": "MBA Bruno Hiriart, CEO de Nuskle",
+        "BULLETS": [
+          "Tecnología",
+          "Valuación de empresas"
+        ]
+      },
+      "ONFLOOR": {
+        "NAME": "OnFloor",
+        "TITLE": "Gracias a Bull, mejoramos significativamente la gestión de nuestro capital de trabajo.",
+        "INTRO": "Su asesoramiento nos permitió tomar mejores decisiones de financiamiento, ordenar la gestión de stock, mejorar la planificación de tesorería y optimizar nuestros resultados. Nos ayudaron a prever situaciones futuras y a actuar de manera proactiva y oportuna. Su conocimiento y profesionalismo hicieron una gran diferencia en nuestro negocio. Sus servicios son altamente recomendables.",
+        "AUTHOR": "Arq. Mario Carassale, CEO de OnFloor",
+        "BULLETS": [
+          "Construcción",
+          " CFO as a service"
+        ]
+      },
+      "GINKGO": {
+        "NAME": "Ginkgo",
+        "TITLE": "Trabajar con Bull ha sido transformador para nuestra empresa.",
+        "INTRO": "Nos ayudaron a implementar un modelo de asignación de horas de nuestros recursos, obteniendo visibilidad sobre la rentabilidad por cliente. Además, mejoraron significativamente nuestra planificación de cash flow. Su conocimiento y enfoque profesional han sido claves para nuestro éxito. Estamos muy satisfechos con los resultados y continuaremos colaborando con ellos en el futuro.",
+        "AUTHOR": "MBA Diego Román, CEO de Ginkgo",
+        "BULLETS": [
+          "Marketing",
+          "CFO as a service"
+        ]
+      }
+    }
+  },
+
+  "NOSOTROS": {
+    "TITLE": "Nosotros",
+    "T1": "Nuestro equipo, tu socio en el éxito",
+    "TEAM": {
+      "CARLOS": {
+        "name": "Carlos Pera Maldonado",
+        "slug": "carlos",
+        "role": "MBA & Contador Público",
+        "email": "#",
+        "linkedin": "#",
+        "desc": "<p> Más de 8 años de experiencia como CFO en diferentes sectores (Software, Automotriz, Retail, Travel).</p><p>Experto en diseño e implementación de estrategias financieras a corto y largo plazo.</p><p> Enfoque innovador para mejorar los márgenes mediante sinergias, negociaciones estratégicas y cambios operativos.</p><p>Amplia experiencia en implementaciones de ERPs (SAP) y reestructuraciones de equipos.</p><p>Experto en modelado financiero.</p>"
+      },
+      "ANDRES": {
+        "name": "Andrés Kavedjian",
+        "slug": "andres",
+        "role": "Lic. en Administración de Empresas",
+        "email": "#",
+        "linkedin": "#",
+        "desc": "<p>Especialista en reestructuras financieras, negociación con bancos y proveedores.</p> <p>Desarrollo de nuevas líneas de negocio y reestructura de puntos de venta tanto físicos como digitales.</p> <p>Experto en optimización de costos. </p> <p>Expertise en implementación de reportes y sistemas diversos.</p>"
+      },
+      "LUIS": {
+        "name": "Luis Brennan",
+        "slug": "luis",
+        "role": "MBA & Contador Público",
+        "email": "#",
+        "linkedin": "#",
+        "desc": "<p>Ejecutivo con más de 20 años de experiencia en diversas industrias (Software, Manufactura, Retail, Farmacéutica, Automotriz y Consultoría).</p> <p>12+ años de experiencia como CFO y Director Financiero a nivel Regional en estructuras matriciales.</p> <p>Amplia experiencia en start-ups, procesos de M&A, ejecución de planes de negocio y reestructuras.</p><p>Liderazgo en implementaciones de ERP’s (SAP y Netsuite) y BI.</p> <p>Gestión de equipos de trabajo en entornos multiculturales.</p> <p>Manejo de relaciones con fondos de inversión y scale up de empresas.</p>"
+      }
+    }
+  },
+
+  "FOOTER": {
+    "TITLE": "Contáctanos",
+    "T1": "¿Listo para desbloquear el <br /> potencial de tu negocio?",
+    "T2": "Contáctanos para obtener más información sobre nuestros servicios de consultoría o para hablar sobre tu proyecto.",
+    "T3": "Estamos aquí para ayudarte."
+  },
+
+  "FORM": {
+    "COMPANY": "Empresa",
+    "COMPANY_MSG": "Coloca el nombre de tu empresa",
+    "NAME": "Nombre y Apellido",
+    "NAME_MSG": "Coloca tu nombre y Apellido",
+    "EMAIL": "ejemplo@email.com",
+    "EMAIL_MSG": "ejemplo@email.com",
+    "MESSAGE": "Coloca un correo válido",
+    "MESSAGE_MSG": "Tu mensaje debe ser de mas de 16 caracteres.",
+    "SERVICES": [
+      "¿En qué servicio estás interesado?",
+      "CFO as a Service Finance",
+      "CFO as a Service Business",
+      "Internacionalización de Negocios",
+      "Investor Relations",
+      "M&A",
+      "Aplicación de Tecnología al Negocio"
+    ],
+    "SEND": "Enviar"
   }
 }

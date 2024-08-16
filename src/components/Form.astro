@@ -1,6 +1,11 @@
 ---
 import "../css/components/forms.css";
 import CustomSelect from "./CustomSelect.astro";
+
+/* GET LANG */
+import { getI18N } from "../i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 <form id="contact-form" name="form" action="#" method="post" accept-charset="utf-8" >
 
@@ -8,32 +13,38 @@ import CustomSelect from "./CustomSelect.astro";
   <input
     type="text"
     name="company"
-    placeholder="Empresa"
+    placeholder={ i18n.FORM.COMPANY }
     required
   />
-  <span class="valid-msg"> Coloca el nombre de tu empresa</span>
+  <span class="valid-msg"> 
+    { i18n.FORM.COMPANY_MSG }
+  </span>
 </div>
 
   <div class="field">
     <input
       type="text"
       name="name"
-      placeholder="Nombre y Apellido"
+      placeholder={ i18n.FORM.NAME }
       pattern="^[A-Za-z]+ [A-Za-z]+$"
       required
     />
-    <span class="valid-msg"> Coloca tu nombre y Apellido</span>
+    <span class="valid-msg">
+      { i18n.FORM.NAME_MSG }
+    </span>
   </div>
 
   <div class="field">
     <input
       type="email"
       name="email"
-      placeholder="ejemplo@email.com"
+      placeholder={ i18n.FORM.EMAIL }
       title="Debe ser un correo válido"
       required
     />
-    <span class="valid-msg"> Coloca un correo válido</span>
+    <span class="valid-msg"> 
+      { i18n.FORM.EMAIL_MSG }
+    </span>
   </div>
 
   <div class="field">
@@ -41,29 +52,23 @@ import CustomSelect from "./CustomSelect.astro";
       cols=""
       name="message"
       rows=""
-      placeholder="Mensaje..."
+      placeholder={ i18n.FORM.MESSAGE }
       minlength="16"></textarea>
-    <div class="valid-msg">Tu mensaje debe ser de mas de 16 caracteres.</div>
+    <div class="valid-msg">
+      { i18n.FORM.MESSAGE_MSG }
+    </div>
   </div>
 
   <div class="flex flex-col xg:flex-row justify-between items-end">
 
-    <CustomSelect options={
-      [
-        {label: '¿En qué servicio estás interesado? ', value: ''}, 
-        {label: 'CFO as a Service Finance', value: 'CFO as a Service Finance'}, 
-        {label: 'CFO as a Service Business', value: 'CFO as a Service Business'},
-        {label: 'Internacionalización de Negocios', value: 'Internacionalización de Negocios'},
-        {label: 'Investor Relations', value: 'Investor Relations'},
-        {label: 'M&A', value: 'M&A'},
-        {label: 'Aplicación de Tecnología al Negocio', value: 'Aplicación de Tecnología al Negocio'}
-      ]
-      } />
+    <CustomSelect/>
 
     <button type="submit" disabled class="submit mt-4 xg:mt-0" >
       <span class="flex items-center">
         <span class="loader mr-1"></span>
-        <span class="white flex items-center">Enviar</span>
+        <span class="white flex items-center">
+          { i18n.FORM.SEND }
+        </span>
       </span>
     </button>
     

@@ -1,18 +1,34 @@
 {
   "METATITLE": "",
   "METADESC": "",
+
   "MENU": {
     "EXPERIENCIA": "Experiencia",
     "SERVICIOS": "Servicios",
     "NOSOTROS": "Nosotros"
   },
+
   "WORDS": {
     "CONTACTUS": "Contáctanos",
     "EXPERIENCIA": "Experiencia",
     "SERVICIOS": "Servicios",
     "READMORE": "Conoce más"
   },
+
   "HEROTITLE": "Tu socio en finanzas <br class=\"xg:hidden\" /> corporativas <br class=\"hidden xg:block\" /> y estrategia empresarial",
+
+  "EXPERIENCIA": {
+    "T1": "Ofrecemos soluciones innovadoras y estratégicas para impulsar el crecimiento, la rentabilidad y la eficiencia de tu empresa.",
+    "T2": " Más de 15 años de experiencia en dirección",
+    "T3": "financiera en diversas industrias y geografías.",
+    "T4": "Generamos mejoras inmediatas con un",
+    "T5": "enfoque proactivo y dinámico."
+  },
+
+  "PARTNERS": "Confían en nosotros",
+
+  "SERV_TXT": "Proporcionamos una amplia gama de servicios financieros y estratégicos para impulsar el crecimiento y la eficiencia de tu empresa.",
+
   "SERVICIOS": {
     "CFO": {
       "TITLE": "CFO as a Service",
@@ -90,5 +106,110 @@
       "L2": "Reporting via business intelligence.",
       "L3": "Automatización de procesos mediante RPA."
     }
+  },
+
+  "CLIENTS":{
+    "TITLE": "Historias de Éxito",
+    "T1": "Nuestros clientes comparten su visión y ambición de generar un cambio positivo",
+    
+    "SLIDES": {
+      
+      "NUSKLE": {
+        "NAME": "Nuskle",
+        "TITLE": "Trabajar con Bull Advisors fue una experiencia excepcional.",
+        "INTRO": "Nos brindaron una valuación precisa de nuestra empresa que superó nuestras expectativas. Su profesionalismo y rápida comprensión del negocio nos ayudaron a tomar decisiones informadas y estratégicas. Espero poder contar con ellos en proyectos futuros.",
+        "AUTHOR": "MBA Bruno Hiriart, CEO de Nuskle",
+        "BULLETS":[
+          "Tecnología", "Valuación de empresas"
+        ]
+      },
+
+      "ONFLOOR": {
+        "NAME": "OnFloor",
+        "TITLE": "Gracias a Bull, mejoramos significativamente la gestión de nuestro capital de trabajo.",
+        "INTRO": "Su asesoramiento nos permitió tomar mejores decisiones de financiamiento, ordenar la gestión de stock, mejorar la planificación de tesorería y optimizar nuestros resultados. Nos ayudaron a prever situaciones futuras y a actuar de manera proactiva y oportuna. Su conocimiento y profesionalismo hicieron una gran diferencia en nuestro negocio. Sus servicios son altamente recomendables.",
+        "AUTHOR": "Arq. Mario Carassale, CEO de OnFloor",
+        "BULLETS":[
+          "Construcción", " CFO as a service"
+        ]
+      },
+
+      "GINKGO": {
+        "NAME": "Ginkgo",
+        "TITLE": "Trabajar con Bull ha sido transformador para nuestra empresa.",
+        "INTRO": "Nos ayudaron a implementar un modelo de asignación de horas de nuestros recursos, obteniendo visibilidad sobre la rentabilidad por cliente. Además, mejoraron significativamente nuestra planificación de cash flow. Su conocimiento y enfoque profesional han sido claves para nuestro éxito. Estamos muy satisfechos con los resultados y continuaremos colaborando con ellos en el futuro.",
+        "AUTHOR": "MBA Diego Román, CEO de Ginkgo",
+        "BULLETS":[
+          "Marketing", "CFO as a service"
+        ]
+      }
+
+    }
+  },
+
+  "NOSOTROS":{
+
+    "TITLE": "Nosotros",
+    "T1": "Nuestro equipo, tu socio en el éxito",
+
+    "TEAM":{
+
+      "CARLOS": {
+        "name": "Carlos Pera Maldonado",
+        "slug": "carlos",
+        "role": "MBA & Contador Público",
+        "email": "#",
+        "linkedin": "#",
+        "desc": "<p> Más de 8 años de experiencia como CFO en diferentes sectores (Software, Automotriz, Retail, Travel).</p><p>Experto en diseño e implementación de estrategias financieras a corto y largo plazo.</p><p> Enfoque innovador para mejorar los márgenes mediante sinergias, negociaciones estratégicas y cambios operativos.</p><p>Amplia experiencia en implementaciones de ERPs (SAP) y reestructuraciones de equipos.</p><p>Experto en modelado financiero.</p>"
+      },
+
+      "ANDRES": {
+        "name": "Andrés Kavedjian",
+        "slug": "andres",
+        "role": "Lic. en Administración de Empresas",
+        "email": "#",
+        "linkedin": "#",
+        "desc": "<p>Especialista en reestructuras financieras, negociación con bancos y proveedores.</p> <p>Desarrollo de nuevas líneas de negocio y reestructura de puntos de venta tanto físicos como digitales.</p> <p>Experto en optimización de costos. </p> <p>Expertise en implementación de reportes y sistemas diversos.</p>"
+      },
+
+      "LUIS": {
+        "name": "Luis Brennan",
+        "slug": "luis",
+        "role": "MBA & Contador Público",
+        "email": "#",
+        "linkedin": "#",
+        "desc": "<p>Ejecutivo con más de 20 años de experiencia en diversas industrias (Software, Manufactura, Retail, Farmacéutica, Automotriz y Consultoría).</p> <p>12+ años de experiencia como CFO y Director Financiero a nivel Regional en estructuras matriciales.</p> <p>Amplia experiencia en start-ups, procesos de M&A, ejecución de planes de negocio y reestructuras.</p><p>Liderazgo en implementaciones de ERP’s (SAP y Netsuite) y BI.</p> <p>Gestión de equipos de trabajo en entornos multiculturales.</p> <p>Manejo de relaciones con fondos de inversión y scale up de empresas.</p>"
+      }
+
+    }
+  },
+
+  "FOOTER": {
+    "TITLE": "Contáctanos",
+    "T1": "¿Listo para desbloquear el <br /> potencial de tu negocio?",
+    "T2": "Contáctanos para obtener más información sobre nuestros servicios de consultoría o para hablar sobre tu proyecto.",
+    "T3": "Estamos aquí para ayudarte."
+  },
+
+  "FORM": {
+    "COMPANY": "Empresa",
+    "COMPANY_MSG": "Coloca el nombre de tu empresa",
+    "NAME": "Nombre y Apellido",
+    "NAME_MSG": "Coloca tu nombre y Apellido",
+    "EMAIL": "ejemplo@email.com",
+    "EMAIL_MSG": "ejemplo@email.com",
+    "MESSAGE": "Coloca un correo válido",
+    "MESSAGE_MSG": "Tu mensaje debe ser de mas de 16 caracteres.",
+    "SERVICES": [
+        "¿En qué servicio estás interesado?",
+        "CFO as a Service Finance",
+        "CFO as a Service Business",
+        "Internacionalización de Negocios",
+        "Investor Relations",
+        "M&A",
+        "Aplicación de Tecnología al Negocio"
+    ],
+    "SEND": "Enviar"
   }
+
 }

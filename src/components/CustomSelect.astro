@@ -2,12 +2,19 @@
 import { Icon } from "astro-icon/components";
 const { options } = Astro.props;
 import "../css/components/custom-select.css";
+
+/* GET LANG */
+import { getI18N } from "../i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const SERVICES = i18n.FORM.SERVICES;
 ---
 <div class="custom-select">
    <select name="" id="">
     {
-        options.map(( option ) => (
-          <option value={ option.value } > { option.label } </option>
+        Object.entries(SERVICES).map( ([key, option]) => (
+          <option value={ option } > { option } </option>
         ) )
     }
     </select>

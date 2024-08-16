@@ -1,8 +1,12 @@
 ---
 import "swiper/css";
 import 'swiper/css/pagination';
-// const { slides } = Astro.props;
-import CLIENTS from "../data/clientes.json";
+
+/* GET LANG */
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale});
+const CLIENTES = i18n.CLIENTS.SLIDES;
 ---
 <style>
 
@@ -26,35 +30,35 @@ import CLIENTS from "../data/clientes.json";
 <div class="swiper swiper-client">
   <div class="swiper-wrapper pb-[3.5rem] xg:pb-6">
     {
-      CLIENTS.map((client) => (
+      Object.entries(CLIENTES).map( ([key, client]) => {
+        return (
         <div class="swiper-slide">
           <div class="card-client slide">
             <h3>
               <span class="text-e-blue">
-                {" "}
-                <Fragment set:html={client.name} />{" "}
-              </span>{" "}
+                <Fragment set:html={client.NAME} />
+              </span>
               -
-              <Fragment set:html={client.title} />
+              <Fragment set:html={client.TITLE} />
             </h3>
             <div>
               <div class="talk">
-                <p>{client.intro}</p>
-                <p class="author">{client.author}</p>
+                <p>{client.INTRO}</p>
+                <p class="author">{client.AUTHOR}</p>
               </div>
 
               <div class="ctas">
                 {
-                  client.bullets.map(
-                      (line) => <div>{line}</div>
+                  Object.entries( client.BULLETS ).map( ([key, line]) => <div>{line}</div>
                   )
                 }
               </div>
             </div>
           </div>
         </div>
-      ))
-    }
+       );
+    })
+  }
   </div>
   <div class="swiper-pagination"></div>
 </div>

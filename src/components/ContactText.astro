@@ -1,17 +1,23 @@
 ---
 import { Icon } from "astro-icon/components";
 const { links } = Astro.props;
+
+/* GET LANG */
+import { getI18N } from "../i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class="mt-10 xg:mt-20 text-center xg:text-left">
 
   <p class="text-deep-blue-300">
-    Contáctanos para obtener más información sobre nuestros servicios de
-    consultoría o para hablar sobre tu proyecto.
+    { i18n.FOOTER.T2 }
   </p>
 
   <p class="text-e-blue mt-2">
-    <span class="block">Estamos aquí para ayudarte. </span>
+    <span class="block">
+      { i18n.FOOTER.T3 }
+    </span>
     <a href="mailto:info@bulladvisors.com.uy">info@bulladvisors.com.uy</a>
 
     <div class="flex justify-center xg:justify-start gap-1 mt-3 xg:mt-2">

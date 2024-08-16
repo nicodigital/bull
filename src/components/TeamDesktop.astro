@@ -3,7 +3,14 @@ import CardTeam from "./CardTeam.astro";
 import carlosIMG from "../assets/Carlos-Pera.jpg";
 import andresIMG from "../assets/Andres-Kavedjian.jpg";
 import luisIMG from "../assets/Luis-Brennan.jpg";
-import TEAM from '../data/team.json';
+
+/* GET LANG */
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale});
+
+const TEAM = i18n.NOSOTROS.TEAM;
+
 ---
 
 <style>
@@ -26,9 +33,11 @@ import TEAM from '../data/team.json';
 
 <div class="team-wrap">
   {
-    TEAM.map((team) => {
+      Object.entries(TEAM).map(([key, team]) => {
+
       const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;
       return <CardTeam name={team.name} role={team.role} src={currImg} slug={team.slug} />
-     })
+
+    })
   }
 </div>
