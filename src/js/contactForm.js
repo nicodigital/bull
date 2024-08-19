@@ -1,5 +1,5 @@
 function contactForm() {
-
+  // info@bulladvisors.com.uy
   const protocolo = window.location.protocol;
   const dominio = window.location.hostname;
   const baseURL = protocolo+"//"+dominio;

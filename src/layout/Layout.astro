@@ -12,16 +12,15 @@ import Footer from "./Footer.astro";
 import Modals from "@/components/Modals.astro";
 import Favicon from "@/components/Favicon.astro";
 import Seo from "@/components/Seo.astro";
-// import getSlug from '@/js/getSlug'
-
 const siteURL = import.meta.env.SITE;
+
 
 const {
   title = "Título de 65 caracteres",
   claim = "Frase Coooool!",
   description = "Descripción de 150 caracteres",
   image = siteURL + 'img/1200x600.jpg',
-  author = 'Andrés González',
+  author = 'Bull',
   author_url = siteURL,
   robots,
 } = Astro.props;

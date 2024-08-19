@@ -37,28 +37,7 @@ body{
     .go-top svg path{
       fill: #fff;
     }
-
-    #whatsapp{
-      @apply bg-white text-neutral-800;
-
-      svg path{
-        fill: theme(colors.neutral.800);
-      }
-
-    }
     
   }
 
-}
-
-#whatsapp{
-
-  @apply 
-    fixed bottom-[2rem] right-[2rem] xg:bottom-[3.5rem] xg:right-[4rem]
-    flex gap-1 items-center
-    bg-neutral-800 
-    rounded-[10rem]
-    p-1 xg:pl-3 xg:pr-1 xg:py-[.5rem]
-    z-[999];
-    
 }

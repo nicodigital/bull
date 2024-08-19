@@ -10,7 +10,6 @@ const i18n = getI18N({ currentLocale });
 
 import CardsServicios from "@/components/CardsServicios.astro";
 import CardsClientes from "@/components/CardsClientes.astro";
-import CONTACT from "@/data/contact.json";
 import ContactText from "@/components/ContactText.astro";
 import Form from "@/components/Form.astro";
 
@@ -24,8 +23,9 @@ import teamIMG from "@/assets/team.jpg";
 
 <Layout
   title="Bull"
-  claim="Tu socio en finanzas corporativas y estrategia empresarial"
-  description="Ofrecemos soluciones innovadoras y estratégicas para impulsar el crecimiento, la rentabilidad y la eficiencia de tu empresa."
+  claim={ i18n.METATITLE }
+  description={ i18n.METADESC }
+  image = 'img/Bull-Advisors-Social.jpg'
 >
   <!-- Hero -->
   <section
@@ -49,7 +49,7 @@ import teamIMG from "@/assets/team.jpg";
       href="#experiencia"
       class="xg:hidden absolute left-[50%] bottom-3 translate-x-[-50%] z-10 text-white"
     >
-      Scroll para continuar
+      { i18n.WORDS.SCROLL_CONTINUE }
     </a>
   </section>
 
@@ -172,7 +172,7 @@ import teamIMG from "@/assets/team.jpg";
         { i18n.FOOTER.TITLE }
       </h2>
       <div class="hidden xg:block">
-        <ContactText links={CONTACT} />
+        <ContactText />
       </div>
     </div>
 
@@ -187,7 +187,7 @@ import teamIMG from "@/assets/team.jpg";
     </div>
 
     <div class="xg:hidden">
-      <ContactText links={CONTACT} />
+      <ContactText />
     </div>
   </section>
 </Layout>

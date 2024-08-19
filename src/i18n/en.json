@@ -1,6 +1,6 @@
 {
-  "METATITLE": "",
-  "METADESC": "",
+  "METATITLE": "Experts in corporate finance.",
+  "METADESC": "At Bull, we provide personalized financial and strategic solutions to drive your business growth and success.",
 
   "MENU": {
     "EXPERIENCIA": "Experience",
@@ -12,22 +12,23 @@
     "CONTACTUS": "Contact us",
     "EXPERIENCIA": "Experience",
     "SERVICIOS": "Services",
-    "READMORE": "Read more"
+    "READMORE": "Read more",
+    "SCROLL_CONTINUE": "Scroll to continue"
   },
 
-  "HEROTITLE": "Tu socio en finanzas <br class=\"xg:hidden\" /> corporativas <br class=\"hidden xg:block\" /> y estrategia empresarial",
+  "HEROTITLE": "Experts in <br/> corporate finance.",
 
   "EXPERIENCIA": {
-    "T1": "Ofrecemos soluciones innovadoras y estratégicas para impulsar el crecimiento, la rentabilidad y la eficiencia de tu empresa.",
-    "T2": " Más de 15 años de experiencia en dirección",
-    "T3": "financiera en diversas industrias y geografías.",
-    "T4": "Generamos mejoras inmediatas con un",
-    "T5": "enfoque proactivo y dinámico."
+    "T1": "We offer innovative and strategic solutions to drive the growth, profitability, and efficiency of your company.",
+    "T2": "Over 15 years of experience in financial management",
+    "T3": "across various industries and geographies.",
+    "T4": "We deliver immediate improvements with a ",
+    "T5": "proactive and dynamic approach."
   },
 
-  "PARTNERS": "Confían en nosotros",
+  "PARTNERS": "Trusted by our clients.",
 
-  "SERV_TXT": "Proporcionamos una amplia gama de servicios financieros y estratégicos para impulsar el crecimiento y la eficiencia de tu empresa.",
+  "SERV_TXT": "We provide a wide range of financial and strategic services to drive the growth and efficiency of your company.",
 
   "SERVICIOS": {
     "CFO": {
@@ -108,34 +109,34 @@
   },
 
   "CLIENTS": {
-    "TITLE": "Historias de Éxito",
-    "T1": "Nuestros clientes comparten su visión y ambición de generar un cambio positivo",
+    "TITLE": "Success Stories",
+    "T1": "Our clients share their vision and ambition to create positive change.",
     "SLIDES": {
       "NUSKLE": {
         "NAME": "Nuskle",
-        "TITLE": "Trabajar con Bull Advisors fue una experiencia excepcional.",
-        "INTRO": "Nos brindaron una valuación precisa de nuestra empresa que superó nuestras expectativas. Su profesionalismo y rápida comprensión del negocio nos ayudaron a tomar decisiones informadas y estratégicas. Espero poder contar con ellos en proyectos futuros.",
-        "AUTHOR": "MBA Bruno Hiriart, CEO de Nuskle",
+        "TITLE": "Working with Bull Advisors was an exceptional experience.",
+        "INTRO": "Working with Bull Advisors was an exceptional experience. They provided us with an accurate valuation of our company that exceeded our expectations. Their professionalism and quick understanding of the business helped us make informed and strategic decisions. I look forward to working with them on future projects.",
+        "AUTHOR": "MBA Bruno Hiriart, CEO of Nuskle",
         "BULLETS": [
-          "Tecnología",
-          "Valuación de empresas"
+          "Technology",
+          " Valuation"
         ]
       },
       "ONFLOOR": {
         "NAME": "OnFloor",
-        "TITLE": "Gracias a Bull, mejoramos significativamente la gestión de nuestro capital de trabajo.",
-        "INTRO": "Su asesoramiento nos permitió tomar mejores decisiones de financiamiento, ordenar la gestión de stock, mejorar la planificación de tesorería y optimizar nuestros resultados. Nos ayudaron a prever situaciones futuras y a actuar de manera proactiva y oportuna. Su conocimiento y profesionalismo hicieron una gran diferencia en nuestro negocio. Sus servicios son altamente recomendables.",
-        "AUTHOR": "Arq. Mario Carassale, CEO de OnFloor",
+        "TITLE": "Thanks to Bull, we significantly improved our working capital management.",
+        "INTRO": "Thanks to Bull Advisors, we significantly improved the management of our working capital. Their advice enabled us to make better financing decisions, streamline stock management, enhance cash flow planning, and optimize our results. They helped us anticipate future scenarios and act proactively and timely. Their knowledge and professionalism made a big difference in our business. Their services are highly recommended.",
+        "AUTHOR": "Arq. Mario Carassale, CEO of OnFloor",
         "BULLETS": [
-          "Construcción",
-          " CFO as a service"
+          "Building Contractor",
+          "CFO as a service"
         ]
       },
       "GINKGO": {
         "NAME": "Ginkgo",
-        "TITLE": "Trabajar con Bull ha sido transformador para nuestra empresa.",
-        "INTRO": "Nos ayudaron a implementar un modelo de asignación de horas de nuestros recursos, obteniendo visibilidad sobre la rentabilidad por cliente. Además, mejoraron significativamente nuestra planificación de cash flow. Su conocimiento y enfoque profesional han sido claves para nuestro éxito. Estamos muy satisfechos con los resultados y continuaremos colaborando con ellos en el futuro.",
-        "AUTHOR": "MBA Diego Román, CEO de Ginkgo",
+        "TITLE": "Working with Bull has been transformative for our company.",
+        "INTRO": "Working with Bull Advisors has been transformative for our company. They helped us implement a resource allocation model, giving us visibility into profitability by client. Additionally, they significantly improved our cash flow planning. Their knowledge and professional approach have been key to our success. We are very satisfied with the results and will continue collaborating with them in the future.",
+        "AUTHOR": "MBA Diego Román, CEO of Ginkgo",
         "BULLETS": [
           "Marketing",
           "CFO as a service"
@@ -145,61 +146,62 @@
   },
 
   "NOSOTROS": {
-    "TITLE": "Nosotros",
-    "T1": "Nuestro equipo, tu socio en el éxito",
+    "TITLE": "Our Team",
+    "T1": "Our team, your partner in success",
     "TEAM": {
       "CARLOS": {
         "name": "Carlos Pera Maldonado",
         "slug": "carlos",
         "role": "MBA/CA",
-        "email": "#",
-        "linkedin": "#",
+        "email": "cpera@bulladvisors.com.uy",
+        "linkedin": "https://www.linkedin.com/in/carlos-pera-maldonado/",
         "desc": "<p>  More than 8 years of experience as CFO in different sectors (Software, Automotive, Retail, Travel).</p><p> Expert in design and implementation of short and long term financial strategies.</p><p> Innovative approach to improve margins through synergies, strategic negotiations and operational changes.</p><p>Extensive experience in ERP (SAP) implementations and team restructurings </p><p> Expert in Financial Modeling.</p>"
       },
       "ANDRES": {
         "name": "Andrés Kavedjian",
         "slug": "andres",
         "role": "Business Administration",
-        "email": "#",
-        "linkedin": "#",
+        "email": "akavedjian@bulladvisors.com.uy",
+        "linkedin": "https://www.linkedin.com/in/andreskavedjian/",
         "desc": "<p>Expert in financial restructuring, negotiation with banks and suppliers.</p> <p>Development of new business lines and restructuring of physical and digital points of sale.</p> <p>Expert in cost optimization. </p> <p>Expertise in implementation of reports and diverse systems.</p>"
       },
       "LUIS": {
         "name": "Luis Brennan",
         "slug": "luis",
         "role": "MBA/CA",
-        "email": "#",
-        "linkedin": "#",
+        "email": "lbrennan@bulladvisors.com.uy",
+        "linkedin": "https://www.linkedin.com/in/luis-brennan/",
         "desc": "<p>Executive with over 20 years of experience in various industries (Software, Manufacturing, Retail, Pharmaceutical, Automotive and Consulting).</p> <p>12+ years of experience as CFO at Regional level in matrix structures.</p> <p>Extensive experience in start-ups, M&A processes, business plan execution and restructurings.</p> <p> Lead several ERP and BI solutions assessment & implementations.</p> <p>Team management in multicultural environments.</p> <p>Relationship management with investment funds and scale up of companies.</p>"
       }
     }
   },
 
   "FOOTER": {
-    "TITLE": "Contáctanos",
-    "T1": "¿Listo para desbloquear el <br /> potencial de tu negocio?",
-    "T2": "Contáctanos para obtener más información sobre nuestros servicios de consultoría o para hablar sobre tu proyecto.",
-    "T3": "Estamos aquí para ayudarte."
+    "TITLE": "Contact Us",
+    "T1": "Ready to unlock the potential <br>of your business?",
+    "T2": "Contact us for more information about our consulting services or to discuss your project.",
+    "T3": "We are here to help."
   },
 
   "FORM": {
-    "COMPANY": "Empresa",
-    "COMPANY_MSG": "Coloca el nombre de tu empresa",
-    "NAME": "Nombre y Apellido",
-    "NAME_MSG": "Coloca tu nombre y Apellido",
-    "EMAIL": "ejemplo@email.com",
-    "EMAIL_MSG": "ejemplo@email.com",
-    "MESSAGE": "Coloca un correo válido",
-    "MESSAGE_MSG": "Tu mensaje debe ser de mas de 16 caracteres.",
+    "COMPANY": "Company",
+    "COMPANY_MSG": "Enter your company name",
+    "NAME": "Name",
+    "NAME_MSG": "Enter your first and last name",
+    "EMAIL": "example@email.com",
+    "EMAIL_MSG": "Enter a valid email address",
+    "MESSAGE": "Message",
+    "MESSAGE_MSG": "Your message must be longer than 16 characters.",
     "SERVICES": [
-      "¿En qué servicio estás interesado?",
+      "Which service are you interested in?",
       "CFO as a Service Finance",
       "CFO as a Service Business",
-      "Internacionalización de Negocios",
+      "Business Internationalization",
       "Investor Relations",
       "M&A",
-      "Aplicación de Tecnología al Negocio"
+      "Application of Technology to Business"
     ],
-    "SEND": "Enviar"
+    "SEND": "Send"
   }
+
 }

@@ -1,6 +1,6 @@
 {
-  "METATITLE": "",
-  "METADESC": "",
+  "METATITLE": "Expertos en Finanzas Corporativas",
+  "METADESC": "En Bull, ofrecemos soluciones financieras y estratégicas personalizadas para impulsar el crecimiento y éxito de tu negocio.",
 
   "MENU": {
     "EXPERIENCIA": "Experiencia",
@@ -12,10 +12,11 @@
     "CONTACTUS": "Contáctanos",
     "EXPERIENCIA": "Experiencia",
     "SERVICIOS": "Servicios",
-    "READMORE": "Conoce más"
+    "READMORE": "Conoce más",
+    "SCROLL_CONTINUE": "Scroll para continuar"
   },
 
-  "HEROTITLE": "Tu socio en finanzas <br class=\"xg:hidden\" /> corporativas <br class=\"hidden xg:block\" /> y estrategia empresarial",
+  "HEROTITLE": "Expertos en <br/> Finanzas Corporativas",
 
   "EXPERIENCIA": {
     "T1": "Ofrecemos soluciones innovadoras y estratégicas para impulsar el crecimiento, la rentabilidad y la eficiencia de tu empresa.",
@@ -109,7 +110,7 @@
 
   "CLIENTS":{
     "TITLE": "Historias de Éxito",
-    "T1": "Nuestros clientes comparten su visión y ambición de generar un cambio positivo",
+    "T1": "Nuestros clientes comparten su visión y ambición de generar un cambio positivo.",
     
     "SLIDES": {
       
@@ -196,8 +197,8 @@
     "NAME": "Nombre y Apellido",
     "NAME_MSG": "Coloca tu nombre y Apellido",
     "EMAIL": "ejemplo@email.com",
-    "EMAIL_MSG": "ejemplo@email.com",
-    "MESSAGE": "Coloca un correo válido",
+    "EMAIL_MSG": "Coloca un correo válido",
+    "MESSAGE": "Mensaje...",
     "MESSAGE_MSG": "Tu mensaje debe ser de mas de 16 caracteres.",
     "SERVICES": [
         "¿En qué servicio estás interesado?",

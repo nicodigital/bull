@@ -1,11 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
-const { links } = Astro.props;
-
+import links from "@/data/contact.json";
 /* GET LANG */
 import { getI18N } from "../i18n";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+
 ---
 
 <div class="mt-10 xg:mt-20 text-center xg:text-left">
@@ -21,12 +21,32 @@ const i18n = getI18N({ currentLocale });
     <a href="mailto:info@bulladvisors.com.uy">info@bulladvisors.com.uy</a>
 
     <div class="flex justify-center xg:justify-start gap-1 mt-3 xg:mt-2">
-      <a href={links[0].whatsapp} target="_blank" rel="noreferrer noopener">
+      <a href="https://www.linkedin.com/company/bull-advisors/about/" target="_blank" rel="noreferrer noopener">
         <Icon class="text-e-blue text-[3.3rem] xg:text-[2.5rem]" name="mdi:linkedin" />
       </a>
-      <a href={links[0].linkedin} target="_blank" rel="noreferrer noopener">
+      <a class="whatsapp-link" href="" target="_blank" rel="noreferrer noopener">
         <Icon class="text-e-blue text-[3.3rem] xg:text-[2.5rem]" name="mdi:whatsapp" />
       </a>
     </div>
   </p>
 </div>
+
+<script>
+  import checkDevice from '@/js/checkDevice'
+  import whaAppLink from "@/js/whaAppLink"
+
+  const device = checkDevice();
+
+  function whaApp() {
+    
+    const whaApp = whaAppLink( "+59897613454", "", device );
+    
+    document.querySelectorAll('.whatsapp-link').forEach( link =>{
+      link.setAttribute('href', whaApp );
+    });
+    
+  }
+
+  document.addEventListener('DOMContentLoaded', whaApp );
+  document.addEventListener('astro:after-swap', whaApp );
+</script>
