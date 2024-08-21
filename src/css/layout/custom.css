@@ -37,7 +37,11 @@
 }
 
 .partners{
-  @apply flex w-full xg:grid xg:grid-cols-4 gap-5 xg:gap-20 place-items-center
+  @apply flex 
+  w-full xg:w-70% 
+  gap-5 xg:gap-20
+  xg:mx-auto 
+  place-items-center
   ctr-px pb-6 xg:p-0;
 }
 

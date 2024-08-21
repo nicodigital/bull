@@ -147,7 +147,7 @@
 
   "NOSOTROS": {
     "TITLE": "Our Team",
-    "T1": "Our team, your partner in success",
+    "T1": "Our team, <br class='xg:hidden'> your partner<br class='xg:hidden'> in success",
     "TEAM": {
       "CARLOS": {
         "name": "Carlos Pera Maldonado",
