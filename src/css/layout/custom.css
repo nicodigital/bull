@@ -38,7 +38,7 @@
 
 .partners{
   @apply flex 
-  w-full xg:w-70% 
+  w-full xg:w-75% 
   gap-5 xg:gap-20
   xg:mx-auto 
   place-items-center
