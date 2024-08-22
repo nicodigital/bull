@@ -9,9 +9,9 @@
   },
 
   "NAVLINKS": {
-    "EXPERIENCIA": "en#experiencia",
-    "SERVICIOS": "en#servicios",
-    "NOSOTROS": "en#nosotros"
+    "EXPERIENCIA": "/en#experiencia",
+    "SERVICIOS": "/en#servicios",
+    "NOSOTROS": "/en#nosotros"
   },
 
   "WORDS": {
