@@ -1,6 +1,7 @@
 function scrollMarkers( winH ){
 	
 		const body = document.querySelector('body');
+		const headerH = document.querySelector('header').offsetHeight;
 		const scrollPosition = window.scrollY;
 
 		var footer = document.querySelector('footer'); // <-- Cambiar a footer 
@@ -23,7 +24,7 @@ function scrollMarkers( winH ){
 					// Por ejemplo, cambiar su estilo, cargar contenido adicional, etc.
 				}else{
 	
-					if ( scrollPosition < winH ) {
+					if ( scrollPosition < ( winH - headerH ) ) {
 						body.setAttribute('data-scroll', 'top');
 					} else {
 						body.setAttribute('data-scroll', 'down');
