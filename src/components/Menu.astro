@@ -5,6 +5,11 @@ const { items } = Astro.props;
 import CONTACT from '../data/contact.json';
 import '../css/layout/menu.css';
 
+/* GET LANG */
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({currentLocale});
+
 ---
 <nav>
     {
@@ -15,7 +20,9 @@ import '../css/layout/menu.css';
         ) )
     }
 
-    <a href="#contacto" class="item xg:hidden" >Contacto</a>
+    <a href="#contacto" class="item xg:hidden anchor" >
+        { i18n.MENU.CONTACTO }
+    </a>
 
     <div class="relative flex w-full justify-between items-end flex-1 xg:hidden pb-3 text-white z-50">
         

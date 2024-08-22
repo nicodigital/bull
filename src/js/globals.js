@@ -103,10 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 	if( device != 'desktop' ) {
 		menuMobile(html,body)
-	}else{ // Desktop
-		smoothAnchors()
 	}
-	
+	smoothAnchors()
 	fetchGsap()
 
 });
@@ -115,9 +113,10 @@ document.addEventListener('astro:after-swap', function () {
 	fetchGsap()
 	if( device != 'desktop' ) {
 		menuMobile(html,body)
-	}else{ // Desktop
-		smoothAnchors()
 	}
+
+	smoothAnchors()
+
 });
 
 

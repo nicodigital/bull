@@ -5,13 +5,8 @@
   "MENU": {
     "EXPERIENCIA": "Experiencia",
     "SERVICIOS": "Servicios",
-    "NOSOTROS": "Nosotros"
-  },
-
-  "NAVLINKS": {
-    "EXPERIENCIA": "#experiencia",
-    "SERVICIOS": "#servicios",
-    "NOSOTROS": "#nosotros"
+    "NOSOTROS": "Nosotros",
+    "CONTACTO": "Contacto"
   },
 
   "WORDS": {
