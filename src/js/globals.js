@@ -2,7 +2,7 @@ import checkDevice from '../js/checkDevice'
 import scrollMarkers from "../js/scrollMarkers"
 import smartMenu from "../js/smartMenu"
 import menuMobile from '../js/menuMobile'
-import SmoothScroll from '../js/smoothscroll'
+import smoothAnchors from '../js/smoothAnchors'
 
 /*/////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////// GET BASIC /////////////////////////////*/
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if( device != 'desktop' ) {
 		menuMobile(html,body)
 	}else{ // Desktop
-		SmoothScroll()
+		smoothAnchors()
 	}
 	
 	fetchGsap()
@@ -116,7 +116,7 @@ document.addEventListener('astro:after-swap', function () {
 	if( device != 'desktop' ) {
 		menuMobile(html,body)
 	}else{ // Desktop
-		SmoothScroll()
+		smoothAnchors()
 	}
 });
 

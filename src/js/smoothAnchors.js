@@ -5,8 +5,9 @@ function smoothAnchors(){
   navItems.forEach((item) => { 
 
     item.addEventListener('click', (e) => {
+      e.preventDefault();
 
-      const target = item.getAttribute('data-anchor');
+      const target = item.getAttribute('href');
       const offset = document.querySelector(target).offsetTop;
 
       const scrollOptions = {
