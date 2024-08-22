@@ -183,7 +183,7 @@
 
   "FOOTER": {
     "TITLE": "Contact Us",
-    "T1": "Ready to unlock the potential <br>of your business?",
+    "T1": "Ready to unlock the potential <br class='hidden xg:block'>of your business?",
     "T2": "Contact us for more information about our consulting services or to discuss your project.",
     "T3": "We are here to help."
   },
