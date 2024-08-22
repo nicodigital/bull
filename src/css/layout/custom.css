@@ -5,7 +5,7 @@
 
 .lang-switcher{
 
-  @apply relative top-[1.3rem] flex gap-[.7rem] xg:top-0 xg:pl-[3.5rem];
+  @apply relative flex gap-[.7rem] xg:pl-[3.5rem];
 
   .langs{
     @apply relative flex flex-col top-[1.4rem] gap-[.7rem];
@@ -15,14 +15,15 @@
       @apply opacity-0 order-2;
 
       &.active{
-        @apply opacity-100 order-1;
+        @apply opacity-100 order-1 pointer-events-none;
       }
 
     }
 
   }
 
-  &:hover{
+  &:hover,
+  &:focus{
 
     a{
       @apply opacity-100;
