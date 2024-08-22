@@ -2,6 +2,10 @@
   "METATITLE": "Experts in corporate finance.",
   "METADESC": "At Bull, we provide personalized financial and strategic solutions to drive your business growth and success.",
 
+  "LINKS": {
+    "HOME": "/en"
+  },
+
   "MENU": {
     "EXPERIENCIA": "Experience",
     "SERVICIOS": "Services",

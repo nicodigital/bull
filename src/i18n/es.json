@@ -2,6 +2,10 @@
   "METATITLE": "Expertos en Finanzas Corporativas",
   "METADESC": "En Bull, ofrecemos soluciones financieras y estratégicas personalizadas para impulsar el crecimiento y éxito de tu negocio.",
 
+  "LINKS": {
+    "HOME": "/"
+  },
+
   "MENU": {
     "EXPERIENCIA": "Experiencia",
     "SERVICIOS": "Servicios",
