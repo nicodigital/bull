@@ -8,6 +8,12 @@
     "NOSOTROS": "Nosotros"
   },
 
+  "NAVLINKS": {
+    "EXPERIENCIA": "#experiencia",
+    "SERVICIOS": "#servicios",
+    "NOSOTROS": "#nosotros"
+  },
+
   "WORDS": {
     "CONTACTUS": "Contáctanos",
     "EXPERIENCIA": "Experiencia",

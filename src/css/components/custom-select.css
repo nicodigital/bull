@@ -17,12 +17,14 @@
       }
 
     }
-
+    
   }
 
   &:has( .select-arrow-active ){
 
     .icon{
+
+      @apply top-[2.4rem] right-0 w-[1.5rem];
 
       svg{
         
