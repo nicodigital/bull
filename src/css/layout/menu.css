@@ -14,7 +14,7 @@ nav {
 
       xg:relative 
       xg:w-auto
-      xg:h-auto
+      xg:h-full
       xg:bg-transparent
       xg:px-0 xg:py-0
       xg:gap-4
@@ -23,6 +23,11 @@ nav {
       .item {
         @apply relative mb-1 xg:mb-0 z-30
         text-white text-h4 xg:text-small;
+
+        &:not([href="#contacto"]){
+          @apply flex items-center;
+        }
+
       }
 
       .ball{
@@ -62,7 +67,7 @@ nav {
   @media (min-width: theme("screens.xg")) {
 
     nav {
-      @apply bg-transparent !important;
+      @apply bg-transparent h-full !important;
     }
 
   }

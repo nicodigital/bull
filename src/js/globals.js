@@ -1,8 +1,8 @@
 import checkDevice from '../js/checkDevice'
-import lenisScroll from "../js/lenisScroll"
 import scrollMarkers from "../js/scrollMarkers"
 import smartMenu from "../js/smartMenu"
 import menuMobile from '../js/menuMobile'
+import SmoothScroll from '../js/smoothscroll'
 
 /*/////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////// GET BASIC /////////////////////////////*/
@@ -84,28 +84,6 @@ function fetchGsap(){
 					observer.observe(image);
 			}
 
-			
-
-	// let tl = gsap.timeline({
-	// 	// yes, we can add it to an entire timeline!
-	// 	scrollTrigger: {
-	// 			trigger: '#team',
-	// 			toggleActions: 'play reverse play reverse',
-	// 			start: '15% 80%', 
-	// 			end: '100% 70%', 
-	// 			// scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-	// 			markers: true,
-	// 	}
-	// });
-
-	// return tl.to( image, { 
-	// 	width: "calc( 100% + var(--container-gap) * 2 )", 
-	// 	marginLeft: "calc(-1 * var(--container-gap) )",
-	// 	borderRadius: "0", 
-	// 	duration: .5, 
-	// 	ease: "ease-in-out",
-	// });
-
 }
 
 /*/////////////////////////////////////////////////////////////////////*/
@@ -125,18 +103,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 	if( device != 'desktop' ) {
 		menuMobile(html,body)
+	}else{ // Desktop
+		SmoothScroll()
 	}
-
+	
 	fetchGsap()
-	lenisScroll()
 
 });
 
 document.addEventListener('astro:after-swap', function () {
 	fetchGsap()
-	lenisScroll()
 	if( device != 'desktop' ) {
 		menuMobile(html,body)
+	}else{ // Desktop
+		SmoothScroll()
 	}
 });
 
