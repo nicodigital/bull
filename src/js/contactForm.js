@@ -1,26 +1,51 @@
 function contactForm() {
+
+  const SPARK_ID = '8KFz5qCt9'; // ID DEL FORMULARIO ID
+  const FROM = "BULL";
+  const SUBJECT = "BULL - Consulta";
+  let notices;
+
   // info@bulladvisors.com.uy
   const protocolo = window.location.protocol;
   const dominio = window.location.hostname;
   const baseURL = protocolo+"//"+dominio;
 
   const form = document.querySelector("#contact-form");
-  const ajax_form_url = 'https://submit-form.com/M56v2ysHS';
+  const ajax_form_url = 'https://submit-form.com/'+SPARK_ID;
   const result = document.getElementById('result');
 
   if (form) {
 
+    const lang = form.querySelector('[name=lang]');
+    const company = form.querySelector('[name=company]');
     const name = form.querySelector('[name=name]');
+    const service = form.querySelector('[name=service]');
     const email = form.querySelector('[type=email]');
-    // const phone = form.querySelector('[name=phone]');
     const message = form.querySelector('[name=message]');
     const btn_submit = form.querySelector('[type=submit]');
 
     const nameRegex = /^[A-Za-z]+ [A-Za-z]+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    // const phoneRegex = /^\+\d{0,3}(?:\s?\d{1,3}){1,4}$|^\d{8,9}$/;
     const messageRegex = /^.{16,}$/; // min 16 caracteres
 
+    // console.log(lang)
+
+    /* Notices */
+    if( lang.value === "en" ){
+
+      notices = {
+        success: 'Thank you for contacting us. We will get back to you shortly.',
+        error: 'Error. Please try again.',
+      }
+
+    }else{
+
+      notices = {
+        success: 'Gracias por contactarnos. En breve nos pondremos en contacto.',
+        error: 'Error. Por favor, intenta de nuevo.',
+      }
+
+    }
 
     /* ////////////////// TEMPORIZADORES ///////////////////*/
     // Definir una variable para el temporizador de retraso
@@ -83,10 +108,6 @@ function contactForm() {
       handleInput(email, emailRegex);
     });
 
-    // phone.addEventListener('input', function() {
-    //   handleInput(phone, phoneRegex);
-    // });
-
     message.addEventListener('input', function() {
       handleInput(message, messageRegex);
     });
@@ -94,10 +115,6 @@ function contactForm() {
     form.onchange = () => {
       checkForm()
     }
-
-    // message.addEventListener('mouseleave', function() {
-    //  checkForm();
-    // })
 
     /* ////////////////// SUBMIT ///////////////////*/
 
@@ -109,20 +126,26 @@ function contactForm() {
 
       if (checkForm()) {
 
-        const formData = new FormData(form);
-        const object = Object.fromEntries(formData);
+        const formData = {
+          "company": company.value,
+          "name": name.value,
+          "email": email.value,
+          "message": message.value,
+          "service": service.value,
+          // "g-recaptcha-response": grecaptcha.getResponse()
+        };
 
         const json = JSON.stringify({
-                      ...object,
-                      _email: {
-                        from: "LIV",
-                        subject: "LIV - Contacto",
-                        template: {
-                          title: false,
-                          footer: false,
-                        }
-                      }
-                    });
+          ...formData,
+          _email: {
+            from: FROM,
+            subject: SUBJECT,
+            template: {
+              title: false,
+              footer: false,
+            }
+          }
+        });
 
         fetch( ajax_form_url , {
           method: 'POST',
@@ -137,25 +160,26 @@ function contactForm() {
 
             if (response.status == 200) {
 
-              window.location.href = baseURL + "/gracias";
-              // result.innerHTML = json.message;
+              // window.location.href = baseURL + "/gracias";
+              loader.style = "display: none";
+              result.innerHTML = notices.success;
 
             } else {
               console.log(response);
-              // result.innerHTML = json.message;
+              result.innerHTML = notices.error;
             }
 
           }).catch(error => {
 
             console.log(error);
-            result.innerHTML = "😭 Algo no ha funcionado bien.";
+            result.innerHTML = notices.error;
 
           }).then(function () {
 
             form.reset();
             setTimeout(() => {
               result.style.display = "none";
-            }, 3000);
+            }, 5000);
 
           });
 

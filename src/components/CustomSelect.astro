@@ -11,7 +11,7 @@ const i18n = getI18N({ currentLocale });
 const SERVICES = i18n.FORM.SERVICES;
 ---
 <div class="custom-select">
-   <select name="" id="">
+   <select name="service" id="">
     {
         Object.entries(SERVICES).map( ([key, option]) => (
           <option value={ option } > { option } </option>
