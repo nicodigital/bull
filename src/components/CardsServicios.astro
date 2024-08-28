@@ -80,10 +80,6 @@ const i18n = getI18N({currentLocale});
       modules: [Autoplay, Navigation],
       spaceBetween: 20,
       speed: 800,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: true,
-      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -101,28 +97,6 @@ const i18n = getI18N({currentLocale});
       },
     });
 
-    // Configuración del Intersection Observer
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            SwiperSlider.autoplay.start(); // Inicia el autoplay
-            setTimeout(() => {
-              SwiperSlider.slideTo(1);
-            }, 1500);
-          } else {
-            SwiperSlider.autoplay.stop(); // Detiene el autoplay
-          }
-        });
-      },
-      {
-        root: null, // Usa el viewport como root
-        threshold: 0.1, // Activa el autoplay cuando al menos el 10% del slider es visible
-      }
-    );
-
-    // Observa el elemento del slider
-    observer.observe(swiperElement);
   }
 
   document.addEventListener("DOMContentLoaded", swiperSlider);
