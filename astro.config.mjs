@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
-import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +20,6 @@ export default defineConfig({
   // base: '/',
   base: '/',
 
-  adapter: netlify(),
   prefetch: true,
   i18n: {
     defaultLocale: "es",
