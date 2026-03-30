@@ -80,7 +80,7 @@
   }
 
   &-team{
-    @apply relative w-full aspect-[9/12.5] xg:min-w-[auto] rounded-[1rem] cursor-pointer overflow-hidden;
+    @apply relative w-full aspect-square xg:min-w-[auto] rounded-[1rem] cursor-pointer overflow-hidden;
 
 
     img{

@@ -1,7 +1,6 @@
 ---
 import CardTeam from "./CardTeam.astro";
 import carlosIMG from "../assets/Carlos-Pera.jpg";
-import andresIMG from "../assets/Andres-Kavedjian.jpg";
 import luisIMG from "../assets/Luis-Brennan.jpg";
 
 /* GET LANG */
@@ -30,7 +29,7 @@ import 'swiper/css/pagination';
     {
       Object.entries(TEAM).map(([key, team]) => {
 
-        const currImg = team.slug === 'carlos' ? carlosIMG : team.slug === 'andres' ? andresIMG : luisIMG;
+        const currImg = team.slug === 'carlos' ? carlosIMG : luisIMG;
 
         return <div class="swiper-slide">
              <CardTeam name={team.name} role={team.role} src={currImg} slug={team.slug} />
